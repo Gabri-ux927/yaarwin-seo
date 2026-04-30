@@ -2,407 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Yaarwin Login - Play Color Trading Game</title>
-  <meta name="description" content="Login to Yaarwin to play color trading game. Download Yaarwin app for Android. New user? Register here.">
+  <title>Yaarwin Login - Access Your Account</title>
+  <meta name="description" content="Login to your Yaarwin account. New user? Register for free. Download Yaarwin app.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
-      color: white;
-      min-height: 100vh;
-      padding: 20px;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .header {
-      text-align: center;
-      padding: 20px 0;
-      border-bottom: 1px solid #334155;
-      margin-bottom: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .header img {
-      height: 50px;
-      width: auto;
-    }
-
-    .header h1 {
-      font-size: 36px;
-      color: #22c55e;
-      letter-spacing: 2px;
-      margin: 0;
-    }
-
-    .tagline {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #94a3b8;
-    }
-
-    .main-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-    }
-
-    .app-card {
-      flex: 1;
-      min-width: 280px;
-      background: #1e293b;
-      border-radius: 24px;
-      padding: 30px;
-      text-align: center;
-      border: 1px solid #334155;
-    }
-
-    .app-icon {
-      width: 80px;
-      height: 80px;
-      background: linear-gradient(135deg, #22c55e, #16a34a);
-      border-radius: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-      overflow: hidden;
-    }
-
-    .app-icon img {
-      width: 50px;
-      height: auto;
-    }
-
-    .app-card h2 {
-      font-size: 28px;
-      margin-bottom: 8px;
-      color: white;
-    }
-
-    .app-size {
-      color: #94a3b8;
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
-
-    .game-list {
-      background: #0f172a;
-      border-radius: 16px;
-      padding: 15px;
-      margin: 20px 0;
-      text-align: left;
-    }
-
-    .game-list h3 {
-      color: #fbbf24;
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
-
-    .game-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .game-tag {
-      background: #334155;
-      padding: 6px 12px;
-      border-radius: 20px;
-      font-size: 13px;
-      color: white;
-    }
-
-    .version-info {
-      color: #64748b;
-      font-size: 12px;
-      margin: 15px 0;
-    }
-
-    .download-btn {
-      display: inline-block;
-      width: 100%;
-      padding: 14px;
-      background: #22c55e;
-      color: black;
-      text-decoration: none;
-      border-radius: 12px;
-      font-weight: bold;
-      font-size: 18px;
-      margin-top: 10px;
-      transition: background 0.3s;
-      border: none;
-      cursor: pointer;
-      text-align: center;
-    }
-
-    .download-btn:hover {
-      background: #16a34a;
-    }
-
-    .links-card {
-      flex: 1;
-      min-width: 300px;
-      background: #1e293b;
-      border-radius: 24px;
-      padding: 40px 30px;
-      text-align: center;
-      border: 1px solid #334155;
-    }
-
-    .links-card h2 {
-      color: #fbbf24;
-      margin-bottom: 30px;
-      font-size: 28px;
-    }
-
-    .link-btn {
-      display: block;
-      width: 100%;
-      padding: 16px;
-      background: #22c55e;
-      color: black;
-      text-decoration: none;
-      border-radius: 12px;
-      font-weight: bold;
-      font-size: 20px;
-      margin-bottom: 20px;
-      transition: background 0.3s;
-      border: none;
-      cursor: pointer;
-      text-align: center;
-    }
-
-    .link-btn:last-child {
-      margin-bottom: 0;
-    }
-
-    .link-btn:hover {
-      background: #16a34a;
-    }
-
-    .link-btn.secondary {
-      background: #3b82f6;
-    }
-
-    .link-btn.secondary:hover {
-      background: #2563eb;
-    }
-
-    .coming-soon {
-      font-size: 12px;
-      color: #64748b;
-      margin-top: 20px;
-    }
-
-    footer {
-      margin-top: 50px;
-      text-align: center;
-      font-size: 12px;
-      color: #64748b;
-      padding: 20px;
-      border-top: 1px solid #334155;
-    }
-
-    footer a {
-      color: #22c55e;
-      text-decoration: none;
-    }
-
-    /* Gift Code Box */
-    .gift-code-box {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      background: #1e293b;
-      border-left: 4px solid #22c55e;
-      padding: 10px 15px;
-      border-radius: 8px;
-      font-size: 12px;
-      z-index: 100;
-    }
-
-    .gift-code-box button {
-      margin-left: 8px;
-      background: #22c55e;
-      border: none;
-      padding: 2px 8px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    @media (max-width: 768px) {
-      .app-card, .links-card {
-        min-width: 100%;
-      }
-      .header h1 {
-        font-size: 28px;
-      }
-      .gift-code-box {
-        font-size: 10px;
-        padding: 6px 10px;
-      }
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); color: white; min-height: 100vh; padding: 20px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .header { text-align: center; padding: 20px 0; border-bottom: 1px solid #334155; margin-bottom: 40px; display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; }
+    .header img { height: 50px; width: auto; }
+    .header h1 { font-size: 36px; color: #22c55e; }
+    .main-grid { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
+    .app-card, .links-card { flex: 1; min-width: 280px; background: #1e293b; border-radius: 24px; padding: 30px; text-align: center; border: 1px solid #334155; }
+    .app-icon { width: 80px; height: 80px; background: linear-gradient(135deg, #22c55e, #16a34a); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; overflow: hidden; }
+    .app-icon img { width: 50px; }
+    .app-card h2 { font-size: 28px; }
+    .game-list { background: #0f172a; border-radius: 16px; padding: 15px; margin: 20px 0; text-align: left; }
+    .game-list h3 { color: #fbbf24; margin-bottom: 10px; }
+    .game-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+    .game-tag { background: #334155; padding: 6px 12px; border-radius: 20px; font-size: 13px; }
+    .download-btn, .link-btn { display: block; width: 100%; padding: 14px; background: #22c55e; color: black; text-decoration: none; border-radius: 12px; font-weight: bold; font-size: 18px; margin-top: 10px; text-align: center; }
+    .link-btn.secondary { background: #3b82f6; }
+    .coming-soon { font-size: 12px; color: #64748b; margin-top: 20px; }
+    footer { margin-top: 50px; text-align: center; font-size: 12px; color: #64748b; padding: 20px; border-top: 1px solid #334155; }
+    footer a { color: #22c55e; }
+    .gift-code-box { position: fixed; bottom: 20px; left: 20px; background: #1e293b; border-left: 4px solid #22c55e; padding: 10px 15px; border-radius: 8px; font-size: 12px; z-index: 100; }
+    @media (max-width: 768px) { .header h1 { font-size: 28px; } }
   </style>
 </head>
 <body>
-
 <div class="container">
-  <!-- Header with Logo -->
   <div class="header">
     <img src="/logo.png">
   </div>
-  
-  <div class="tagline">
-    Color Trading Platform • Daily Gift Codes • Instant Withdrawals
-  </div>
-
+  <div style="text-align: center; margin-bottom: 20px;">Color Trading Platform • Daily Gift Codes</div>
   <div class="main-grid">
-    
-    <!-- Left Side: App Info Card -->
     <div class="app-card">
-      <div class="app-icon">
-        <img src="/logo.png" alt="Yaarwin Logo" onerror="this.parentElement.innerHTML='Y'">
-      </div>
+      <div class="app-icon"><img src="/logo.png" alt="Logo" onerror="this.parentElement.innerHTML='Y'"></div>
       <h2>Yaarwin App</h2>
-      <div class="app-size">Size: 6.8 MB • Version: 1.0.0 (Latest)</div>
-      
       <div class="game-list">
-        <h3>🎮 Games Available</h3>
+        <h3>🎮 Games</h3>
         <div class="game-tags">
-          <span class="game-tag">Wingo</span>
-          <span class="game-tag">Aviator</span>
-          <span class="game-tag">Rummy</span>
-          <span class="game-tag">Teen Patti</span>
-          <span class="game-tag">etc</span>
+          <span class="game-tag">Color Trading</span>
+          <span class="game-tag">Big/Small</span>
+          <span class="game-tag">Numbers</span>
         </div>
       </div>
-
-      <div class="version-info">
-        📱 Android APK • Fast & Secure
-      </div>
-
-      <a href="#" class="download-btn" id="downloadAppBtn">
-        ⬇️ Download Yaarwin App
-      </a>
-      <p style="font-size: 11px; color: #64748b; margin-top: 12px;">
-        *APK file. Enable "Unknown Sources" in settings.
-      </p>
+      <a href="#" class="download-btn" id="downloadAppBtn">⬇️ Download App</a>
     </div>
-
-    <!-- Right Side: Login / Register Links -->
     <div class="links-card">
-      <h2>🔐 Access Your Account</h2>
-      
-      <a href="#" class="link-btn" id="loginLink">
-        🚀 Login to Yaarwin
-      </a>
-      
-      <a href="#" class="link-btn secondary" id="registerLink">
-        📝 Register New Account
-      </a>
-      
-      <div class="coming-soon">
-        ⚡ Login and register links will be activated once available
-      </div>
+      <h2>🔐 Account Access</h2>
+      <a href="#" class="link-btn" id="loginLink">🚀 Login</a>
+      <a href="#" class="link-btn secondary" id="registerLink">📝 Register</a>
+      <div class="coming-soon">Links active once available</div>
     </div>
   </div>
-
-  <footer>
-    <p>© 2026 Yaarwin — India's Trusted Color Trading Platform | 
-      <a href="/">Home</a> | 
-      <a href="/yaarwin-game.html">Game Rules</a> | 
-      <a href="/yaarwin-strategy.html">Strategy</a>
-    </p>
-  </footer>
+  <footer><p>© 2026 Yaarwin | <a href="/">Home</a> | <a href="/yaarwin-game.html">Rules</a></p></footer>
 </div>
-
-<!-- Gift Code Box -->
-<div class="gift-code-box">
-  🎁 Today's Code: <strong id="footerDailyCode">YAARWIN-DAILY</strong>
-  <button id="copyCodeBtn">Copy</button>
-</div>
-
+<div class="gift-code-box">🎁 Code: <strong id="footerDailyCode">LOADING</strong> <button id="copyBtn">Copy</button></div>
 <script>
   (function() {
-    // Daily Gift Codes
-    var dailyCodes = {
-      '2026-04-30': 'YAARWIN-30APR',
-      '2026-05-01': 'YAARWIN-01MAY',
-      '2026-05-02': 'YAARWIN-02MAY',
-      '2026-05-03': 'YAARWIN-03MAY',
-      '2026-05-04': 'YAARWIN-04MAY',
-      '2026-05-05': 'YAARWIN-05MAY',
-      '2026-05-06': 'YAARWIN-06MAY',
-      '2026-05-07': 'YAARWIN-07MAY',
-      '2026-05-08': 'YAARWIN-08MAY',
-      '2026-05-09': 'YAARWIN-09MAY',
-      '2026-05-10': 'YAARWIN-10MAY'
-    };
-
-    var today = new Date().toISOString().split('T')[0];
-    var dailyCode = dailyCodes[today] || 'YAARWIN-DAILY';
-    
-    var codeElement = document.getElementById('footerDailyCode');
-    if (codeElement) {
-      codeElement.textContent = dailyCode;
-    }
-
-    // Copy button
-    var copyBtn = document.getElementById('copyCodeBtn');
-    if (copyBtn) {
-      copyBtn.addEventListener('click', function() {
-        navigator.clipboard.writeText(dailyCode);
-        alert('✅ Daily code copied: ' + dailyCode);
-      });
-    }
-
-    // Login button
-    var loginBtn = document.getElementById('loginLink');
-    if (loginBtn) {
-      loginBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        alert('🔐 Login page coming soon.\n\nCheck back or follow Telegram for updates.');
-      });
-    }
-
-    // Register button
-    var registerBtn = document.getElementById('registerLink');
-    if (registerBtn) {
-      registerBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        alert('📝 Registration coming soon.\n\nCheck back or follow Telegram for updates.');
-      });
-    }
-
-    // Download button
-    var downloadBtn = document.getElementById('downloadAppBtn');
-    if (downloadBtn) {
-      downloadBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        alert('📱 Yaarwin App coming soon.\n\nAPK download link will be available shortly.');
-      });
-    }
-
-    console.log('Yaarwin Login Page Loaded | Daily Code: ' + dailyCode);
+    const codes = {'2026-04-30':'YAARWIN-30APR','2026-05-01':'YAARWIN-01MAY'};
+    const today = new Date().toISOString().split('T')[0];
+    const code = codes[today] || 'YAARWIN-DAILY';
+    const codeSpan = document.getElementById('footerDailyCode');
+    if(codeSpan) codeSpan.textContent = code;
+    const copyBtn = document.getElementById('copyBtn');
+    if(copyBtn) copyBtn.onclick = () => { navigator.clipboard.writeText(code); alert('Copied: '+code); };
+    const loginBtn = document.getElementById('loginLink');
+    const registerBtn = document.getElementById('registerLink');
+    const downloadBtn = document.getElementById('downloadAppBtn');
+    if(loginBtn) loginBtn.onclick = (e) => { e.preventDefault(); alert('Login coming soon.'); };
+    if(registerBtn) registerBtn.onclick = (e) => { e.preventDefault(); alert('Register coming soon.'); };
+    if(downloadBtn) downloadBtn.onclick = (e) => { e.preventDefault(); alert('App coming soon.'); };
   })();
 </script>
-
 </body>
 </html>
