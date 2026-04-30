@@ -3,80 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <title>Yaarwin Login - Access Your Account</title>
-  <meta name="description" content="Login to your Yaarwin account. New user? Register for free. Download Yaarwin app.">
+  <meta name="description" content="Login to your Yaarwin account. New user? Register for free. Daily gift codes, instant withdrawals.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: Arial, sans-serif; background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); color: white; min-height: 100vh; padding: 20px; }
     .container { max-width: 1200px; margin: 0 auto; }
-    .header { text-align: center; padding: 20px 0; border-bottom: 1px solid #334155; margin-bottom: 40px; display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; }
-    .header img { height: 50px; width: auto; }
-    .header h1 { font-size: 36px; color: #22c55e; }
-    .main-grid { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
+    .header { text-align: center; padding: 20px 0; display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; }
+    .header img { height: 50px; }
+    .main-grid { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; margin-top: 30px; }
     .app-card, .links-card { flex: 1; min-width: 280px; background: #1e293b; border-radius: 24px; padding: 30px; text-align: center; border: 1px solid #334155; }
-    .app-icon { width: 80px; height: 80px; background: linear-gradient(135deg, #22c55e, #16a34a); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; overflow: hidden; }
+    .app-icon { width: 80px; height: 80px; background: linear-gradient(135deg, #22c55e, #16a34a); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
     .app-icon img { width: 50px; }
-    .app-card h2 { font-size: 28px; }
-    .game-list { background: #0f172a; border-radius: 16px; padding: 15px; margin: 20px 0; text-align: left; }
-    .game-list h3 { color: #fbbf24; margin-bottom: 10px; }
-    .game-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+    .game-tags { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 20px 0; }
     .game-tag { background: #334155; padding: 6px 12px; border-radius: 20px; font-size: 13px; }
-    .download-btn, .link-btn { display: block; width: 100%; padding: 14px; background: #22c55e; color: black; text-decoration: none; border-radius: 12px; font-weight: bold; font-size: 18px; margin-top: 10px; text-align: center; }
-    .link-btn.secondary { background: #3b82f6; }
-    .coming-soon { font-size: 12px; color: #64748b; margin-top: 20px; }
-    footer { margin-top: 50px; text-align: center; font-size: 12px; color: #64748b; padding: 20px; border-top: 1px solid #334155; }
-    footer a { color: #22c55e; }
-    .gift-code-box { position: fixed; bottom: 20px; left: 20px; background: #1e293b; border-left: 4px solid #22c55e; padding: 10px 15px; border-radius: 8px; font-size: 12px; z-index: 100; }
-    @media (max-width: 768px) { .header h1 { font-size: 28px; } }
+    .btn { display: block; width: 100%; padding: 14px; background: #22c55e; color: black; text-decoration: none; border-radius: 12px; font-weight: bold; font-size: 18px; margin: 10px 0; text-align: center; }
+    .btn-secondary { background: #3b82f6; }
+    footer { margin-top: 50px; text-align: center; font-size: 12px; color: #64748b; }
+    .gift-code-box { position: fixed; bottom: 20px; left: 20px; background: #1e293b; border-left: 4px solid #22c55e; padding: 10px 15px; border-radius: 8px; font-size: 12px; }
   </style>
 </head>
 <body>
 <div class="container">
   <div class="header">
-    <img src="/logo.png">
+    <img src="/logo.png" alt="Yaarwin Logo">
+    <h1>Yaarwin</h1>
   </div>
-  <div style="text-align: center; margin-bottom: 20px;">Color Trading Platform • Daily Gift Codes</div>
+
   <div class="main-grid">
     <div class="app-card">
-      <div class="app-icon"><img src="/logo.png" alt="Logo" onerror="this.parentElement.innerHTML='Y'"></div>
+      <div class="app-icon"><img src="/logo.png" alt="Logo"></div>
       <h2>Yaarwin App</h2>
-      <div class="game-list">
-        <h3>🎮 Games</h3>
-        <div class="game-tags">
-          <span class="game-tag">Color Trading</span>
-          <span class="game-tag">Big/Small</span>
-          <span class="game-tag">Numbers</span>
-        </div>
+      <div class="game-tags">
+        <span class="game-tag">Colour Prediction</span>
+        <span class="game-tag">Big/Small</span>
+        <span class="game-tag">Numbers 1-9</span>
       </div>
-      <a href="#" class="download-btn" id="downloadAppBtn">⬇️ Download App</a>
+      <a href="#" class="btn" id="downloadBtn">⬇️ Download App</a>
     </div>
+
     <div class="links-card">
       <h2>🔐 Account Access</h2>
-      <a href="#" class="link-btn" id="loginLink">🚀 Login</a>
-      <a href="#" class="link-btn secondary" id="registerLink">📝 Register</a>
-      <div class="coming-soon">Links active once available</div>
+      <a href="#" class="btn" id="loginBtn">🚀 Login to Yaarwin</a>
+      <a href="#" class="btn btn-secondary" id="registerBtn">📝 Register New Account</a>
+      <p style="margin-top: 20px; font-size: 12px; color: #64748b;">New user? Sign up in 2 minutes. First deposit bonus available.</p>
     </div>
   </div>
-  <footer><p>© 2026 Yaarwin | <a href="/">Home</a> | <a href="/yaarwin-game.html">Rules</a></p></footer>
+
+  <footer><p>© 2026 Yaarwin | <a href="/">Home</a> | <a href="/yaarwin-game.html">Rules</a> | <a href="/yaarwin-strategy.html">Strategy</a></p></footer>
 </div>
-<div class="gift-code-box">🎁 Code: <strong id="footerDailyCode">LOADING</strong> <button id="copyBtn">Copy</button></div>
+
+<div class="gift-code-box">🎁 Today's Code: <strong id="code">YAARWIN-DAILY</strong> <button id="copyBtn">Copy</button></div>
+
 <script>
-  (function() {
-    const codes = {'2026-04-30':'YAARWIN-30APR','2026-05-01':'YAARWIN-01MAY'};
-    const today = new Date().toISOString().split('T')[0];
-    const code = codes[today] || 'YAARWIN-DAILY';
-    const codeSpan = document.getElementById('footerDailyCode');
-    if(codeSpan) codeSpan.textContent = code;
-    const copyBtn = document.getElementById('copyBtn');
-    if(copyBtn) copyBtn.onclick = () => { navigator.clipboard.writeText(code); alert('Copied: '+code); };
-    const loginBtn = document.getElementById('loginLink');
-    const registerBtn = document.getElementById('registerLink');
-    const downloadBtn = document.getElementById('downloadAppBtn');
-    if(loginBtn) loginBtn.onclick = (e) => { e.preventDefault(); alert('Login coming soon.'); };
-    if(registerBtn) registerBtn.onclick = (e) => { e.preventDefault(); alert('Register coming soon.'); };
-    if(downloadBtn) downloadBtn.onclick = (e) => { e.preventDefault(); alert('App coming soon.'); };
-  })();
+  const codes = {'2026-04-30':'YAARWIN-30APR','2026-05-01':'YAARWIN-01MAY'};
+  const today = new Date().toISOString().split('T')[0];
+  const code = codes[today] || 'YAARWIN-DAILY';
+  document.getElementById('code').textContent = code;
+  document.getElementById('copyBtn').onclick = () => { navigator.clipboard.writeText(code); alert('Copied: '+code); };
+  
+  ['loginBtn', 'registerBtn', 'downloadBtn'].forEach(id => {
+    document.getElementById(id).addEventListener('click', (e) => {
+      e.preventDefault();
+      alert('Official Yaarwin link coming soon. Follow Telegram for updates!');
+    });
+  });
 </script>
 </body>
 </html>
