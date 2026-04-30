@@ -21,10 +21,23 @@
 
     header {
       padding: 20px;
-      font-size: 28px;
-      font-weight: bold;
       background: #111827;
       border-bottom: 1px solid #22c55e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    header img {
+      height: 40px;
+      width: auto;
+    }
+
+    header span {
+      font-size: 28px;
+      font-weight: bold;
+      color: white;
     }
 
     .container {
@@ -108,13 +121,14 @@
 </head>
 <body>
 
-<header>🎲 Yaarwin</header>
+<header>
+  <img src="/logo.png" alt="Yaarwin Logo">
+  <span>Yaarwin</span>
+</header>
 
 <div class="container">
 
-  <!-- ============================================ -->
-  <!-- SYSTEM 1: INSTANT VISIBLE GIFT CODE (Top of page) -->
-  <!-- ============================================ -->
+  <!-- System 1: Instant Visible Gift Code -->
   <div style="background: linear-gradient(135deg, #1e293b, #0f172a); border: 2px solid #22c55e; border-radius: 12px; padding: 20px; margin: 20px auto; max-width: 500px; text-align: center; box-shadow: 0 0 15px rgba(34,197,94,0.2);">
     <p style="color: #fbbf24; font-size: 14px; margin: 0 0 5px 0;">🎁 TODAY'S FREE GIFT CODE</p>
     <p style="color: white; font-size: 32px; font-weight: bold; letter-spacing: 3px; margin: 10px 0; font-family: monospace;" id="dailyCode">LOADING...</p>
@@ -122,19 +136,16 @@
     <button onclick="copyDailyCode()" style="margin-top: 10px; padding: 8px 20px; background: #22c55e; color: black; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 14px;">📋 Copy Code</button>
   </div>
 
-  <!-- Main Hero Section -->
   <h1>Make Smarter Predictions Without the Confusion</h1>
   <p>Yaarwin gives you simple tools and step-by-step strategies — even if you're a beginner. No random guessing.</p>
 
   <a href="/yaarwin-login.html" class="btn">🎮 Get Started Free</a>
 
-  <!-- What is Yaarwin Section -->
   <div class="section">
     <h2>What is Yaarwin?</h2>
     <p>Yaarwin is a color trading platform where you predict colors (Red, Green, Violet), sizes (Big/Small), or numbers (1-9) and win based on accuracy. Simple, fast, and beginner-friendly.</p>
   </div>
 
-  <!-- Payout Quick Reference -->
   <div class="section">
     <h2>💰 Winning Payouts</h2>
     <ul style="color: #cbd5f5; margin-left: 20px;">
@@ -145,7 +156,6 @@
     </ul>
   </div>
 
-  <!-- Navigation Links -->
   <nav>
     <a href="/what-is-yaarwin.html">📖 What is Yaarwin</a> |
     <a href="/how-to-use-yaarwin.html">📚 How to Use</a> |
@@ -162,9 +172,7 @@
   <p>© 2026 Yaarwin. All rights reserved.</p>
 </footer>
 
-<!-- ============================================ -->
-<!-- SYSTEM 2: HIDDEN TREASURE CODE (Randomly appears) -->
-<!-- ============================================ -->
+<!-- System 2: Hidden Treasure Code -->
 <div id="treasureBox" style="display: none; background: linear-gradient(135deg, #1e293b, #0f172a); border: 2px solid #fbbf24; border-radius: 12px; padding: 20px; margin: 20px auto; max-width: 450px; text-align: center; position: fixed; bottom: 20px; right: 20px; z-index: 1000; box-shadow: 0 0 20px rgba(251,191,36,0.3); animation: fadeIn 0.5s;">
   <p style="color: #fbbf24; font-size: 14px; margin: 0 0 5px 0;">✨ TREASURE FOUND! ✨</p>
   <p style="color: white; font-size: 22px; font-weight: bold; letter-spacing: 2px; margin: 5px 0; font-family: monospace;" id="treasureCode">YAARWIN-TREASURE</p>
@@ -174,9 +182,7 @@
 </div>
 
 <script>
-  // ============================================
-  // SYSTEM 1: DAILY VISIBLE GIFT CODE
-  // ============================================
+  // Daily Gift Codes
   const dailyCodes = {
     '2026-04-30': 'YAARWIN-30APR',
     '2026-05-01': 'YAARWIN-01MAY',
@@ -197,7 +203,6 @@
   if (dailyCodes[today]) {
     dailyCodeElement.textContent = dailyCodes[today];
   } else {
-    // Fallback code for future dates
     dailyCodeElement.textContent = 'YAARWIN-DAILY';
   }
 
@@ -207,41 +212,28 @@
     alert('✅ Daily code copied: ' + code);
   }
 
-  // ============================================
-  // SYSTEM 2: HIDDEN TREASURE CODE
-  // ============================================
+  // Treasure Code System
   const treasureCodes = [
-    'GOLD-500',
-    'TREASURE-1K',
-    'YAARWIN-777',
-    'BONUS-2X',
-    'LUCKY-GOLD',
-    'VIP-2026',
-    'HIDDEN-CHEST',
-    'RAINBOW-100'
+    'GOLD-500', 'TREASURE-1K', 'YAARWIN-777', 'BONUS-2X',
+    'LUCKY-GOLD', 'VIP-2026', 'HIDDEN-CHEST', 'RAINBOW-100'
   ];
 
-  // Randomly pick one treasure code
   const randomTreasureCode = treasureCodes[Math.floor(Math.random() * treasureCodes.length)];
   const treasureCodeElement = document.getElementById('treasureCode');
   if (treasureCodeElement) {
     treasureCodeElement.textContent = randomTreasureCode;
   }
 
-  // Check if user already saw a treasure on this device (once per session)
   const hasSeenTreasure = sessionStorage.getItem('treasureSeen');
   
-  if (!hasSeenTreasure && Math.random() < 0.25) { // 25% chance to appear
-    // Random delay between 5 and 15 seconds
+  if (!hasSeenTreasure && Math.random() < 0.25) {
     const delay = Math.random() * 10000 + 5000;
     setTimeout(() => {
       const treasureBox = document.getElementById('treasureBox');
       if (treasureBox) {
         treasureBox.style.display = 'block';
         sessionStorage.setItem('treasureSeen', 'true');
-        
-        // Optional: Track in console
-        console.log('🎁 Treasure code revealed on this page:', randomTreasureCode);
+        console.log('🎁 Treasure code revealed:', randomTreasureCode);
       }
     }, delay);
   }
@@ -257,10 +249,7 @@
     treasureBox.style.display = 'none';
   }
 
-  // ============================================
-  // BONUS: Show a small console message (just for fun)
-  // ============================================
-  console.log('🎲 Yaarwin is ready! Daily gift code: ' + dailyCodeElement.textContent);
+  console.log('🎲 Yaarwin is ready! Daily code: ' + dailyCodeElement.textContent);
 </script>
 
 </body>
