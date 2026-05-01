@@ -48,6 +48,7 @@
 
 <div class="container">
 
+  <!-- Gift Code Box -->
   <div class="gift-box">
     <p style="color: #fbbf24; font-size: 14px;">🎁 TODAY'S GIFT CODE</p>
     <p style="color: white; font-size: 32px; font-weight: bold; letter-spacing: 3px; font-family: monospace;" id="dailyCode">YAARWIN-DAILY</p>
@@ -60,6 +61,7 @@
 
   <a href="#" class="btn" id="registerBtn">🎮 Register & Play Now →</a>
 
+  <!-- Trust Badges -->
   <div style="margin: 30px 0;">
     <span class="trust-badge">✅ 50,000+ Active Players</span>
     <span class="trust-badge">✅ ₹10Cr+ Paid Out</span>
@@ -68,6 +70,32 @@
     <span class="trust-badge">✅ UPI & Bank Transfer</span>
   </div>
 
+  <div class="section">
+    <h2>What is Yaarwin?</h2>
+    <p>Yaarwin is an online color trading platform where players predict colors (Red, Green, Violet), sizes (Big/Small), or numbers (1-9). With over 50,000+ active users and daily payouts exceeding ₹10 crore, Yaarwin is India's most trusted color trading platform.</p>
+  </div>
+
+  <div class="section">
+    <h2>How to Play</h2>
+    <div class="grid-2">
+      <div class="card"><strong>🎨 Step 1:</strong> Choose your prediction (Red, Green, Violet, Big, Small, or Number 1-9)</div>
+      <div class="card"><strong>💰 Step 2:</strong> Set your bet amount (minimum ₹10)</div>
+      <div class="card"><strong>⏱️ Step 3:</strong> Wait for result (rounds every 1-3 minutes)</div>
+      <div class="card"><strong>🏆 Step 4:</strong> Win and withdraw instantly</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Game Options</h2>
+    <div class="grid-2">
+      <div class="card"><strong>🔴 Red / Green / Violet</strong><br>Classic colour prediction</div>
+      <div class="card"><strong>📊 Big / Small</strong><br>Size-based betting</div>
+      <div class="card"><strong>🔢 Numbers 1-9</strong><br>High-risk, high-reward</div>
+      <div class="card"><strong>🎁 Daily Bonus</strong><br>Free gift codes every day</div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
   <nav>
     <a href="/">Home</a> |
     <a href="/yaarwin-game.html">Game Rules</a> |
@@ -80,69 +108,127 @@
 
 <footer>
   <p><strong>Play Responsibly</strong> — Set deposit limits, take breaks, and never chase losses. Must be 18+.</p>
-  <p>© 2026 Yaarwin. All rights reserved.</p>
+  <p>© 2026 Yaarwin. All rights reserved. | <a href="/privacy.html">Privacy Policy</a> | <a href="/terms.html">Terms</a></p>
 </footer>
 
 <script>
-  // Daily gift code
-  const codes = {'2026-05-01':'YAARWIN-01MAY','2026-05-02':'YAARWIN-02MAY','2026-05-03':'YAARWIN-03MAY'};
+  // ============================================
+  // DAILY GIFT CODE
+  // ============================================
+  const codes = {
+    '2026-05-01': 'YAARWIN-01MAY',
+    '2026-05-02': 'YAARWIN-02MAY', 
+    '2026-05-03': 'YAARWIN-03MAY',
+    '2026-05-04': 'YAARWIN-04MAY',
+    '2026-05-05': 'YAARWIN-05MAY'
+  };
   const today = new Date().toISOString().split('T')[0];
   const dailyCode = codes[today] || 'YAARWIN-DAILY';
-  document.getElementById('dailyCode').textContent = dailyCode;
-  function copyCode() { navigator.clipboard.writeText(dailyCode); alert('✅ Code copied: ' + dailyCode); }
+  const codeElement = document.getElementById('dailyCode');
+  if (codeElement) codeElement.textContent = dailyCode;
+  
+  window.copyCode = function() {
+    navigator.clipboard.writeText(dailyCode);
+    alert('✅ Code copied: ' + dailyCode);
+  };
 
   // ============================================
-  // REFERRAL TRACKING SYSTEM (WITH YOUR DEFAULT CODE)
+  // REFERRAL TRACKING SYSTEM (FULLY FIXED)
   // ============================================
-  
-  const urlParams = new URLSearchParams(window.location.search);
-  let referrer = urlParams.get('ref');
-  
-  if (!referrer) {
-    referrer = localStorage.getItem('referrer');
-  } else {
-    localStorage.setItem('referrer', referrer);
-  }
-  
-  // YOUR DEFAULT INVITATION CODE (used when no agent referrer)
-  const YOUR_INVITATION_CODE = '22358100020';
-  
-  // Agent invitation codes (replace with actual codes)
-  const invitationCodes = {
-    'AGENTA': '22358100021',   // Replace with Agent A's actual code
-    'AGENTB': '22358100022',   // Replace with Agent B's actual code
-    'AGENTC': '22358100023'    // Replace with Agent C's actual code
-  };
-  
-  let invitationCode = YOUR_INVITATION_CODE;
-  
-  if (referrer && invitationCodes[referrer]) {
-    invitationCode = invitationCodes[referrer];
-  } else if (referrer && !invitationCodes[referrer]) {
-    console.warn(`⚠️ Unknown referrer: ${referrer} — using default code`);
-  }
-  
-  const registerUrl = `https://yaarwin.app/#/register?invitationCode=${invitationCode}`;
-  
-  function updateRegisterButtons() {
-    const btns = document.querySelectorAll('a, button');
-    btns.forEach(btn => {
-      const text = btn.innerText.toLowerCase();
-      const href = btn.getAttribute('href') || '';
-      if (text.includes('register') || text.includes('sign up') || href.includes('register') || btn.id === 'registerBtn') {
-        btn.setAttribute('href', registerUrl);
-        btn.setAttribute('target', '_blank');
-      }
-    });
-    if (referrer && invitationCodes[referrer]) {
-      console.log(`✅ ${referrer} → Code: ${invitationCode}`);
+  (function() {
+    // Get referrer from URL parameter 'ref'
+    const urlParams = new URLSearchParams(window.location.search);
+    let referrer = urlParams.get('ref');
+    
+    // If no ref in URL, check if previously stored in browser
+    if (!referrer) {
+      referrer = localStorage.getItem('yaarwin_referrer');
     } else {
-      console.log(`✅ No referrer → Your code: ${invitationCode}`);
+      // Save for future pages
+      localStorage.setItem('yaarwin_referrer', referrer);
     }
-  }
-  
-  document.addEventListener('DOMContentLoaded', updateRegisterButtons);
-  setTimeout(updateRegisterButtons, 500);
+    
+    // YOUR personal invitation code (default when no agent referrer)
+    const YOUR_INVITATION_CODE = '22358100020';
+    
+    // Agent mapping - UPDATE THESE WITH YOUR AGENTS' ACTUAL CODES
+    const invitationCodes = {
+      'AGENTA': '22358100020',   // Replace with Agent A's real invitation code
+      'AGENTB': '22358100021',   // Replace with Agent B's real invitation code
+      'AGENTC': '22358100022',   // Replace with Agent C's real invitation code
+      'AGENTD': '22358100023',   // Add more agents here
+      'AGENTE': '22358100024'    // Add more agents here
+    };
+    
+    // Determine which invitation code to use
+    let finalInvitationCode = YOUR_INVITATION_CODE;
+    let matchedAgent = null;
+    let isDefaultCode = true;
+    
+    if (referrer && invitationCodes[referrer]) {
+      finalInvitationCode = invitationCodes[referrer];
+      matchedAgent = referrer;
+      isDefaultCode = false;
+    } else if (referrer && !invitationCodes[referrer]) {
+      console.warn('⚠️ Unknown referrer: "' + referrer + '" — using default code');
+    }
+    
+    // Build the official registration URL
+    const registerUrl = 'https://yaarwin.app/#/register?invitationCode=' + finalInvitationCode;
+    const loginUrl = 'https://yaarwin.app/#/login';
+    
+    // Update ALL register/login buttons on the page
+    function updateAllButtons() {
+      const allElements = document.querySelectorAll('a, button, .btn, .register-btn, .login-btn');
+      let registerButtonCount = 0;
+      let loginButtonCount = 0;
+      
+      allElements.forEach(function(el) {
+        const text = (el.innerText || el.textContent || '').toLowerCase();
+        const href = (el.getAttribute('href') || '').toLowerCase();
+        const id = el.id || '';
+        const className = (el.className || '').toLowerCase();
+        
+        // Check for register buttons
+        if (text.includes('register') || text.includes('sign up') || 
+            text.includes('create account') || href.includes('register') ||
+            id === 'registerBtn' || className.includes('register')) {
+          el.setAttribute('href', registerUrl);
+          el.setAttribute('target', '_blank');
+          registerButtonCount++;
+        }
+        
+        // Check for login buttons
+        if (text.includes('login') || text.includes('sign in') || 
+            href.includes('login') || id === 'loginBtn' || className.includes('login')) {
+          el.setAttribute('href', loginUrl);
+          el.setAttribute('target', '_blank');
+          loginButtonCount++;
+        }
+      });
+      
+      // Log status to console for debugging
+      if (matchedAgent) {
+        console.log('✅ Referral ACTIVE: ' + matchedAgent + ' → Invitation Code: ' + finalInvitationCode);
+      } else if (referrer) {
+        console.log('⚠️ Unknown referrer "' + referrer + '" → Using YOUR default code: ' + finalInvitationCode);
+      } else {
+        console.log('✅ No referrer detected → Using YOUR default invitation code: ' + finalInvitationCode);
+      }
+      console.log('📌 Updated ' + registerButtonCount + ' register buttons | ' + loginButtonCount + ' login buttons');
+    }
+    
+    // Run when page is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', updateAllButtons);
+    } else {
+      updateAllButtons();
+    }
+    
+    // Also run after a short delay (for dynamically loaded content)
+    setTimeout(updateAllButtons, 500);
+    setTimeout(updateAllButtons, 1000);
+  })();
 </script>
 
 </body>
