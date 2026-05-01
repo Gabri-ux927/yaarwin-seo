@@ -2,12 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Yaarwin - Color Trading Platform | Play Online & Earn Daily</title>
-  <meta name="description" content="Yaarwin is India's trusted color trading platform. Play colour prediction, big/small, numbers 1-9. Daily gift codes, instant withdrawals, 24/7 support.">
-  <meta name="keywords" content="yaarwin, color trading, colour prediction, yaarwin game, yaarwin login, yaarwin app, big small game">
+  <title>Yaarwin - Color Trading Platform | Play Online</title>
+  <meta name="description" content="Yaarwin is a color trading platform. Learn game rules, download app, and play. Daily gift codes for community members.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Yaarwin">
-  <meta name="revisit-after" content="1 days">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W8117DXPCG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-W8117DXPCG');
+  </script>
+  
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: Arial, sans-serif; background: #0f172a; color: white; text-align: center; }
@@ -28,21 +36,18 @@
     nav a { color: #22c55e; text-decoration: none; margin: 0 10px; display: inline-block; padding: 5px 0; }
     footer { margin-top: 40px; padding: 20px; font-size: 12px; color: #64748b; border-top: 1px solid #1e293b; }
     .gift-box { background: linear-gradient(135deg, #1e293b, #0f172a); border: 2px solid #22c55e; border-radius: 12px; padding: 20px; margin: 20px auto; max-width: 500px; text-align: center; }
-    .faq-item { margin-bottom: 20px; border-bottom: 1px solid #334155; padding-bottom: 15px; }
-    .faq-question { color: #22c55e; font-weight: bold; margin-bottom: 8px; cursor: pointer; }
-    .faq-answer { color: #cbd5f5; font-size: 14px; }
     @media (max-width: 768px) { h1 { font-size: 28px; } }
   </style>
 </head>
 <body>
 
 <header>
-  <img src="/logo.png">
+  <img src="/logo.png" alt="Yaarwin Logo">
+  <span>Yaarwin</span>
 </header>
 
 <div class="container">
 
-  <!-- Gift Code Box -->
   <div class="gift-box">
     <p style="color: #fbbf24; font-size: 14px;">🎁 TODAY'S GIFT CODE</p>
     <p style="color: white; font-size: 32px; font-weight: bold; letter-spacing: 3px; font-family: monospace;" id="dailyCode">YAARWIN-DAILY</p>
@@ -53,9 +58,8 @@
   <h1>Yaarwin — India's Fastest Growing Color Trading Platform</h1>
   <p>Play colour prediction, big/small, numbers 1-9. Instant withdrawals, daily bonuses, and 24/7 support.</p>
 
-  <a href="#" class="btn" id="playNowBtn">🎮 Play on Yaarwin Now →</a>
+  <a href="#" class="btn" id="registerBtn">🎮 Register & Play Now →</a>
 
-  <!-- Trust Badges -->
   <div style="margin: 30px 0;">
     <span class="trust-badge">✅ 50,000+ Active Players</span>
     <span class="trust-badge">✅ ₹10Cr+ Paid Out</span>
@@ -64,94 +68,82 @@
     <span class="trust-badge">✅ UPI & Bank Transfer</span>
   </div>
 
-  <!-- What is Yaarwin -->
-  <div class="section">
-    <h2>What is Yaarwin?</h2>
-    <p>Yaarwin is an online color trading platform where players predict colors (Red, Green, Violet), sizes (Big/Small), or numbers (1-9). Founded with the mission to provide fair, transparent, and exciting gaming to Indian players, Yaarwin has grown to serve over 50,000+ active users with daily payouts exceeding ₹10 crore.</p>
-    <p>Whether you're a beginner looking for simple colour prediction or an experienced player exploring number strategies, Yaarwin offers a seamless experience across mobile and desktop.</p>
-  </div>
-
-  <!-- How to Play -->
-  <div class="section">
-    <h2>How to Play Yaarwin Game</h2>
-    <div class="grid-2">
-      <div class="card"><strong>🎨 Step 1:</strong> Choose your prediction (Red, Green, Violet, Big, Small, or Number 1-9)</div>
-      <div class="card"><strong>💰 Step 2:</strong> Set your bet amount (minimum ₹10)</div>
-      <div class="card"><strong>⏱️ Step 3:</strong> Wait for result (rounds every 1-3 minutes)</div>
-      <div class="card"><strong>🏆 Step 4:</strong> Win and withdraw instantly</div>
-    </div>
-  </div>
-
-  <!-- Game Options -->
-  <div class="section">
-    <h2>Game Options Available</h2>
-    <div class="grid-2">
-      <div class="card"><strong>🔴 Red / Green / Violet</strong><br>Classic colour prediction</div>
-      <div class="card"><strong>📊 Big / Small</strong><br>Size-based betting</div>
-      <div class="card"><strong>🔢 Numbers 1-9</strong><br>High-risk, high-reward</div>
-      <div class="card"><strong>🎁 Daily Bonus</strong><br>Free gift codes every day</div>
-    </div>
-  </div>
-
-  <!-- FAQ Section -->
-  <div class="section">
-    <h2>Frequently Asked Questions</h2>
-    
-    <div class="faq-item">
-      <div class="faq-question">► How do I register on Yaarwin?</div>
-      <div class="faq-answer">Click the "Play Now" button above, fill in your mobile number, create a password, and verify OTP. Registration takes less than 2 minutes.</div>
-    </div>
-    
-    <div class="faq-item">
-      <div class="faq-question">► What is minimum withdrawal?</div>
-      <div class="faq-answer">Minimum withdrawal is ₹110. Most withdrawals are processed within 5 minutes to UPI or bank account.</div>
-    </div>
-    
-    <div class="faq-item">
-      <div class="faq-question">► Is Yaarwin legal in India?</div>
-      <div class="faq-answer">Yaarwin operates as a skill-based gaming platform. Users must be 18+ and check local laws before playing.</div>
-    </div>
-    
-    <div class="faq-item">
-      <div class="faq-question">► How do I get daily gift codes?</div>
-      <div class="faq-answer">Daily gift codes are posted on our Telegram channel. Join for free codes every morning.</div>
-    </div>
-    
-    <div class="faq-item">
-      <div class="faq-question">► What payment methods are accepted?</div>
-      <div class="faq-answer">UPI (Google Pay, PhonePe, Paytm), bank transfer, and direct deposits. No fees on withdrawals.</div>
-    </div>
-  </div>
-
-  <!-- Navigation -->
   <nav>
     <a href="/">Home</a> |
     <a href="/yaarwin-game.html">Game Rules</a> |
     <a href="/yaarwin-strategy.html">Strategy Guide</a> |
     <a href="/yaarwin-app.html">Download App</a> |
     <a href="/yaarwin-login.html">Login</a> |
-    <a href="/how-to-register.html">Register</a> |
-    <a href="/yaarwin-vs-others.html">Comparison</a>
+    <a href="/how-to-register.html">Register Guide</a>
   </nav>
 </div>
 
 <footer>
-  <p><strong>Play Responsibly</strong> — Yaarwin encourages responsible gaming. Set deposit limits, take breaks, and never chase losses. Must be 18+ to play.</p>
-  <p>© 2026 Yaarwin. All rights reserved. | <a href="/privacy.html">Privacy Policy</a> | <a href="/terms.html">Terms of Service</a></p>
+  <p><strong>Play Responsibly</strong> — Set deposit limits, take breaks, and never chase losses. Must be 18+.</p>
+  <p>© 2026 Yaarwin. All rights reserved.</p>
 </footer>
 
 <script>
-  const codes = {'2026-04-30':'YAARWIN-30APR','2026-05-01':'YAARWIN-01MAY','2026-05-02':'YAARWIN-02MAY'};
+  // Daily gift code
+  const codes = {'2026-05-01':'YAARWIN-01MAY','2026-05-02':'YAARWIN-02MAY','2026-05-03':'YAARWIN-03MAY'};
   const today = new Date().toISOString().split('T')[0];
-  const code = codes[today] || 'YAARWIN-DAILY';
-  document.getElementById('dailyCode').textContent = code;
+  const dailyCode = codes[today] || 'YAARWIN-DAILY';
+  document.getElementById('dailyCode').textContent = dailyCode;
+  function copyCode() { navigator.clipboard.writeText(dailyCode); alert('✅ Code copied: ' + dailyCode); }
+
+  // ============================================
+  // REFERRAL TRACKING SYSTEM (WITH YOUR DEFAULT CODE)
+  // ============================================
   
-  function copyCode() { navigator.clipboard.writeText(code); alert('✅ Code copied: ' + code); }
+  const urlParams = new URLSearchParams(window.location.search);
+  let referrer = urlParams.get('ref');
   
-  document.getElementById('playNowBtn').addEventListener('click', (e) => {
-    e.preventDefault();
-    alert('🚀 Official Yaarwin link coming soon. Check Telegram for updates.');
-  });
+  if (!referrer) {
+    referrer = localStorage.getItem('referrer');
+  } else {
+    localStorage.setItem('referrer', referrer);
+  }
+  
+  // YOUR DEFAULT INVITATION CODE (used when no agent referrer)
+  const YOUR_INVITATION_CODE = '22358100020';
+  
+  // Agent invitation codes (replace with actual codes)
+  const invitationCodes = {
+    'AGENTA': '22358100021',   // Replace with Agent A's actual code
+    'AGENTB': '22358100022',   // Replace with Agent B's actual code
+    'AGENTC': '22358100023'    // Replace with Agent C's actual code
+  };
+  
+  let invitationCode = YOUR_INVITATION_CODE;
+  
+  if (referrer && invitationCodes[referrer]) {
+    invitationCode = invitationCodes[referrer];
+  } else if (referrer && !invitationCodes[referrer]) {
+    console.warn(`⚠️ Unknown referrer: ${referrer} — using default code`);
+  }
+  
+  const registerUrl = `https://yaarwin.app/#/register?invitationCode=${invitationCode}`;
+  
+  function updateRegisterButtons() {
+    const btns = document.querySelectorAll('a, button');
+    btns.forEach(btn => {
+      const text = btn.innerText.toLowerCase();
+      const href = btn.getAttribute('href') || '';
+      if (text.includes('register') || text.includes('sign up') || href.includes('register') || btn.id === 'registerBtn') {
+        btn.setAttribute('href', registerUrl);
+        btn.setAttribute('target', '_blank');
+      }
+    });
+    if (referrer && invitationCodes[referrer]) {
+      console.log(`✅ ${referrer} → Code: ${invitationCode}`);
+    } else {
+      console.log(`✅ No referrer → Your code: ${invitationCode}`);
+    }
+  }
+  
+  document.addEventListener('DOMContentLoaded', updateRegisterButtons);
+  setTimeout(updateRegisterButtons, 500);
 </script>
+
 </body>
 </html>
