@@ -3,51 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <title>Yaarwin Game Rules - Simple Guide with Examples</title>
-  <meta name="description" content="Yaarwin game rules made simple. See payout examples, illegal bets, and allowed combinations.">
+  <meta name="description" content="Yaarwin game rules made simple. See payout examples, illegal bets, and allowed combinations with easy-to-understand visuals.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Segoe UI', Arial, sans-serif; background: #0f172a; color: white; padding: 20px; }
     .container { max-width: 1000px; margin: auto; }
+    
+    /* Header */
     .header { text-align: center; margin-bottom: 30px; }
     .header img { height: 50px; }
     .header h1 { color: #22c55e; font-size: 32px; margin-top: 10px; }
+    .header p { color: #94a3b8; }
+    
+    /* Card Grid */
     .grid-2 { display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 30px; }
     .card { flex: 1; min-width: 250px; background: #1e293b; border-radius: 20px; padding: 20px; transition: transform 0.2s; }
     .card:hover { transform: translateY(-5px); }
     .card-icon { font-size: 48px; margin-bottom: 15px; }
     .card h3 { color: #fbbf24; margin-bottom: 10px; }
     .card p { color: #cbd5f5; font-size: 14px; }
+    
+    /* Payout Grid */
     .payout-grid { display: flex; flex-wrap: wrap; gap: 15px; margin: 20px 0; }
     .payout-item { flex: 1; min-width: 120px; background: #0f172a; border-radius: 16px; padding: 15px; text-align: center; border: 1px solid #334155; }
     .payout-multiplier { font-size: 28px; font-weight: bold; color: #22c55e; }
     .payout-label { font-size: 14px; color: #94a3b8; margin-top: 5px; }
-    .illegal-grid, .allowed-grid { display: flex; flex-wrap: wrap; gap: 15px; margin: 20px 0; }
+    
+    /* Illegal Bets (Red Cards) */
+    .illegal-grid { display: flex; flex-wrap: wrap; gap: 15px; margin: 20px 0; }
     .illegal-card { flex: 1; min-width: 180px; background: #7f1d1d; border-radius: 16px; padding: 15px; text-align: center; border-left: 4px solid #ef4444; }
+    .illegal-card .card-icon { font-size: 32px; margin-bottom: 10px; }
+    .illegal-card h4 { color: #fca5a5; margin-bottom: 8px; }
+    .illegal-card p { color: #fecaca; font-size: 12px; }
+    
+    /* Allowed Bets (Green Cards) */
+    .allowed-grid { display: flex; flex-wrap: wrap; gap: 15px; margin: 20px 0; }
     .allowed-card { flex: 1; min-width: 180px; background: #064e3b; border-radius: 16px; padding: 15px; text-align: center; border-left: 4px solid #22c55e; }
+    .allowed-card .card-icon { font-size: 32px; margin-bottom: 10px; }
+    .allowed-card h4 { color: #86efac; margin-bottom: 8px; }
+    .allowed-card p { color: #bbf7d0; font-size: 12px; }
+    
+    /* Example Box */
     .example-box { background: linear-gradient(135deg, #1e293b, #0f172a); border-radius: 20px; padding: 25px; margin: 30px 0; text-align: center; border: 1px solid #22c55e; }
-    .btn { display: inline-block; margin-top: 20px; padding: 14px 28px; background: #22c55e; color: black; text-decoration: none; border-radius: 12px; font-weight: bold; font-size: 18px; }
+    
+    /* Buttons */
+    .btn { display: inline-block; margin-top: 20px; padding: 14px 28px; background: #22c55e; color: black; text-decoration: none; border-radius: 12px; font-weight: bold; font-size: 18px; transition: background 0.2s; }
     .btn:hover { background: #16a34a; }
-    nav { margin-top: 40px; text-align: center; padding: 20px; border-top: 1px solid #334155; }
-    nav a { color: #22c55e; margin: 0 10px; text-decoration: none; }
-    @media (max-width: 768px) { .header h1 { font-size: 24px; } }
+    
+    /* Navigation & Internal Links */
+    nav { margin-top: 40px; padding: 20px; background: #111827; border-radius: 12px; text-align: center; }
+    nav a { color: #22c55e; text-decoration: none; margin: 0 10px; display: inline-block; padding: 5px 0; }
+    nav a:hover { text-decoration: underline; }
+    
+    .internal-links { background: #1e293b; border-radius: 16px; padding: 20px; margin: 30px 0; text-align: center; border: 1px solid #334155; }
+    .internal-links h3 { color: #fbbf24; margin-bottom: 15px; }
+    .internal-links a { color: #22c55e; text-decoration: none; margin: 0 12px; display: inline-block; }
+    .internal-links a:hover { text-decoration: underline; }
+    
+    footer { margin-top: 30px; text-align: center; font-size: 12px; color: #64748b; padding: 20px; border-top: 1px solid #334155; }
+    
+    @media (max-width: 768px) {
+      .header h1 { font-size: 24px; }
+      .internal-links a { display: block; margin: 8px 0; }
+    }
   </style>
 </head>
 <body>
 
 <div class="container">
+  <!-- Header with Logo -->
   <div class="header">
     <img src="/logo.png" alt="Yaarwin Logo">
     <h1>Yaarwin Game Rules — Simple Edition</h1>
-    <p style="color: #94a3b8;">No complicated jargon. Just what you need to know.</p>
+    <p>No complicated jargon. Just what you need to know before playing.</p>
   </div>
 
+  <!-- What Can You Bet On? -->
   <div class="grid-2">
-    <div class="card"><div class="card-icon">🎨</div><h3>Colors</h3><p>🔴 Red • 🟢 Green • 🟣 Violet</p></div>
-    <div class="card"><div class="card-icon">📊</div><h3>Sizes</h3><p>🔲 Big • ◽ Small</p></div>
-    <div class="card"><div class="card-icon">🔢</div><h3>Numbers</h3><p>1 2 3 4 5 6 7 8 9</p></div>
+    <div class="card">
+      <div class="card-icon">🎨</div>
+      <h3>Colors</h3>
+      <p>🔴 Red • 🟢 Green • 🟣 Violet</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📊</div>
+      <h3>Sizes</h3>
+      <p>🔲 Big • ◽ Small</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🔢</div>
+      <h3>Numbers</h3>
+      <p>1 2 3 4 5 6 7 8 9</p>
+    </div>
   </div>
 
+  <!-- How Much You Win -->
   <h2 style="color: #fbbf24; margin: 30px 0 15px;">💰 How Much You Win</h2>
   <div class="payout-grid">
     <div class="payout-item"><span class="payout-multiplier">2x</span><div class="payout-label">Big / Small</div></div>
@@ -56,6 +107,7 @@
     <div class="payout-item"><span class="payout-multiplier">9x</span><div class="payout-label">Numbers 1-9</div></div>
   </div>
 
+  <!-- ILLEGAL BETS -->
   <h2 style="color: #ef4444; margin: 30px 0 15px;">🚫 DON'T DO THESE (Illegal Bets)</h2>
   <div class="illegal-grid">
     <div class="illegal-card"><div class="card-icon">❌</div><h4>Big + Small</h4><p>Same period = rejected</p></div>
@@ -63,6 +115,7 @@
     <div class="illegal-card"><div class="card-icon">❌</div><h4>All answers</h4><p>Betting everything = banned</p></div>
   </div>
 
+  <!-- ALLOWED BETS -->
   <h2 style="color: #22c55e; margin: 30px 0 15px;">✅ YOU CAN DO THESE</h2>
   <div class="allowed-grid">
     <div class="allowed-card"><div class="card-icon">✅</div><h4>Single Color</h4><p>Red, Green, or Violet</p></div>
@@ -71,21 +124,46 @@
     <div class="allowed-card"><div class="card-icon">✅</div><h4>Color + Number</h4><p>Example: Red + 5</p></div>
   </div>
 
+  <!-- Example Box -->
   <div class="example-box">
     <p style="font-size: 18px;">🎯 <strong>Example Allowed Bet</strong></p>
     <p style="color: #cbd5f5; margin: 10px 0;">You bet on <span style="color: #22c55e;">🔴 Red + Number 7</span></p>
-    <p style="color: #cbd5f5;">Result shows Red → You win 3x</p>
-    <p style="color: #cbd5f5;">Result shows 7 → You win 9x</p>
-    <p style="color: #fbbf24; margin-top: 10px;">You can win both!</p>
+    <p style="color: #cbd5f5;">Result shows Red → You win 3x your bet</p>
+    <p style="color: #cbd5f5;">Result shows 7 → You win 9x your bet</p>
+    <p style="color: #fbbf24; margin-top: 10px;">You can win both in the same round!</p>
   </div>
 
+  <!-- Call to Action Button -->
   <div style="text-align: center;">
     <a href="#" id="registerBtn" class="btn">🎮 Ready to Play? Register Now →</a>
   </div>
 
+  <!-- INTERNAL LINKS SECTION - Helps Google find your other pages -->
+  <div class="internal-links">
+    <h3>📚 More Yaarwin Guides</h3>
+    <p style="margin-bottom: 15px; color: #cbd5f5; font-size: 14px;">Learn more about earning and playing on Yaarwin:</p>
+    <a href="/earn-by-playing.html">💰 How to Earn by Playing</a> |
+    <a href="/become-agent.html">🤝 Become a Yaarwin Agent</a> |
+    <a href="/yaarwin-login.html">🔐 Login to Your Account</a> |
+    <a href="/yaarwin-strategy.html">🎯 Advanced Strategy Guide</a> |
+    <a href="/yaarwin-app.html">📱 Download Yaarwin App</a> |
+    <a href="/how-to-register.html">📝 How to Register</a>
+  </div>
+
+  <!-- Navigation -->
   <nav>
-    <a href="/">Home</a> | <a href="/earn-by-playing.html">Earn by Playing</a> | <a href="/become-agent.html">Become Agent</a> | <a href="/yaarwin-login.html">Login</a>
+    <a href="/">Home</a> |
+    <a href="/yaarwin-game.html">Game Rules</a> |
+    <a href="/yaarwin-strategy.html">Strategy Guide</a> |
+    <a href="/yaarwin-app.html">Download App</a> |
+    <a href="/yaarwin-login.html">Login</a> |
+    <a href="/become-agent.html">Become Agent</a>
   </nav>
+
+  <footer>
+    <p><strong>Play Responsibly</strong> — Set deposit limits, take breaks, and never chase losses. Must be 18+.</p>
+    <p>© 2026 Yaarwin. All rights reserved.</p>
+  </footer>
 </div>
 
 <script>
@@ -93,21 +171,41 @@
   (function() {
     const YOUR_CODE = '22358100020';
     const agents = {
-      'kunal': { code: '22358100020' }, 'professor': { code: '22358100021' },
-      'komal': { code: '22358100022' }, 'pragati': { code: '22358100023' },
-      'warrior': { code: '22358100024' }, 'chikusam': { code: '22358100025' },
-      'aman': { code: '22358100026' }, 'ganesh': { code: '22358100027' }, 'chandu': { code: '22358100028' }
+      'kunal': { code: '22358100020' },
+      'professor': { code: '22358100021' },
+      'shivani': { code: '22358100022' },
+      'pragati': { code: '22358100023' },
+      'warrior': { code: '22358100024' },
+      'chikusam': { code: '22358100025' },
+      'aman': { code: '22358100026' },
+      'ganesh': { code: '22358100027' },
+      'chandu': { code: '22358100028' }
     };
-    const urlRef = new URLSearchParams(location.search).get('ref');
-    const savedRef = localStorage.getItem('yaarwin_referrer');
-    let finalRef = urlRef || savedRef;
-    if (urlRef) localStorage.setItem('yaarwin_referrer', urlRef);
+    const urlParams = new URLSearchParams(window.location.search);
+    let referrerFromUrl = urlParams.get('ref');
+    let savedReferrer = localStorage.getItem('yaarwin_referrer');
+    let finalReferrer = null;
+    
+    if (referrerFromUrl) {
+      finalReferrer = referrerFromUrl;
+      localStorage.setItem('yaarwin_referrer', finalReferrer);
+    } else if (savedReferrer) {
+      finalReferrer = savedReferrer;
+    }
+    
     let finalCode = YOUR_CODE;
-    if (finalRef && agents[finalRef]) finalCode = agents[finalRef].code;
-    const regUrl = 'https://yaarwin.app/#/register?invitationCode=' + finalCode;
-    const btn = document.getElementById('registerBtn');
-    if (btn) { btn.href = regUrl; btn.target = '_blank'; }
+    if (finalReferrer && agents[finalReferrer]) {
+      finalCode = agents[finalReferrer].code;
+    }
+    
+    const registerUrl = 'https://yaarwin.app/#/register?invitationCode=' + finalCode;
+    const registerBtn = document.getElementById('registerBtn');
+    if (registerBtn) {
+      registerBtn.href = registerUrl;
+      registerBtn.target = '_blank';
+    }
   })();
 </script>
+
 </body>
 </html>
