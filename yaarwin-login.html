@@ -50,16 +50,17 @@
     .btn-outline:hover { background: #22c55e20; }
     .btn:hover { transform: scale(1.02); }
     
-    .help-links { display: flex; justify-content: space-between; margin-top: 20px; font-size: 13px; }
-    .help-links a { color: #22c55e; text-decoration: none; }
+    .help-links { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-top: 20px; font-size: 13px; }
+    .help-links a { color: #22c55e; text-decoration: none; transition: color 0.2s; }
+    .help-links a:hover { text-decoration: underline; color: #16a34a; }
     
     .gift-code-box { position: fixed; bottom: 20px; left: 20px; background: #1e293b; border-left: 4px solid #22c55e; padding: 10px 15px; border-radius: 8px; font-size: 12px; z-index: 100; }
-    .gift-code-box button { margin-left: 8px; background: #22c55e; border: none; padding: 4px 10px; border-radius: 4px; cursor: pointer; }
+    .gift-code-box button { margin-left: 8px; background: #22c55e; border: none; padding: 4px 10px; border-radius: 4px; cursor: pointer; font-weight: bold; }
     
     footer { margin-top: 50px; text-align: center; font-size: 12px; color: #64748b; padding: 20px; border-top: 1px solid #334155; }
     footer a { color: #22c55e; text-decoration: none; }
     
-    @media (max-width: 768px) { .stats-row { flex-wrap: wrap; gap: 15px; } }
+    @media (max-width: 768px) { .stats-row { flex-wrap: wrap; gap: 15px; } .help-links { justify-content: center; } }
   </style>
 </head>
 <body>
@@ -71,6 +72,7 @@
   <div class="tagline">India's #1 Color Trading Platform • Instant Withdrawals • 24/7 Support</div>
 
   <div class="main-grid">
+    <!-- Left Side: App Card -->
     <div class="app-card">
       <div class="app-icon"><img src="/logo.png" alt="Logo" onerror="this.parentElement.innerHTML='Y'"></div>
       <h2>Yaarwin App</h2>
@@ -91,10 +93,11 @@
         <li>✅ Referral bonus up to ₹5000/month</li>
       </div>
       
-      <a href="#" class="download-btn" id="downloadBtn">📱 Download Yaarwin App</a>
+      <a href="https://yaarwin.app/#/downloadCenter" class="download-btn" id="downloadBtn" target="_blank">📱 Download Yaarwin App</a>
       <p style="font-size: 10px; color: #64748b; margin-top: 12px;">*APK file. Enable "Unknown Sources" in settings.</p>
     </div>
 
+    <!-- Right Side: Auth Card -->
     <div class="auth-card">
       <h2>🔐 Welcome Back</h2>
       <div class="auth-subtitle">Login or create your free account</div>
@@ -118,10 +121,11 @@
         <a href="/become-agent.html" class="btn-outline" style="display: inline-block; padding: 10px 20px; font-size: 14px; margin-top: 8px;">👉 Become a Yaarwin Agent</a>
       </div>
       
+      <!-- Help Links Section (Updated with all your links) -->
       <div class="help-links">
-        <a href="#">Forgot Password?</a>
-        <a href="#">Contact Support</a>
-        <a href="#">Telegram Channel</a>
+        <a href="https://yaarwin.app/#/rpwd" target="_blank">🔑 Forgot Password?</a>
+        <a href="https://h5.workorder.support/" target="_blank">💬 Contact Support</a>
+        <a href="https://t.me/+MUIJJJmuOVI2Njg1" target="_blank">📢 Telegram Channel</a>
       </div>
     </div>
   </div>
@@ -137,39 +141,71 @@
   </footer>
 </div>
 
+<!-- Gift Code Box (Fixed Position) -->
 <div class="gift-code-box">
   🎁 Today's Code: <strong id="code">YAARWIN-DAILY</strong>
   <button id="copyBtn">Copy</button>
 </div>
 
 <script>
+  // Daily Gift Code
   (function() {
-    const codes = { '2026-05-02': 'YAARWIN-02MAY', '2026-05-03': 'YAARWIN-03MAY', '2026-05-04': 'YAARWIN-04MAY', '2026-05-05': 'YAARWIN-05MAY' };
+    const codes = {
+      '2026-05-02': 'YAARWIN-02MAY',
+      '2026-05-03': 'YAARWIN-03MAY',
+      '2026-05-04': 'YAARWIN-04MAY',
+      '2026-05-05': 'YAARWIN-05MAY'
+    };
     const today = new Date().toISOString().split('T')[0];
     const code = codes[today] || 'YAARWIN-DAILY';
     const codeSpan = document.getElementById('code');
     if (codeSpan) codeSpan.textContent = code;
     const copyBtn = document.getElementById('copyBtn');
-    if (copyBtn) copyBtn.onclick = function() { navigator.clipboard.writeText(code); alert('✅ Code copied: ' + code); };
+    if (copyBtn) {
+      copyBtn.onclick = function() { 
+        navigator.clipboard.writeText(code); 
+        alert('✅ Code copied: ' + code); 
+      };
+    }
   })();
 
+  // Persistent Referral Tracking
   (function() {
     const YOUR_INVITATION_CODE = '22358100020';
-    const invitationCodes = { 'AGENTA': '22358100020', 'AGENTB': '22358100021', 'AGENTC': '22358100022' };
+    const invitationCodes = {
+      'AGENTA': '22358100020',
+      'AGENTB': '22358100021',
+      'AGENTC': '22358100022'
+    };
+    
     const urlParams = new URLSearchParams(window.location.search);
     let referrer = urlParams.get('ref');
     if (!referrer) referrer = localStorage.getItem('yaarwin_referrer');
     else localStorage.setItem('yaarwin_referrer', referrer);
-    let finalCode = YOUR_INVITATION_CODE;
-    if (referrer && invitationCodes[referrer]) finalCode = invitationCodes[referrer];
-    const registerUrl = 'https://yaarwin.app/#/register?invitationCode=' + finalCode;
+    
+    let finalInvitationCode = YOUR_INVITATION_CODE;
+    if (referrer && invitationCodes[referrer]) {
+      finalInvitationCode = invitationCodes[referrer];
+      console.log('✅ Referrer ACTIVE: ' + referrer);
+    }
+    
+    const registerUrl = 'https://yaarwin.app/#/register?invitationCode=' + finalInvitationCode;
     const loginUrl = 'https://yaarwin.app/#/login';
+    
     const registerBtn = document.getElementById('registerBtn');
-    if (registerBtn) { registerBtn.href = registerUrl; registerBtn.setAttribute('target', '_blank'); }
+    if (registerBtn) {
+      registerBtn.href = registerUrl;
+      registerBtn.setAttribute('target', '_blank');
+    }
+    
     const loginBtn = document.getElementById('loginBtn');
-    if (loginBtn) { loginBtn.href = loginUrl; loginBtn.setAttribute('target', '_blank'); }
-    const downloadBtn = document.getElementById('downloadBtn');
-    if (downloadBtn) { downloadBtn.href = 'https://yaarwin.app/#/download'; downloadBtn.setAttribute('target', '_blank'); }
+    if (loginBtn) {
+      loginBtn.href = loginUrl;
+      loginBtn.setAttribute('target', '_blank');
+    }
+    
+    // Download button already has direct link (no override needed)
+    // Help links already have direct links (no override needed)
   })();
 </script>
 
