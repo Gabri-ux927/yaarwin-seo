@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Yaarwin - Color Trading Platform | Play Online</title>
-  <meta name="description" content="Yaarwin is a color trading platform. Learn game rules, download app, and play. Daily gift codes for community members.">
+  <title>Yaarwin - Earn by Playing or Become an Agent</title>
+  <meta name="description" content="Choose how to earn with Yaarwin: Play color trading games or become an agent and earn commissions. Daily gift codes, instant withdrawals.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
   
@@ -24,19 +24,76 @@
     header span { font-size: 28px; font-weight: bold; color: white; }
     .container { padding: 40px 20px; max-width: 1200px; margin: auto; }
     h1 { font-size: 36px; margin-bottom: 10px; color: #22c55e; }
-    p { color: #cbd5f5; line-height: 1.6; }
-    .btn { display: inline-block; margin-top: 20px; padding: 12px 24px; background: #22c55e; color: black; text-decoration: none; border-radius: 8px; font-weight: bold; transition: background 0.3s; }
-    .btn:hover { background: #16a34a; }
+    .subtitle { color: #cbd5f5; margin-bottom: 40px; font-size: 18px; }
+    
+    /* Selection Buttons Section */
+    .selection-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin: 40px 0;
+    }
+    .earn-card {
+      flex: 1;
+      min-width: 280px;
+      max-width: 350px;
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+      border-radius: 24px;
+      padding: 30px 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid #334155;
+      text-decoration: none;
+      display: block;
+    }
+    .earn-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 30px -15px rgba(34,197,94,0.3);
+      border-color: #22c55e;
+    }
+    .earn-card img {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 20px;
+    }
+    .earn-card h3 {
+      font-size: 28px;
+      color: #fbbf24;
+      margin-bottom: 15px;
+    }
+    .earn-card p {
+      color: #cbd5f5;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .earn-card .btn-small {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 24px;
+      background: #22c55e;
+      color: black;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .earn-card:hover .btn-small {
+      background: #16a34a;
+    }
+    
+    /* Other sections */
+    .btn-main { display: inline-block; margin-top: 20px; padding: 12px 24px; background: #22c55e; color: black; text-decoration: none; border-radius: 8px; font-weight: bold; transition: background 0.3s; }
+    .btn-main:hover { background: #16a34a; }
     .section { margin-top: 40px; text-align: left; background: #1e293b; padding: 25px; border-radius: 12px; }
     .section h2 { color: #fbbf24; margin-bottom: 15px; }
-    .grid-2 { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px; }
-    .card { flex: 1; min-width: 200px; background: #0f172a; padding: 20px; border-radius: 12px; }
     .trust-badge { display: inline-block; background: #22c55e20; border: 1px solid #22c55e; border-radius: 30px; padding: 8px 16px; margin: 5px; font-size: 14px; }
     nav { margin-top: 40px; padding: 20px; background: #111827; border-radius: 12px; }
     nav a { color: #22c55e; text-decoration: none; margin: 0 10px; display: inline-block; padding: 5px 0; }
     footer { margin-top: 40px; padding: 20px; font-size: 12px; color: #64748b; border-top: 1px solid #1e293b; }
     .gift-box { background: linear-gradient(135deg, #1e293b, #0f172a); border: 2px solid #22c55e; border-radius: 12px; padding: 20px; margin: 20px auto; max-width: 500px; text-align: center; }
-    @media (max-width: 768px) { h1 { font-size: 28px; } }
+    @media (max-width: 768px) { h1 { font-size: 28px; } .earn-card { min-width: 260px; } }
   </style>
 </head>
 <body>
@@ -56,13 +113,32 @@
     <button onclick="copyCode()" style="padding: 8px 20px; background: #22c55e; color: black; border: none; border-radius: 6px; cursor: pointer;">📋 Copy Code</button>
   </div>
 
-  <h1>Yaarwin — India's Fastest Growing Color Trading Platform</h1>
-  <p>Play colour prediction, big/small, numbers 1-9. Instant withdrawals, daily bonuses, and 24/7 support.</p>
+  <h1>Welcome to Yaarwin</h1>
+  <p class="subtitle">India's fastest-growing color trading platform • Instant withdrawals • 24/7 support</p>
 
-  <a href="#" class="btn" id="registerBtn">🎮 Register & Play Now →</a>
+  <!-- SELECTION SECTION: Two image buttons -->
+  <div class="selection-section">
+    
+    <!-- Option 1: Earning by Playing -->
+    <a href="/earn-by-playing.html" class="earn-card" id="playCard">
+      <img src="https://img.icons8.com/fluency/120/gaming.png" alt="Earn by Playing">
+      <h3>🎮 Earn by Playing</h3>
+      <p>Play color trading games — predict colors, sizes, and numbers. Win real money. Withdraw instantly.</p>
+      <span class="btn-small">Learn More →</span>
+    </a>
+    
+    <!-- Option 2: Earning by Becoming Agent -->
+    <a href="/become-agent.html" class="earn-card" id="agentCard">
+      <img src="https://img.icons8.com/fluency/120/teamwork.png" alt="Earn as Agent">
+      <h3>🤝 Become an Agent</h3>
+      <p>Earn commissions by referring players. No investment needed. Passive income daily.</p>
+      <span class="btn-small">Learn More →</span>
+    </a>
+    
+  </div>
 
   <!-- Trust Badges -->
-  <div style="margin: 30px 0;">
+  <div style="margin: 20px 0 30px;">
     <span class="trust-badge">✅ 50,000+ Active Players</span>
     <span class="trust-badge">✅ ₹10Cr+ Paid Out</span>
     <span class="trust-badge">✅ 5-Min Withdrawals</span>
@@ -70,28 +146,14 @@
     <span class="trust-badge">✅ UPI & Bank Transfer</span>
   </div>
 
+  <!-- Quick Info Section -->
   <div class="section">
-    <h2>What is Yaarwin?</h2>
-    <p>Yaarwin is an online color trading platform where players predict colors (Red, Green, Violet), sizes (Big/Small), or numbers (1-9). With over 50,000+ active users and daily payouts exceeding ₹10 crore, Yaarwin is India's most trusted color trading platform.</p>
-  </div>
-
-  <div class="section">
-    <h2>How to Play</h2>
-    <div class="grid-2">
-      <div class="card"><strong>🎨 Step 1:</strong> Choose your prediction (Red, Green, Violet, Big, Small, or Number 1-9)</div>
-      <div class="card"><strong>💰 Step 2:</strong> Set your bet amount (minimum ₹10)</div>
-      <div class="card"><strong>⏱️ Step 3:</strong> Wait for result (rounds every 1-3 minutes)</div>
-      <div class="card"><strong>🏆 Step 4:</strong> Win and withdraw instantly</div>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>Game Options</h2>
-    <div class="grid-2">
-      <div class="card"><strong>🔴 Red / Green / Violet</strong><br>Classic colour prediction</div>
-      <div class="card"><strong>📊 Big / Small</strong><br>Size-based betting</div>
-      <div class="card"><strong>🔢 Numbers 1-9</strong><br>High-risk, high-reward</div>
-      <div class="card"><strong>🎁 Daily Bonus</strong><br>Free gift codes every day</div>
+    <h2>How Yaarwin Works</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 15px;">
+      <div style="flex: 1; min-width: 150px;"><strong>1️⃣ Choose</strong><br>Select color, size, or number</div>
+      <div style="flex: 1; min-width: 150px;"><strong>2️⃣ Bet</strong><br>Place your prediction (₹10 min)</div>
+      <div style="flex: 1; min-width: 150px;"><strong>3️⃣ Win</strong><br>Get paid instantly to UPI/bank</div>
+      <div style="flex: 1; min-width: 150px;"><strong>4️⃣ Refer</strong><br>Earn extra as an agent</div>
     </div>
   </div>
 
@@ -101,133 +163,100 @@
     <a href="/yaarwin-game.html">Game Rules</a> |
     <a href="/yaarwin-strategy.html">Strategy Guide</a> |
     <a href="/yaarwin-app.html">Download App</a> |
-    <a href="/yaarwin-login.html">Login</a> |
-    <a href="/how-to-register.html">Register Guide</a>
+    <a href="/yaarwin-login.html">Login</a>
   </nav>
 </div>
 
 <footer>
   <p><strong>Play Responsibly</strong> — Set deposit limits, take breaks, and never chase losses. Must be 18+.</p>
-  <p>© 2026 Yaarwin. All rights reserved. | <a href="/privacy.html">Privacy Policy</a> | <a href="/terms.html">Terms</a></p>
+  <p>© 2026 Yaarwin. All rights reserved.</p>
 </footer>
 
 <script>
-  // ============================================
-  // DAILY GIFT CODE
-  // ============================================
-  const codes = {
-    '2026-05-01': 'YAARWIN-01MAY',
-    '2026-05-02': 'YAARWIN-02MAY', 
-    '2026-05-03': 'YAARWIN-03MAY',
-    '2026-05-04': 'YAARWIN-04MAY',
-    '2026-05-05': 'YAARWIN-05MAY'
-  };
-  const today = new Date().toISOString().split('T')[0];
-  const dailyCode = codes[today] || 'YAARWIN-DAILY';
-  const codeElement = document.getElementById('dailyCode');
-  if (codeElement) codeElement.textContent = dailyCode;
-  
-  window.copyCode = function() {
-    navigator.clipboard.writeText(dailyCode);
-    alert('✅ Code copied: ' + dailyCode);
-  };
+  // Daily gift code
+  (function() {
+    const codes = {
+      '2026-05-02': 'YAARWIN-02MAY',
+      '2026-05-03': 'YAARWIN-03MAY',
+      '2026-05-04': 'YAARWIN-04MAY',
+      '2026-05-05': 'YAARWIN-05MAY'
+    };
+    const today = new Date().toISOString().split('T')[0];
+    const dailyCode = codes[today] || 'YAARWIN-DAILY';
+    const codeElement = document.getElementById('dailyCode');
+    if (codeElement) codeElement.textContent = dailyCode;
+    
+    window.copyCode = function() {
+      navigator.clipboard.writeText(dailyCode);
+      alert('✅ Code copied: ' + dailyCode);
+    };
+  })();
 
   // ============================================
-  // REFERRAL TRACKING SYSTEM (FULLY FIXED)
+  // PERSISTENT REFERRAL TRACKING
   // ============================================
   (function() {
-    // Get referrer from URL parameter 'ref'
-    const urlParams = new URLSearchParams(window.location.search);
-    let referrer = urlParams.get('ref');
-    
-    // If no ref in URL, check if previously stored in browser
-    if (!referrer) {
-      referrer = localStorage.getItem('yaarwin_referrer');
-    } else {
-      // Save for future pages
-      localStorage.setItem('yaarwin_referrer', referrer);
-    }
-    
-    // YOUR personal invitation code (default when no agent referrer)
     const YOUR_INVITATION_CODE = '22358100020';
     
-    // Agent mapping - UPDATE THESE WITH YOUR AGENTS' ACTUAL CODES
     const invitationCodes = {
-      'AGENTA': '22358100021',   // Replace with Agent A's real invitation code
-      'AGENTB': '22358100022',   // Replace with Agent B's real invitation code
-      'AGENTC': '22358100023',   // Replace with Agent C's real invitation code
-      'AGENTD': '22358100024',   // Add more agents here
-      'AGENTE': '22358100025'    // Add more agents here
+      'AGENTA': '22358100020',
+      'AGENTB': '22358100021',
+      'AGENTC': '22358100022'
     };
     
-    // Determine which invitation code to use
-    let finalInvitationCode = YOUR_INVITATION_CODE;
-    let matchedAgent = null;
-    let isDefaultCode = true;
+    const urlParams = new URLSearchParams(window.location.search);
+    const referrerFromUrl = urlParams.get('ref');
+    const savedReferrer = localStorage.getItem('yaarwin_referrer');
     
-    if (referrer && invitationCodes[referrer]) {
-      finalInvitationCode = invitationCodes[referrer];
-      matchedAgent = referrer;
-      isDefaultCode = false;
-    } else if (referrer && !invitationCodes[referrer]) {
-      console.warn('⚠️ Unknown referrer: "' + referrer + '" — using default code');
+    let finalReferrer = null;
+    
+    if (referrerFromUrl) {
+      finalReferrer = referrerFromUrl;
+      localStorage.setItem('yaarwin_referrer', finalReferrer);
+      console.log('📌 New referrer: ' + finalReferrer);
+    } else if (savedReferrer) {
+      finalReferrer = savedReferrer;
+      console.log('📌 Saved referrer: ' + finalReferrer);
     }
     
-    // Build the official registration URL
+    let finalInvitationCode = YOUR_INVITATION_CODE;
+    
+    if (finalReferrer && invitationCodes[finalReferrer]) {
+      finalInvitationCode = invitationCodes[finalReferrer];
+      console.log('✅ Referrer ACTIVE: ' + finalReferrer);
+    }
+    
     const registerUrl = 'https://yaarwin.app/#/register?invitationCode=' + finalInvitationCode;
     const loginUrl = 'https://yaarwin.app/#/login';
     
-    // Update ALL register/login buttons on the page
-    function updateAllButtons() {
-      const allElements = document.querySelectorAll('a, button, .btn, .register-btn, .login-btn');
-      let registerButtonCount = 0;
-      let loginButtonCount = 0;
-      
+    function updateButtons() {
+      const allElements = document.querySelectorAll('a, button, .btn, .btn-small');
       allElements.forEach(function(el) {
-        const text = (el.innerText || el.textContent || '').toLowerCase();
+        const text = (el.innerText || '').toLowerCase();
         const href = (el.getAttribute('href') || '').toLowerCase();
         const id = el.id || '';
-        const className = (el.className || '').toLowerCase();
         
-        // Check for register buttons
         if (text.includes('register') || text.includes('sign up') || 
             text.includes('create account') || href.includes('register') ||
-            id === 'registerBtn' || className.includes('register')) {
+            id === 'registerBtn') {
           el.setAttribute('href', registerUrl);
           el.setAttribute('target', '_blank');
-          registerButtonCount++;
         }
         
-        // Check for login buttons
         if (text.includes('login') || text.includes('sign in') || 
-            href.includes('login') || id === 'loginBtn' || className.includes('login')) {
+            href.includes('login') || id === 'loginBtn') {
           el.setAttribute('href', loginUrl);
           el.setAttribute('target', '_blank');
-          loginButtonCount++;
         }
       });
-      
-      // Log status to console for debugging
-      if (matchedAgent) {
-        console.log('✅ Referral ACTIVE: ' + matchedAgent + ' → Invitation Code: ' + finalInvitationCode);
-      } else if (referrer) {
-        console.log('⚠️ Unknown referrer "' + referrer + '" → Using YOUR default code: ' + finalInvitationCode);
-      } else {
-        console.log('✅ No referrer detected → Using YOUR default invitation code: ' + finalInvitationCode);
-      }
-      console.log('📌 Updated ' + registerButtonCount + ' register buttons | ' + loginButtonCount + ' login buttons');
     }
     
-    // Run when page is ready
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', updateAllButtons);
+      document.addEventListener('DOMContentLoaded', updateButtons);
     } else {
-      updateAllButtons();
+      updateButtons();
     }
-    
-    // Also run after a short delay (for dynamically loaded content)
-    setTimeout(updateAllButtons, 500);
-    setTimeout(updateAllButtons, 1000);
+    setTimeout(updateButtons, 500);
   })();
 </script>
 
