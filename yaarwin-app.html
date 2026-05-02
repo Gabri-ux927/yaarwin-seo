@@ -6,37 +6,42 @@
   <meta name="description" content="Download Yaarwin APK for Android. Play colour prediction on mobile. Step-by-step install guide.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body { font-family: Arial, sans-serif; background: #0f172a; color: white; padding: 20px; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #0f172a; color: white; padding: 20px; }
     .container { max-width: 800px; margin: auto; background: #1e293b; padding: 30px; border-radius: 12px; }
     h1 { color: #22c55e; }
     .step { background: #334155; padding: 15px; margin: 15px 0; border-radius: 8px; }
     .btn { display: inline-block; padding: 14px 28px; background: #22c55e; color: black; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 20px; }
+    .header { text-align: center; margin-bottom: 20px; }
+    .header img { height: 50px; }
+    nav { margin-top: 30px; text-align: center; }
+    nav a { color: #22c55e; margin: 0 10px; }
   </style>
 </head>
 <body>
 <div class="container">
+  <div class="header"><img src="/logo.png" alt="Logo"></div>
   <h1>Download Yaarwin App for Android</h1>
   <p>Get the official Yaarwin APK and play colour prediction on your mobile phone.</p>
-
   <div class="step"><strong>📱 App Details:</strong><br>Size: 6.8 MB • Version: 1.0.0 • Android 5.0+</div>
-
-  <div class="step"><strong>⬇️ Step 1: Download APK</strong><br>Click the download button below to get the Yaarwin APK file.</div>
-
-  <div class="step"><strong>⚙️ Step 2: Enable Unknown Sources</strong><br>Settings → Security → Enable "Unknown Sources" (or "Install from unknown apps")</div>
-
-  <div class="step"><strong>📂 Step 3: Install APK</strong><br>Open downloaded file → Tap "Install" → Wait for completion</div>
-
-  <div class="step"><strong>🎮 Step 4: Login & Play</strong><br>Open Yaarwin app → Login or Register → Start playing</div>
-
-  <a href="#" class="btn" id="downloadBtn">⬇️ Download Yaarwin APK Now</a>
-  <p style="font-size: 11px; margin-top: 20px;">*APK file. Enable unknown sources in settings. Android only.</p>
+  <div class="step"><strong>⬇️ Step 1: Download APK</strong><br>Click the download button below.</div>
+  <div class="step"><strong>⚙️ Step 2: Enable Unknown Sources</strong><br>Settings → Security → Enable "Unknown Sources"</div>
+  <div class="step"><strong>📂 Step 3: Install APK</strong><br>Open downloaded file → Tap "Install"</div>
+  <div class="step"><strong>🎮 Step 4: Login & Play</strong><br>Open Yaarwin app → Login or Register</div>
+  <a href="#" id="registerBtn" class="btn">⬇️ Download Yaarwin APK Now</a>
+  <nav><a href="/">Home</a> | <a href="/yaarwin-game.html">Rules</a> | <a href="/yaarwin-login.html">Login</a></nav>
 </div>
 
 <script>
-  document.getElementById('downloadBtn').addEventListener('click', (e) => {
-    e.preventDefault();
-    alert('APK download link coming soon. Check Telegram for update!');
-  });
+  (function() {
+    const YOUR_CODE = '22358100020';
+    const agents = { 'kunal': {}, 'professor': {}, 'komal': {}, 'pragati': {}, 'warrior': {}, 'chikusam': {}, 'aman': {}, 'ganesh': {}, 'chandu': {} };
+    const urlRef = new URLSearchParams(location.search).get('ref');
+    const savedRef = localStorage.getItem('yaarwin_referrer');
+    let finalRef = urlRef || savedRef;
+    if (urlRef) localStorage.setItem('yaarwin_referrer', urlRef);
+    const btn = document.getElementById('registerBtn');
+    if (btn) btn.href = 'https://yaarwin.app/#/downloadCenter';
+  })();
 </script>
 </body>
 </html>
