@@ -101,4 +101,73 @@
 
   <h2 class="steps-title">🚀 How It Works</h2>
   <div class="steps-grid">
-    <div class="step"><div class="step-number">1</div><h3>Get Your Link</
+    <div class="step"><div class="step-number">1</div><h3>Get Your Link</h3><p>We give you a unique referral link:<br><code>yaarwinpro.com/?ref=YOURNAME</code></p></div>
+    <div class="step"><div class="step-number">2</div><h3>Share Anywhere</h3><p>Post on Telegram, WhatsApp, Instagram, YouTube, or run ads</p></div>
+    <div class="step"><div class="step-number">3</div><h3>Earn Commissions</h3><p>Get a percentage of every deposit your referred players make</p></div>
+    <div class="step"><div class="step-number">4</div><h3>Withdraw Daily</h3><p>Commissions paid instantly to your bank account or UPI</p></div>
+  </div>
+
+  <div class="commission-section">
+    <h2>💰 Commission Structure</h2>
+    <table>
+      <tr><th>Referrals / Month</th><th>Commission Rate</th><th>Weekly Bonus</th></tr>
+      <tr><td>1-10 players</td><td><span class="highlight">5%</span></td><td>-</td></tr>
+      <tr><td>11-50 players</td><td><span class="highlight">7%</span></td><td>₹500</td></tr>
+      <tr><td>51-200 players</td><td><span class="highlight">10%</span></td><td>₹2,000</td></tr>
+      <tr><td>200+ players</td><td><span class="highlight">15%</span></td><td>₹5,000</td></tr>
+    </table>
+    <p style="text-align: center; margin-top: 20px; font-size: 12px; color: #64748b;">*Commissions paid daily. No cap on earnings.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>❓ Frequently Asked Questions</h2>
+    <div class="faq-grid">
+      <div class="faq-item"><h4>Do I need to invest money?</h4><p>No. Zero investment required. You only share your referral link.</p></div>
+      <div class="faq-item"><h4>How do I get paid?</h4><p>Commissions are sent daily to your bank account or UPI.</p></div>
+      <div class="faq-item"><h4>Can I track my referrals?</h4><p>Yes. We provide a dashboard showing clicks, registrations, and earnings.</p></div>
+      <div class="faq-item"><h4>Is there a limit on earnings?</h4><p>No. Top agents earn ₹50,000+ per month.</p></div>
+    </div>
+  </div>
+
+  <div class="cta-box">
+    <h2>🎯 Ready to Start Earning?</h2>
+    <p>Join 500+ active agents already earning daily commissions.</p>
+    <div class="cta-buttons">
+      <a href="/yaarwin-login.html" class="btn btn-primary">📝 Register as Agent</a>
+      <a href="https://t.me/yaarwin_agents" class="btn btn-secondary">💬 Join Agent Telegram</a>
+      <a href="/" class="btn btn-outline">🏠 Back to Home</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <a href="/">Home</a> | 
+  <a href="/yaarwin-game.html">Game Rules</a> | 
+  <a href="/earn-by-playing.html">Earn by Playing</a> | 
+  <a href="/yaarwin-login.html">Login</a>
+  <p>© 2026 Yaarwin — India's Trusted Color Trading Platform | Must be 18+ | Play Responsibly</p>
+</footer>
+
+<script>
+  (function() {
+    const YOUR_INVITATION_CODE = '22358100020';
+    const invitationCodes = { 'AGENTA': '22358100020', 'AGENTB': '22358100021', 'AGENTC': '22358100022' };
+    const urlParams = new URLSearchParams(window.location.search);
+    let referrer = urlParams.get('ref');
+    if (!referrer) referrer = localStorage.getItem('yaarwin_referrer');
+    else localStorage.setItem('yaarwin_referrer', referrer);
+    let finalCode = YOUR_INVITATION_CODE;
+    if (referrer && invitationCodes[referrer]) finalCode = invitationCodes[referrer];
+    const registerUrl = 'https://yaarwin.app/#/register?invitationCode=' + finalCode;
+    const btns = document.querySelectorAll('.btn-primary, .btn-secondary');
+    btns.forEach(btn => {
+      if (btn.innerText.includes('Register') || btn.innerText.includes('Login') || btn.href?.includes('yaarwin-login')) {
+        btn.href = registerUrl;
+        btn.setAttribute('target', '_blank');
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
