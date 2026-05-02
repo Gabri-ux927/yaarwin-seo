@@ -20,7 +20,6 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Segoe UI', Arial, sans-serif; background: #0f172a; color: white; }
     
-    /* Header */
     header { padding: 20px; background: #111827; border-bottom: 1px solid #22c55e; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px; }
     .logo-area { display: flex; align-items: center; gap: 12px; }
     .logo-area img { height: 40px; width: auto; }
@@ -31,46 +30,42 @@
     .header-btn-outline:hover { background: #22c55e20; }
     
     .container { padding: 40px 20px; max-width: 1200px; margin: auto; }
-    
-    /* Hero Section */
     .hero { text-align: center; margin-bottom: 50px; }
     .hero h1 { font-size: 42px; color: #22c55e; margin-bottom: 15px; }
     .hero p { font-size: 18px; color: #cbd5f5; max-width: 700px; margin: 0 auto; }
     
-    /* Gift Box */
-    .gift-box { background: linear-gradient(135deg, #1e293b, #0f172a); border: 2px solid #22c55e; border-radius: 20px; padding: 25px; margin: 30px auto; max-width: 550px; text-align: center; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3); }
+    .gift-box { background: linear-gradient(135deg, #1e293b, #0f172a); border: 2px solid #22c55e; border-radius: 20px; padding: 25px; margin: 30px auto; max-width: 550px; text-align: center; }
     .gift-box p:first-child { color: #fbbf24; font-size: 14px; letter-spacing: 2px; }
     .gift-code { font-size: 36px; font-weight: bold; letter-spacing: 4px; font-family: monospace; margin: 15px 0; color: white; }
-    .gift-box button { padding: 10px 24px; background: #22c55e; color: black; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; transition: background 0.2s; }
+    .gift-box button { padding: 10px 24px; background: #22c55e; color: black; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; }
     .gift-box button:hover { background: #16a34a; }
     
-    /* Register Banner */
     .register-banner { background: linear-gradient(135deg, #22c55e15, #16a34a05); border: 1px solid #22c55e; border-radius: 16px; padding: 20px; text-align: center; margin: 20px 0 30px; }
     .register-banner p { margin-bottom: 12px; font-size: 16px; }
-    .register-banner .big-register-btn { display: inline-block; padding: 14px 32px; background: #22c55e; color: black; text-decoration: none; border-radius: 12px; font-weight: bold; font-size: 20px; transition: all 0.2s; }
-    .register-banner .big-register-btn:hover { background: #16a34a; transform: scale(1.02); }
+    .big-register-btn { display: inline-block; padding: 14px 32px; background: #22c55e; color: black; text-decoration: none; border-radius: 12px; font-weight: bold; font-size: 20px; transition: all 0.2s; }
+    .big-register-btn:hover { background: #16a34a; transform: scale(1.02); }
     
-    /* Selection Cards */
+    .telegram-section { text-align: center; margin: 25px 0; }
+    .telegram-btn { display: inline-flex; align-items: center; gap: 12px; background: #0088cc; padding: 14px 28px; border-radius: 50px; text-decoration: none; color: white; font-weight: bold; font-size: 18px; transition: transform 0.2s; }
+    .telegram-btn:hover { background: #006699; transform: scale(1.02); }
+    
     .selection-section { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin: 50px 0; }
-    .earn-card { flex: 1; min-width: 280px; max-width: 350px; background: linear-gradient(135deg, #1e293b, #0f172a); border-radius: 24px; padding: 35px 25px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; border: 1px solid #334155; text-decoration: none; display: block; }
-    .earn-card:hover { transform: translateY(-8px); box-shadow: 0 25px 35px -12px rgba(34,197,94,0.25); border-color: #22c55e; }
+    .earn-card { flex: 1; min-width: 280px; max-width: 350px; background: linear-gradient(135deg, #1e293b, #0f172a); border-radius: 24px; padding: 35px 25px; text-align: center; transition: transform 0.3s; border: 1px solid #334155; text-decoration: none; display: block; }
+    .earn-card:hover { transform: translateY(-8px); border-color: #22c55e; }
     .earn-card img { width: 100px; height: 100px; margin-bottom: 20px; }
     .earn-card h3 { font-size: 28px; color: #fbbf24; margin-bottom: 15px; }
     .earn-card p { color: #cbd5f5; font-size: 14px; line-height: 1.5; margin-bottom: 20px; }
-    .earn-card .btn-small { display: inline-block; padding: 10px 24px; background: #22c55e; color: black; text-decoration: none; border-radius: 8px; font-weight: bold; transition: background 0.2s; }
+    .earn-card .btn-small { display: inline-block; padding: 10px 24px; background: #22c55e; color: black; text-decoration: none; border-radius: 8px; font-weight: bold; }
     .earn-card:hover .btn-small { background: #16a34a; }
     
-    /* Trust Badges */
     .trust-section { text-align: center; margin: 40px 0; }
     .trust-badge { display: inline-block; background: #22c55e20; border: 1px solid #22c55e; border-radius: 40px; padding: 8px 20px; margin: 6px; font-size: 14px; }
     
-    /* Stats Row */
     .stats-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; background: #1e293b; border-radius: 24px; padding: 40px 20px; margin: 50px 0; }
     .stat-item { text-align: center; min-width: 150px; }
     .stat-number { font-size: 36px; font-weight: bold; color: #fbbf24; }
     .stat-label { color: #94a3b8; font-size: 14px; margin-top: 8px; }
     
-    /* How It Works */
     .how-it-works { text-align: center; margin: 50px 0; }
     .how-it-works h2 { color: #fbbf24; font-size: 32px; margin-bottom: 30px; }
     .steps-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
@@ -80,7 +75,6 @@
     .step-card h3 { color: #22c55e; margin-bottom: 10px; font-size: 18px; }
     .step-card p { color: #cbd5f5; font-size: 13px; }
     
-    /* Payout Info */
     .payout-section { background: linear-gradient(135deg, #1e293b, #0f172a); border-radius: 24px; padding: 40px; margin: 50px 0; text-align: center; border: 1px solid #334155; }
     .payout-section h2 { color: #fbbf24; margin-bottom: 25px; }
     .payout-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
@@ -88,12 +82,10 @@
     .payout-multiplier { font-size: 28px; font-weight: bold; color: #22c55e; }
     .payout-name { font-size: 14px; color: #94a3b8; margin-top: 5px; }
     
-    /* Testimonial */
     .testimonial { background: #1e293b; border-radius: 24px; padding: 30px; margin: 50px 0; text-align: center; border-left: 4px solid #22c55e; }
     .testimonial p { color: #cbd5f5; font-style: italic; font-size: 16px; }
     .testimonial-author { color: #fbbf24; margin-top: 15px; font-weight: bold; }
     
-    /* FAQ Preview */
     .faq-preview { margin: 50px 0; }
     .faq-preview h2 { text-align: center; color: #fbbf24; font-size: 32px; margin-bottom: 30px; }
     .faq-grid { display: flex; flex-wrap: wrap; gap: 20px; }
@@ -101,7 +93,6 @@
     .faq-item h4 { color: #22c55e; margin-bottom: 8px; }
     .faq-item p { color: #cbd5f5; font-size: 13px; }
     
-    /* CTA Banner */
     .cta-banner { background: linear-gradient(135deg, #22c55e20, #16a34a10); border: 2px solid #22c55e; border-radius: 24px; padding: 40px; text-align: center; margin: 50px 0; }
     .cta-banner h2 { color: #22c55e; margin-bottom: 15px; }
     .cta-banner p { color: #cbd5f5; margin-bottom: 25px; }
@@ -112,9 +103,8 @@
     .cta-secondary { background: #3b82f6; color: white; }
     .cta-secondary:hover { background: #2563eb; transform: scale(1.02); }
     
-    /* Navigation */
     nav { margin: 40px 0 20px; padding: 20px; background: #111827; border-radius: 12px; text-align: center; }
-    nav a { color: #22c55e; text-decoration: none; margin: 0 12px; display: inline-block; padding: 5px 0; transition: color 0.2s; }
+    nav a { color: #22c55e; text-decoration: none; margin: 0 12px; display: inline-block; padding: 5px 0; }
     nav a:hover { color: #16a34a; text-decoration: underline; }
     
     footer { margin-top: 40px; padding: 30px 20px; font-size: 12px; color: #64748b; border-top: 1px solid #1e293b; text-align: center; }
@@ -123,8 +113,6 @@
       .hero h1 { font-size: 28px; }
       .gift-code { font-size: 24px; letter-spacing: 2px; }
       .stat-number { font-size: 28px; }
-      .payout-item { padding: 10px 20px; }
-      nav a { margin: 0 8px; font-size: 12px; }
       header { flex-direction: column; text-align: center; }
     }
   </style>
@@ -142,19 +130,23 @@
 </header>
 
 <div class="container">
-  <!-- Hero Section -->
   <div class="hero">
     <h1>Welcome to Yaarwin</h1>
     <p>India's fastest-growing color trading platform. Play, earn, withdraw instantly. Or become an agent and earn passive income.</p>
   </div>
 
-  <!-- Register Banner (Prominent CTA) -->
   <div class="register-banner">
     <p>🚀 <strong>Start your journey today!</strong> Create a free account in 2 minutes.</p>
     <a href="#" class="big-register-btn" id="registerBannerBtn">📝 Register Now & Get ₹100 Bonus →</a>
   </div>
 
-  <!-- Gift Code Box -->
+  <div class="telegram-section">
+    <a href="#" id="telegramBtn" class="telegram-btn" target="_blank">
+      <span>📢</span> Join Our Telegram Channel
+    </a>
+    <p style="color: #64748b; font-size: 12px; margin-top: 8px;">Get daily gift codes, tips, and support</p>
+  </div>
+
   <div class="gift-box">
     <p>🎁 TODAY'S GIFT CODE</p>
     <div class="gift-code" id="dailyCode">YAARWIN-DAILY</div>
@@ -162,7 +154,6 @@
     <button onclick="copyCode()">📋 Copy Code</button>
   </div>
 
-  <!-- Selection Cards -->
   <div class="selection-section">
     <a href="/earn-by-playing.html" class="earn-card">
       <img src="https://img.icons8.com/fluency/120/gaming.png" alt="Earn by Playing">
@@ -179,7 +170,6 @@
     </a>
   </div>
 
-  <!-- Trust Badges -->
   <div class="trust-section">
     <span class="trust-badge">✅ 50,000+ Active Players</span>
     <span class="trust-badge">✅ ₹10Cr+ Paid Out</span>
@@ -189,7 +179,6 @@
     <span class="trust-badge">✅ 100% Legal in India</span>
   </div>
 
-  <!-- Stats Row -->
   <div class="stats-row">
     <div class="stat-item"><div class="stat-number">50K+</div><div class="stat-label">Active Players</div></div>
     <div class="stat-item"><div class="stat-number">₹10Cr+</div><div class="stat-label">Total Payouts</div></div>
@@ -197,7 +186,6 @@
     <div class="stat-item"><div class="stat-number">24/7</div><div class="stat-label">Support</div></div>
   </div>
 
-  <!-- How It Works -->
   <div class="how-it-works">
     <h2>🚀 How Yaarwin Works</h2>
     <div class="steps-grid">
@@ -208,7 +196,6 @@
     </div>
   </div>
 
-  <!-- Payout Info -->
   <div class="payout-section">
     <h2>💰 Payout Structure</h2>
     <div class="payout-grid">
@@ -219,13 +206,11 @@
     </div>
   </div>
 
-  <!-- Testimonial -->
   <div class="testimonial">
     <p>"Started as a player, earned ₹15,000 in first week. Then became an agent — now making ₹40,000/month passive income. Best decision ever."</p>
     <div class="testimonial-author">— Rajesh K., Agent since 2025</div>
   </div>
 
-  <!-- FAQ Preview -->
   <div class="faq-preview">
     <h2>❓ Quick Answers</h2>
     <div class="faq-grid">
@@ -236,18 +221,6 @@
     </div>
   </div>
 
-  <!-- CTA Banner -->
-  <div class="cta-banner">
-    <h2>🎯 Ready to Start Earning?</h2>
-    <p>Join 50,000+ active players or become an agent with zero investment.</p>
-    <div class="cta-buttons">
-      <a href="#" class="cta-btn cta-primary" id="registerCtaBtn">📝 Start Playing</a>
-      <a href="/become-agent.html" class="cta-btn cta-secondary">🤝 Become an Agent</a>
-      <a href="/yaarwin-login.html" class="cta-btn cta-primary">🔐 Login</a>
-    </div>
-  </div>
-
-  <!-- Navigation -->
   <nav>
     <a href="/">Home</a> |
     <a href="/yaarwin-game.html">Game Rules</a> |
@@ -283,105 +256,78 @@
     };
   })();
 
-  // ============================================
-  // PERSISTENT REFERRAL TRACKING (CRITICAL)
-  // ============================================
+  // Referral and Telegram Tracking System
   (function() {
-    // YOUR default invitation code
+    // YOUR default settings
     const YOUR_INVITATION_CODE = '22358100020';
+    const YOUR_TELEGRAM_CHANNEL = 'https://t.me/+MUIJJJmuOVI2Njg1';
     
-    // Agent invitation codes (UPDATE WITH REAL CODES)
-    const invitationCodes = {
-      'AGENTA': '22358100021',
-      'AGENTB': '22358100022',
-      'AGENTC': '22358100023',
-      'AGENTD': '22358100024'
+    // Agent configurations - UPDATE THESE
+    const agents = {
+      'AGENTA': {
+        invitationCode: '22358100020',
+        telegramChannel: 'https://t.me/agentA_channel'
+      },
+      'AGENTB': {
+        invitationCode: '22358100021',
+        telegramChannel: 'https://t.me/agentB_channel'
+      },
+      'AGENTC': {
+        invitationCode: '22358100022',
+        telegramChannel: 'https://t.me/agentC_channel'
+      }
     };
     
-    // Step 1: Check URL for ref parameter
+    // Get referrer from URL or localStorage
     const urlParams = new URLSearchParams(window.location.search);
-    const referrerFromUrl = urlParams.get('ref');
+    let referrerFromUrl = urlParams.get('ref');
+    let savedReferrer = localStorage.getItem('yaarwin_referrer');
     
-    // Step 2: Check localStorage for existing referrer
-    const savedReferrer = localStorage.getItem('yaarwin_referrer');
-    
-    // Step 3: Determine which referrer to use
     let finalReferrer = null;
     
     if (referrerFromUrl) {
-      // URL has referrer → use it and save it (overwrites old)
       finalReferrer = referrerFromUrl;
       localStorage.setItem('yaarwin_referrer', finalReferrer);
-      console.log('📌 New referrer from URL: ' + finalReferrer);
+      console.log('New referrer: ' + finalReferrer);
     } else if (savedReferrer) {
-      // No referrer in URL but saved in browser → use saved
       finalReferrer = savedReferrer;
-      console.log('📌 Using saved referrer from previous page: ' + finalReferrer);
-    } else {
-      console.log('ℹ️ No referrer detected');
+      console.log('Saved referrer: ' + finalReferrer);
     }
     
-    // Step 4: Determine final invitation code
+    // Determine invitation code and Telegram channel
     let finalInvitationCode = YOUR_INVITATION_CODE;
+    let finalTelegramChannel = YOUR_TELEGRAM_CHANNEL;
     
-    if (finalReferrer && invitationCodes[finalReferrer]) {
-      finalInvitationCode = invitationCodes[finalReferrer];
-      console.log('✅ Referrer ACTIVE: ' + finalReferrer + ' → Code: ' + finalInvitationCode);
-    } else if (finalReferrer && !invitationCodes[finalReferrer]) {
-      console.warn('⚠️ Unknown referrer: ' + finalReferrer + ' — using default code');
-    } else {
-      console.log('✅ No referrer — using YOUR default code: ' + finalInvitationCode);
+    if (finalReferrer && agents[finalReferrer]) {
+      finalInvitationCode = agents[finalReferrer].invitationCode;
+      finalTelegramChannel = agents[finalReferrer].telegramChannel;
+      console.log('Agent active: ' + finalReferrer);
     }
     
-    // Step 5: Build registration URL
     const registerUrl = 'https://yaarwin.app/#/register?invitationCode=' + finalInvitationCode;
-    const loginUrl = 'https://yaarwin.app/#/login';
     
-    // Step 6: Update ALL register buttons on the page
-    function updateAllRegisterButtons() {
-      // Find all register buttons (by ID, class, or text content)
-      const registerSelectors = [
-        '#registerHeaderBtn',
-        '#registerBannerBtn', 
-        '#registerCtaBtn',
-        '.big-register-btn',
-        '.header-btn[id*="register"]',
-        'a[href*="register"]'
-      ];
-      
-      registerSelectors.forEach(selector => {
-        const elements = document.querySelectorAll(selector);
-        elements.forEach(el => {
-          el.setAttribute('href', registerUrl);
-          el.setAttribute('target', '_blank');
-        });
+    // Update all register buttons
+    function updateButtons() {
+      const btns = document.querySelectorAll('#registerHeaderBtn, #registerBannerBtn, .big-register-btn');
+      btns.forEach(btn => {
+        btn.href = registerUrl;
+        btn.target = '_blank';
       });
       
-      // Also find any element containing "Register" text
-      const allLinks = document.querySelectorAll('a, button');
-      allLinks.forEach(el => {
-        const text = (el.innerText || '').toLowerCase();
-        if (text.includes('register') || text.includes('sign up') || text.includes('create account')) {
-          el.setAttribute('href', registerUrl);
-          el.setAttribute('target', '_blank');
-        }
-        if (text.includes('login') && !el.id.includes('register')) {
-          el.setAttribute('href', loginUrl);
-          el.setAttribute('target', '_blank');
-        }
-      });
+      const telegramBtn = document.getElementById('telegramBtn');
+      if (telegramBtn) {
+        telegramBtn.href = finalTelegramChannel;
+        telegramBtn.target = '_blank';
+      }
       
-      console.log('✅ All register buttons updated with code: ' + finalInvitationCode);
+      console.log('Buttons updated with code: ' + finalInvitationCode);
     }
     
-    // Run immediately and after page loads
-    updateAllRegisterButtons();
+    updateButtons();
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', updateAllRegisterButtons);
+      document.addEventListener('DOMContentLoaded', updateButtons);
     }
-    // Extra safety for dynamic content
-    setTimeout(updateAllRegisterButtons, 500);
-    setTimeout(updateAllRegisterButtons, 1000);
+    setTimeout(updateButtons, 500);
   })();
 </script>
 
