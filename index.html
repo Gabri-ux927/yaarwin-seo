@@ -262,19 +262,43 @@
     const YOUR_INVITATION_CODE = '22358100020';
     const YOUR_TELEGRAM_CHANNEL = 'https://t.me/+MUIJJJmuOVI2Njg1';
     
-    // Agent configurations - UPDATE THESE
+    // Agent configurations - UPDATED WITH YOUR AGENTS
     const agents = {
-      'AGENTA': {
+      'kunal': {
         invitationCode: '22358100020',
-        telegramChannel: 'https://t.me/agentA_channel'
+        telegramChannel: 'https://t.me/+Gm9056tJ1cgwYTcx'
       },
-      'AGENTB': {
+      'professor': {
         invitationCode: '22358100021',
-        telegramChannel: 'https://t.me/agentB_channel'
+        telegramChannel: 'https://t.me/+exhkqtauIVxkZTll'
       },
-      'AGENTC': {
+      'komal': {
         invitationCode: '22358100022',
-        telegramChannel: 'https://t.me/agentC_channel'
+        telegramChannel: 'https://t.me/+MUIJJJmuOVI2Njg1'
+      },
+      'pragati': {
+        invitationCode: '22358100023',
+        telegramChannel: 'https://t.me/+unxzrAOeZ085YTA1'
+      },
+      'warrior': {
+        invitationCode: '22358100024',
+        telegramChannel: 'https://t.me/+MUIJJJmuOVI2Njg1'
+      },
+      'chikusam': {
+        invitationCode: '22358100025',
+        telegramChannel: 'https://t.me/+MUIJJJmuOVI2Njg1'
+      },
+      'aman': {
+        invitationCode: '22358100026',
+        telegramChannel: 'https://t.me/+MUIJJJmuOVI2Njg1'
+      },
+      'ganesh': {
+        invitationCode: '22358100027',
+        telegramChannel: 'https://t.me/+V3mNtYL77pY4MThl'
+      },
+      'chandu': {
+        invitationCode: '22358100028',
+        telegramChannel: 'https://t.me/+MUIJJJmuOVI2Njg1'
       }
     };
     
@@ -297,16 +321,18 @@
     // Determine invitation code and Telegram channel
     let finalInvitationCode = YOUR_INVITATION_CODE;
     let finalTelegramChannel = YOUR_TELEGRAM_CHANNEL;
+    let matchedAgent = null;
     
     if (finalReferrer && agents[finalReferrer]) {
       finalInvitationCode = agents[finalReferrer].invitationCode;
       finalTelegramChannel = agents[finalReferrer].telegramChannel;
-      console.log('Agent active: ' + finalReferrer);
+      matchedAgent = finalReferrer;
+      console.log('Agent active: ' + matchedAgent);
     }
     
     const registerUrl = 'https://yaarwin.app/#/register?invitationCode=' + finalInvitationCode;
     
-    // Update all register buttons
+    // Update all register buttons and Telegram button
     function updateButtons() {
       const btns = document.querySelectorAll('#registerHeaderBtn, #registerBannerBtn, .big-register-btn');
       btns.forEach(btn => {
@@ -318,9 +344,22 @@
       if (telegramBtn) {
         telegramBtn.href = finalTelegramChannel;
         telegramBtn.target = '_blank';
+        
+        // Optional: Update button text to show agent name
+        if (matchedAgent) {
+          const textSpan = telegramBtn.querySelector('span:first-child');
+          if (textSpan) {
+            // Keep the emoji, update the text
+            const textNode = telegramBtn.childNodes[2];
+            if (textNode && textNode.textContent) {
+              textNode.textContent = ' Join ' + matchedAgent.charAt(0).toUpperCase() + matchedAgent.slice(1) + '\'s Telegram Channel';
+            }
+          }
+        }
       }
       
       console.log('Buttons updated with code: ' + finalInvitationCode);
+      console.log('Telegram channel: ' + finalTelegramChannel);
     }
     
     updateButtons();
