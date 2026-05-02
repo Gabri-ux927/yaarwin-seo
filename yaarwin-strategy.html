@@ -3,73 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <title>Yaarwin Strategy Guide - Tips for Colour Prediction</title>
-  <meta name="description" content="Learn winning strategies for Yaarwin colour prediction. Bankroll management, pattern recognition, and responsible gaming tips.">
+  <meta name="description" content="Learn strategies for Yaarwin colour prediction. Bankroll management, pattern recognition, and responsible gaming tips.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #0f172a; color: white; padding: 20px; line-height: 1.6; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #0f172a; color: white; padding: 20px; line-height: 1.6; }
     .container { max-width: 900px; margin: auto; background: #1e293b; padding: 30px; border-radius: 12px; }
     h1 { color: #22c55e; }
-    h2 { color: #fbbf24; }
+    h2 { color: #fbbf24; margin-top: 25px; }
     .strategy-box { background: #334155; padding: 15px; border-radius: 8px; margin: 15px 0; }
     .pro-tip { background: #1e3a5f; border-left: 4px solid #22c55e; padding: 15px; margin: 15px 0; }
-    .btn { display: inline-block; margin-top: 20px; padding: 10px 20px; background: #22c55e; color: black; text-decoration: none; border-radius: 8px; }
+    .btn { display: inline-block; margin-top: 20px; padding: 12px 24px; background: #22c55e; color: black; text-decoration: none; border-radius: 8px; font-weight: bold; }
     nav { margin-top: 30px; text-align: center; }
+    nav a { color: #22c55e; margin: 0 10px; text-decoration: none; }
+    .header { text-align: center; margin-bottom: 20px; }
+    .header img { height: 50px; }
   </style>
 </head>
 <body>
 <div class="container">
+  <div class="header"><img src="/logo.png" alt="Logo"></div>
   <h1>Yaarwin Strategy Guide for Beginners</h1>
   <p>Smart strategies to improve your colour prediction game. No guaranteed wins — just proven approaches.</p>
 
-  <div class="strategy-box">
-    <h2>🎯 Strategy 1: Bankroll Management</h2>
-    <p>Never bet more than 5% of your total balance on a single round.<br>
-    <strong>Example:</strong> If you have ₹1000, max bet = ₹50 per round.<br>
-    This ensures you can survive losing streaks.</p>
-  </div>
+  <div class="strategy-box"><h2>🎯 Strategy 1: Bankroll Management</h2><p>Never bet more than 5% of your balance on a single round. ₹1000 balance = ₹50 max bet.</p></div>
+  <div class="strategy-box"><h2>📊 Strategy 2: Pattern Tracking</h2><p>Watch 10-15 rounds before placing real bets. Note which colors appear most frequently.</p></div>
+  <div class="strategy-box"><h2>💰 Strategy 3: The 70% Rule</h2><p>Withdraw 70% of daily winnings. Leave 30% to continue playing.</p></div>
+  <div class="pro-tip"><h2>🔥 Pro Tip: Use Gift Codes Wisely</h2><p>Claim daily gift codes from our Telegram. Use free credits to practice.</p></div>
+  <div class="pro-tip"><h2>⚠️ Common Mistakes to Avoid</h2><ul><li>❌ Chasing losses — doubling bets after losing</li><li>❌ Betting all colors at once (illegal)</li><li>❌ Not reading game rules</li></ul></div>
 
-  <div class="strategy-box">
-    <h2>📊 Strategy 2: Pattern Tracking</h2>
-    <p>Watch 10-15 rounds before placing real bets. Note which colors appear most frequently.<br>
-    Many players use the "3-round rule" — if Red hasn't appeared in 3 rounds, bet on Red.</p>
-  </div>
-
-  <div class="strategy-box">
-    <h2>💰 Strategy 3: The 70% Rule</h2>
-    <p>Withdraw 70% of your winnings daily. Leave 30% to continue playing.<br>
-    This locks in profits and prevents giving everything back.</p>
-  </div>
-
-  <div class="pro-tip">
-    <h2>🔥 Pro Tip: Use Gift Codes Wisely</h2>
-    <p>Claim daily gift codes from our Telegram. Use free credits to practice without risking your own money.</p>
-  </div>
-
-  <div class="pro-tip">
-    <h2>⚠️ Common Mistakes to Avoid</h2>
-    <ul>
-      <li>❌ Chasing losses — doubling bets after losing</li>
-      <li>❌ Betting all colors at once (illegal + guaranteed loss)</li>
-      <li>❌ Ignoring withdrawal limits</li>
-      <li>❌ Not reading game rules before playing</li>
-    </ul>
-  </div>
-
-  <h2>❓ Frequently Asked Questions</h2>
-  <div><strong>Q: Is there a guaranteed trick to win?</strong><br>A: No. Colour prediction involves luck. Play responsibly.</div>
-  <div style="margin-top: 15px;"><strong>Q: How often do gift codes release?</strong><br>A: Daily at 10 AM on our Telegram channel.</div>
-  <div style="margin-top: 15px;"><strong>Q: Can I use multiple accounts?</strong><br>A: No — one account per user. Multi-accounting leads to permanent ban.</div>
-
-  <a href="#" class="btn" id="playBtn">Start Playing Yaarwin →</a>
-  
+  <a href="#" id="registerBtn" class="btn">🎮 Start Playing Yaarwin →</a>
   <nav><a href="/">Home</a> | <a href="/yaarwin-game.html">Game Rules</a> | <a href="/yaarwin-app.html">App</a></nav>
 </div>
 
 <script>
-  document.getElementById('playBtn').addEventListener('click', (e) => {
-    e.preventDefault();
-    alert('Official Yaarwin link coming soon. Check Telegram for updates!');
-  });
+  (function() {
+    const YOUR_CODE = '22358100020';
+    const agents = { 'kunal': { code: '22358100020' }, 'professor': { code: '22358100021' }, 'komal': { code: '22358100022' }, 'pragati': { code: '22358100023' }, 'warrior': { code: '22358100024' }, 'chikusam': { code: '22358100025' }, 'aman': { code: '22358100026' }, 'ganesh': { code: '22358100027' }, 'chandu': { code: '22358100028' } };
+    const urlRef = new URLSearchParams(location.search).get('ref');
+    const savedRef = localStorage.getItem('yaarwin_referrer');
+    let finalRef = urlRef || savedRef;
+    if (urlRef) localStorage.setItem('yaarwin_referrer', urlRef);
+    let finalCode = YOUR_CODE;
+    if (finalRef && agents[finalRef]) finalCode = agents[finalRef].code;
+    const btn = document.getElementById('registerBtn');
+    if (btn) { btn.href = 'https://yaarwin.app/#/register?invitationCode=' + finalCode; btn.target = '_blank'; }
+  })();
 </script>
 </body>
 </html>
