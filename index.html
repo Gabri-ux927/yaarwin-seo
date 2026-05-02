@@ -21,8 +21,14 @@
     body { font-family: 'Segoe UI', Arial, sans-serif; background: #0f172a; color: white; }
     
     /* Header */
-    header { padding: 20px; background: #111827; border-bottom: 1px solid #22c55e; display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; }
-    header img { height: 40px; width: auto; }
+    header { padding: 20px; background: #111827; border-bottom: 1px solid #22c55e; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px; }
+    .logo-area { display: flex; align-items: center; gap: 12px; }
+    .logo-area img { height: 40px; width: auto; }
+    .header-buttons { display: flex; gap: 12px; }
+    .header-btn { padding: 10px 20px; background: #22c55e; color: black; text-decoration: none; border-radius: 8px; font-weight: bold; transition: background 0.2s; }
+    .header-btn:hover { background: #16a34a; }
+    .header-btn-outline { background: transparent; border: 1px solid #22c55e; color: #22c55e; }
+    .header-btn-outline:hover { background: #22c55e20; }
     
     .container { padding: 40px 20px; max-width: 1200px; margin: auto; }
     
@@ -37,6 +43,12 @@
     .gift-code { font-size: 36px; font-weight: bold; letter-spacing: 4px; font-family: monospace; margin: 15px 0; color: white; }
     .gift-box button { padding: 10px 24px; background: #22c55e; color: black; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; transition: background 0.2s; }
     .gift-box button:hover { background: #16a34a; }
+    
+    /* Register Banner */
+    .register-banner { background: linear-gradient(135deg, #22c55e15, #16a34a05); border: 1px solid #22c55e; border-radius: 16px; padding: 20px; text-align: center; margin: 20px 0 30px; }
+    .register-banner p { margin-bottom: 12px; font-size: 16px; }
+    .register-banner .big-register-btn { display: inline-block; padding: 14px 32px; background: #22c55e; color: black; text-decoration: none; border-radius: 12px; font-weight: bold; font-size: 20px; transition: all 0.2s; }
+    .register-banner .big-register-btn:hover { background: #16a34a; transform: scale(1.02); }
     
     /* Selection Cards */
     .selection-section { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin: 50px 0; }
@@ -113,13 +125,20 @@
       .stat-number { font-size: 28px; }
       .payout-item { padding: 10px 20px; }
       nav a { margin: 0 8px; font-size: 12px; }
+      header { flex-direction: column; text-align: center; }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <img src="/logo.png" alt="Yaarwin Logo">
+  <div class="logo-area">
+    <img src="/logo.png" alt="Yaarwin Logo">
+  </div>
+  <div class="header-buttons">
+    <a href="#" class="header-btn" id="registerHeaderBtn">📝 Register Now</a>
+    <a href="/yaarwin-login.html" class="header-btn-outline header-btn" id="loginHeaderBtn">🔐 Login</a>
+  </div>
 </header>
 
 <div class="container">
@@ -127,6 +146,12 @@
   <div class="hero">
     <h1>Welcome to Yaarwin</h1>
     <p>India's fastest-growing color trading platform. Play, earn, withdraw instantly. Or become an agent and earn passive income.</p>
+  </div>
+
+  <!-- Register Banner (Prominent CTA) -->
+  <div class="register-banner">
+    <p>🚀 <strong>Start your journey today!</strong> Create a free account in 2 minutes.</p>
+    <a href="#" class="big-register-btn" id="registerBannerBtn">📝 Register Now & Get ₹100 Bonus →</a>
   </div>
 
   <!-- Gift Code Box -->
@@ -216,7 +241,7 @@
     <h2>🎯 Ready to Start Earning?</h2>
     <p>Join 50,000+ active players or become an agent with zero investment.</p>
     <div class="cta-buttons">
-      <a href="/earn-by-playing.html" class="cta-btn cta-primary">📝 Start Playing</a>
+      <a href="#" class="cta-btn cta-primary" id="registerCtaBtn">📝 Start Playing</a>
       <a href="/become-agent.html" class="cta-btn cta-secondary">🤝 Become an Agent</a>
       <a href="/yaarwin-login.html" class="cta-btn cta-primary">🔐 Login</a>
     </div>
@@ -258,42 +283,104 @@
     };
   })();
 
-  // Referral tracking
+  // ============================================
+  // PERSISTENT REFERRAL TRACKING (CRITICAL)
+  // ============================================
   (function() {
+    // YOUR default invitation code
     const YOUR_INVITATION_CODE = '22358100020';
+    
+    // Agent invitation codes (UPDATE WITH REAL CODES)
     const invitationCodes = {
       'AGENTA': '22358100020',
       'AGENTB': '22358100021',
       'AGENTC': '22358100022'
     };
     
+    // Step 1: Check URL for ref parameter
     const urlParams = new URLSearchParams(window.location.search);
-    let referrer = urlParams.get('ref');
-    if (!referrer) referrer = localStorage.getItem('yaarwin_referrer');
-    else localStorage.setItem('yaarwin_referrer', referrer);
+    const referrerFromUrl = urlParams.get('ref');
     
-    let finalInvitationCode = YOUR_INVITATION_CODE;
-    if (referrer && invitationCodes[referrer]) {
-      finalInvitationCode = invitationCodes[referrer];
-      console.log('✅ Referrer active: ' + referrer);
+    // Step 2: Check localStorage for existing referrer
+    const savedReferrer = localStorage.getItem('yaarwin_referrer');
+    
+    // Step 3: Determine which referrer to use
+    let finalReferrer = null;
+    
+    if (referrerFromUrl) {
+      // URL has referrer → use it and save it (overwrites old)
+      finalReferrer = referrerFromUrl;
+      localStorage.setItem('yaarwin_referrer', finalReferrer);
+      console.log('📌 New referrer from URL: ' + finalReferrer);
+    } else if (savedReferrer) {
+      // No referrer in URL but saved in browser → use saved
+      finalReferrer = savedReferrer;
+      console.log('📌 Using saved referrer from previous page: ' + finalReferrer);
+    } else {
+      console.log('ℹ️ No referrer detected');
     }
     
+    // Step 4: Determine final invitation code
+    let finalInvitationCode = YOUR_INVITATION_CODE;
+    
+    if (finalReferrer && invitationCodes[finalReferrer]) {
+      finalInvitationCode = invitationCodes[finalReferrer];
+      console.log('✅ Referrer ACTIVE: ' + finalReferrer + ' → Code: ' + finalInvitationCode);
+    } else if (finalReferrer && !invitationCodes[finalReferrer]) {
+      console.warn('⚠️ Unknown referrer: ' + finalReferrer + ' — using default code');
+    } else {
+      console.log('✅ No referrer — using YOUR default code: ' + finalInvitationCode);
+    }
+    
+    // Step 5: Build registration URL
     const registerUrl = 'https://yaarwin.app/#/register?invitationCode=' + finalInvitationCode;
     const loginUrl = 'https://yaarwin.app/#/login';
     
-    const allLinks = document.querySelectorAll('a');
-    allLinks.forEach(link => {
-      const text = (link.innerText || '').toLowerCase();
-      const href = (link.getAttribute('href') || '').toLowerCase();
-      if (text.includes('register') || text.includes('sign up') || href.includes('register') || link.id === 'registerBtn') {
-        link.href = registerUrl;
-        link.setAttribute('target', '_blank');
-      }
-      if (text.includes('login') || href.includes('login') || link.id === 'loginBtn') {
-        link.href = loginUrl;
-        link.setAttribute('target', '_blank');
-      }
-    });
+    // Step 6: Update ALL register buttons on the page
+    function updateAllRegisterButtons() {
+      // Find all register buttons (by ID, class, or text content)
+      const registerSelectors = [
+        '#registerHeaderBtn',
+        '#registerBannerBtn', 
+        '#registerCtaBtn',
+        '.big-register-btn',
+        '.header-btn[id*="register"]',
+        'a[href*="register"]'
+      ];
+      
+      registerSelectors.forEach(selector => {
+        const elements = document.querySelectorAll(selector);
+        elements.forEach(el => {
+          el.setAttribute('href', registerUrl);
+          el.setAttribute('target', '_blank');
+        });
+      });
+      
+      // Also find any element containing "Register" text
+      const allLinks = document.querySelectorAll('a, button');
+      allLinks.forEach(el => {
+        const text = (el.innerText || '').toLowerCase();
+        if (text.includes('register') || text.includes('sign up') || text.includes('create account')) {
+          el.setAttribute('href', registerUrl);
+          el.setAttribute('target', '_blank');
+        }
+        if (text.includes('login') && !el.id.includes('register')) {
+          el.setAttribute('href', loginUrl);
+          el.setAttribute('target', '_blank');
+        }
+      });
+      
+      console.log('✅ All register buttons updated with code: ' + finalInvitationCode);
+    }
+    
+    // Run immediately and after page loads
+    updateAllRegisterButtons();
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', updateAllRegisterButtons);
+    }
+    // Extra safety for dynamic content
+    setTimeout(updateAllRegisterButtons, 500);
+    setTimeout(updateAllRegisterButtons, 1000);
   })();
 </script>
 
