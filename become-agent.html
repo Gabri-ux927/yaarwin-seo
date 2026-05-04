@@ -42,23 +42,32 @@
 <div class="container">
   <div class="hero"><h1>🤝 Become a Yaarwin Agent</h1><p>Earn daily commissions without playing. Zero investment. Passive income starting today.</p></div>
   <div class="stats-grid"><div class="stat-card"><div class="stat-number">₹50K+</div><div class="stat-label">Monthly Agent Earnings</div></div><div class="stat-card"><div class="stat-number">500+</div><div class="stat-label">Active Agents</div></div><div class="stat-card"><div class="stat-number">₹10Cr+</div><div class="stat-label">Total Commissions</div></div></div>
+  
   <h2 style="text-align:center; color:#fbbf24;">🚀 How It Works</h2>
   <div class="steps-grid"><div class="step"><div class="step-number">1</div><h3>Get Your Link</h3><p>yaarwinpro.com/?ref=YOURNAME</p></div><div class="step"><div class="step-number">2</div><h3>Share Anywhere</h3><p>Telegram, WhatsApp, Instagram, ads</p></div><div class="step"><div class="step-number">3</div><h3>Earn Commissions</h3><p>Percentage of each deposit</p></div><div class="step"><div class="step-number">4</div><h3>Withdraw Daily</h3><p>Instant to bank/UPI</p></div></div>
+  
   <div class="commission-section"><h2 style="text-align:center; color:#fbbf24;">💰 Commission Structure</h2><table><tr><th>Referrals / Month</th><th>Commission Rate</th><th>Weekly Bonus</th></tr><tr><td>1-10 players</td><td style="color:#22c55e; font-weight:bold;">5%</td><td>-</td></tr><tr><td>11-50 players</td><td style="color:#22c55e; font-weight:bold;">7%</td><td>₹500</td></tr><tr><td>51-200 players</td><td style="color:#22c55e; font-weight:bold;">10%</td><td>₹2,000</td></tr><tr><td>200+ players</td><td style="color:#22c55e; font-weight:bold;">15%</td><td>₹5,000</td></tr></table></div>
+  
   <div class="cta-box"><h2>🎯 Ready to Start Earning?</h2><p>Join 500+ active agents already earning daily commissions.</p><a href="#" id="registerBtn" class="btn btn-primary">📝 Register as Agent</a><a href="https://t.me/+MUIJJJmuOVI2Njg1" class="btn btn-secondary">💬 Join Agent Telegram</a><a href="/" class="btn btn-primary">🏠 Back to Home</a></div>
 </div>
 
 <footer><a href="/">Home</a> | <a href="/yaarwin-game.html">Game Rules</a> | <a href="/earn-by-playing.html">Earn by Playing</a> | <a href="/yaarwin-login.html">Login</a><p>© 2026 Yaarwin | Must be 18+ | Play Responsibly</p></footer>
 
 <script>
+  // REFERRAL SYSTEM
   (function() {
-    const YOUR_CODE = '22358100020';
-    const agents = { 'kunal': { code: '22358100020' }, 'professor': { code: '22358100021' }, 'shivani': { code: '22358100022' }, 'pragati': { code: '22358100023' }, 'warrior': { code: '22358100024' }, 'chikusam': { code: '22358100025' }, 'aman': { code: '22358100026' }, 'ganesh': { code: '22358100027' }, 'chandu': { code: '22358100028' } };
+    const DEFAULT_CODE = '13173101628';
+    const agents = {
+      'kunal': { code: '25744140589' }, 'shivani': { code: '83145146323' },
+      'professor': { code: '73247140528' }, 'ganesh': { code: '67318146623' },
+      'pragati': { code: '17843157929' }, 'chikusam': { code: '86547158763' },
+      'hukum': { code: '32453140774' }, 'chandu': { code: '13388140914' }
+    };
     const urlRef = new URLSearchParams(location.search).get('ref');
     const savedRef = localStorage.getItem('yaarwin_referrer');
     let finalRef = urlRef || savedRef;
     if (urlRef) localStorage.setItem('yaarwin_referrer', urlRef);
-    let finalCode = YOUR_CODE;
+    let finalCode = DEFAULT_CODE;
     if (finalRef && agents[finalRef]) finalCode = agents[finalRef].code;
     const btn = document.getElementById('registerBtn');
     if (btn) { btn.href = 'https://yaarwin.app/#/register?invitationCode=' + finalCode; btn.target = '_blank'; }
