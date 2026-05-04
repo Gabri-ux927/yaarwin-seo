@@ -24,7 +24,7 @@
     .logo-area { display: flex; align-items: center; gap: 12px; }
     .logo-area img { height: 40px; width: auto; }
     .header-buttons { display: flex; gap: 12px; }
-    .header-btn { padding: 10px 20px; background: #22c55e; color: black; text-decoration: none; border-radius: 8px; font-weight: bold; transition: background 0.2s; }
+    .header-btn { padding: 10px 20px; background: #22c55e; color: black; text-decoration: none; border-radius: 8px; font-weight: bold; }
     .header-btn:hover { background: #16a34a; }
     .header-btn-outline { background: transparent; border: 1px solid #22c55e; color: #22c55e; }
     .header-btn-outline:hover { background: #22c55e20; }
@@ -36,27 +36,26 @@
     
     .gift-box { background: linear-gradient(135deg, #1e293b, #0f172a); border: 2px solid #22c55e; border-radius: 20px; padding: 25px; margin: 30px auto; max-width: 550px; text-align: center; }
     .gift-box p:first-child { color: #fbbf24; font-size: 14px; letter-spacing: 2px; }
-    .gift-code { font-size: 36px; font-weight: bold; letter-spacing: 4px; font-family: monospace; margin: 15px 0; color: white; }
+    .gift-code { font-size: 28px; font-weight: bold; letter-spacing: 2px; font-family: monospace; margin: 15px 0; color: white; word-break: break-all; }
     .gift-box button { padding: 10px 24px; background: #22c55e; color: black; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; }
     .gift-box button:hover { background: #16a34a; }
     
     .register-banner { background: linear-gradient(135deg, #22c55e15, #16a34a05); border: 1px solid #22c55e; border-radius: 16px; padding: 20px; text-align: center; margin: 20px 0 30px; }
     .register-banner p { margin-bottom: 12px; font-size: 16px; }
-    .big-register-btn { display: inline-block; padding: 14px 32px; background: #22c55e; color: black; text-decoration: none; border-radius: 12px; font-weight: bold; font-size: 20px; transition: all 0.2s; }
+    .big-register-btn { display: inline-block; padding: 14px 32px; background: #22c55e; color: black; text-decoration: none; border-radius: 12px; font-weight: bold; font-size: 20px; }
     .big-register-btn:hover { background: #16a34a; transform: scale(1.02); }
     
     .telegram-section { text-align: center; margin: 25px 0; }
-    .telegram-btn { display: inline-flex; align-items: center; gap: 12px; background: #0088cc; padding: 14px 28px; border-radius: 50px; text-decoration: none; color: white; font-weight: bold; font-size: 18px; transition: transform 0.2s; }
+    .telegram-btn { display: inline-flex; align-items: center; gap: 12px; background: #0088cc; padding: 14px 28px; border-radius: 50px; text-decoration: none; color: white; font-weight: bold; font-size: 18px; }
     .telegram-btn:hover { background: #006699; transform: scale(1.02); }
     
     .selection-section { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin: 50px 0; }
-    .earn-card { flex: 1; min-width: 280px; max-width: 350px; background: linear-gradient(135deg, #1e293b, #0f172a); border-radius: 24px; padding: 35px 25px; text-align: center; transition: transform 0.3s; border: 1px solid #334155; text-decoration: none; display: block; }
+    .earn-card { flex: 1; min-width: 280px; max-width: 350px; background: linear-gradient(135deg, #1e293b, #0f172a); border-radius: 24px; padding: 35px 25px; text-align: center; border: 1px solid #334155; text-decoration: none; display: block; }
     .earn-card:hover { transform: translateY(-8px); border-color: #22c55e; }
     .earn-card img { width: 100px; height: 100px; margin-bottom: 20px; }
     .earn-card h3 { font-size: 28px; color: #fbbf24; margin-bottom: 15px; }
-    .earn-card p { color: #cbd5f5; font-size: 14px; line-height: 1.5; margin-bottom: 20px; }
+    .earn-card p { color: #cbd5f5; font-size: 14px; margin-bottom: 20px; }
     .earn-card .btn-small { display: inline-block; padding: 10px 24px; background: #22c55e; color: black; text-decoration: none; border-radius: 8px; font-weight: bold; }
-    .earn-card:hover .btn-small { background: #16a34a; }
     
     .trust-section { text-align: center; margin: 40px 0; }
     .trust-badge { display: inline-block; background: #22c55e20; border: 1px solid #22c55e; border-radius: 40px; padding: 8px 20px; margin: 6px; font-size: 14px; }
@@ -69,20 +68,19 @@
     .how-it-works { text-align: center; margin: 50px 0; }
     .how-it-works h2 { color: #fbbf24; font-size: 32px; margin-bottom: 30px; }
     .steps-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
-    .step-card { flex: 1; min-width: 200px; background: #1e293b; border-radius: 20px; padding: 25px 20px; border: 1px solid #334155; transition: transform 0.2s; }
-    .step-card:hover { transform: translateY(-5px); border-color: #22c55e; }
+    .step-card { flex: 1; min-width: 200px; background: #1e293b; border-radius: 20px; padding: 25px 20px; border: 1px solid #334155; }
     .step-number { width: 45px; height: 45px; background: #22c55e; color: black; font-size: 22px; font-weight: bold; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; }
     .step-card h3 { color: #22c55e; margin-bottom: 10px; font-size: 18px; }
     .step-card p { color: #cbd5f5; font-size: 13px; }
     
-    .payout-section { background: linear-gradient(135deg, #1e293b, #0f172a); border-radius: 24px; padding: 40px; margin: 50px 0; text-align: center; border: 1px solid #334155; }
+    .payout-section { background: linear-gradient(135deg, #1e293b, #0f172a); border-radius: 24px; padding: 40px; text-align: center; border: 1px solid #334155; }
     .payout-section h2 { color: #fbbf24; margin-bottom: 25px; }
     .payout-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
     .payout-item { background: #0f172a; border-radius: 16px; padding: 15px 25px; min-width: 120px; }
     .payout-multiplier { font-size: 28px; font-weight: bold; color: #22c55e; }
     .payout-name { font-size: 14px; color: #94a3b8; margin-top: 5px; }
     
-    .testimonial { background: #1e293b; border-radius: 24px; padding: 30px; margin: 50px 0; text-align: center; border-left: 4px solid #22c55e; }
+    .testimonial { background: #1e293b; border-radius: 24px; padding: 30px; text-align: center; border-left: 4px solid #22c55e; margin: 50px 0; }
     .testimonial p { color: #cbd5f5; font-style: italic; font-size: 16px; }
     .testimonial-author { color: #fbbf24; margin-top: 15px; font-weight: bold; }
     
@@ -97,21 +95,19 @@
     .cta-banner h2 { color: #22c55e; margin-bottom: 15px; }
     .cta-banner p { color: #cbd5f5; margin-bottom: 25px; }
     .cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
-    .cta-btn { padding: 14px 28px; border-radius: 12px; font-weight: bold; text-decoration: none; transition: all 0.2s; display: inline-block; }
+    .cta-btn { padding: 14px 28px; border-radius: 12px; font-weight: bold; text-decoration: none; display: inline-block; }
     .cta-primary { background: #22c55e; color: black; }
-    .cta-primary:hover { background: #16a34a; transform: scale(1.02); }
+    .cta-primary:hover { background: #16a34a; }
     .cta-secondary { background: #3b82f6; color: white; }
-    .cta-secondary:hover { background: #2563eb; transform: scale(1.02); }
+    .cta-secondary:hover { background: #2563eb; }
     
     nav { margin: 40px 0 20px; padding: 20px; background: #111827; border-radius: 12px; text-align: center; }
     nav a { color: #22c55e; text-decoration: none; margin: 0 12px; display: inline-block; padding: 5px 0; }
-    nav a:hover { color: #16a34a; text-decoration: underline; }
-    
     footer { margin-top: 40px; padding: 30px 20px; font-size: 12px; color: #64748b; border-top: 1px solid #1e293b; text-align: center; }
     
     @media (max-width: 768px) {
       .hero h1 { font-size: 28px; }
-      .gift-code { font-size: 24px; letter-spacing: 2px; }
+      .gift-code { font-size: 18px; letter-spacing: 1px; }
       .stat-number { font-size: 28px; }
       header { flex-direction: column; text-align: center; }
     }
@@ -141,16 +137,15 @@
   </div>
 
   <div class="telegram-section">
-    <a href="#" id="telegramBtn" class="telegram-btn" target="_blank">
-      <span>📢</span> Join Our Telegram Channel
-    </a>
+    <a href="#" id="telegramBtn" class="telegram-btn" target="_blank">📢 Join Our Telegram Channel</a>
     <p style="color: #64748b; font-size: 12px; margin-top: 8px;">Get daily gift codes, tips, and support</p>
   </div>
 
+  <!-- PERMANENT GIFT CODE BOX (No daily change needed) -->
   <div class="gift-box">
-    <p>🎁 TODAY'S GIFT CODE</p>
-    <div class="gift-code" id="dailyCode">YAARWIN-DAILY</div>
-    <p style="color: #94a3b8; font-size: 12px; margin-bottom: 15px;">Valid 24 hours • New code daily</p>
+    <p>🎁 YOUR GIFT CODE</p>
+    <div class="gift-code" id="dailyCode">AD52201CDBE0D43F57D32F14CC87F35F</div>
+    <p style="color: #94a3b8; font-size: 12px; margin-bottom: 15px;">Use this code to claim your bonus</p>
     <button onclick="copyCode()">📋 Copy Code</button>
   </div>
 
@@ -158,14 +153,13 @@
     <a href="/earn-by-playing.html" class="earn-card">
       <img src="https://img.icons8.com/fluency/120/gaming.png" alt="Earn by Playing">
       <h3>🎮 Earn by Playing</h3>
-      <p>Play color trading games — predict colors, sizes, and numbers. Win real money. Withdraw instantly to UPI or bank.</p>
+      <p>Play color trading games — predict colors, sizes, and numbers. Win real money. Withdraw instantly.</p>
       <span class="btn-small">Learn More →</span>
     </a>
-    
     <a href="/become-agent.html" class="earn-card">
       <img src="https://img.icons8.com/fluency/120/teamwork.png" alt="Earn as Agent">
       <h3>🤝 Become an Agent</h3>
-      <p>Earn daily commissions by referring players. No investment needed. Passive income. Top agents earn ₹50K+/month.</p>
+      <p>Earn daily commissions by referring players. No investment. Passive income. Top agents earn ₹50K+/month.</p>
       <span class="btn-small">Learn More →</span>
     </a>
   </div>
@@ -214,10 +208,10 @@
   <div class="faq-preview">
     <h2>❓ Quick Answers</h2>
     <div class="faq-grid">
-      <div class="faq-item"><h4>Is Yaarwin legal?</h4><p>Yes. Yaarwin operates as a skill-based gaming platform compliant with Indian laws.</p></div>
-      <div class="faq-item"><h4>Minimum withdrawal?</h4><p>₹110. Withdrawals processed within 5 minutes to UPI or bank account.</p></div>
-      <div class="faq-item"><h4>How to get gift codes?</h4><p>Daily codes posted on this website. Join our Telegram for early access.</p></div>
-      <div class="faq-item"><h4>Can I play on mobile?</h4><p>Yes. Download the Yaarwin APK from the login page. Works on all Android devices.</p></div>
+      <div class="faq-item"><h4>Is Yaarwin legal?</h4><p>Yes. Skill-based gaming platform compliant with Indian laws.</p></div>
+      <div class="faq-item"><h4>Minimum withdrawal?</h4><p>₹110. Withdrawals processed within 5 minutes to UPI or bank.</p></div>
+      <div class="faq-item"><h4>How to get gift codes?</h4><p>Daily codes here. Join Telegram for early access.</p></div>
+      <div class="faq-item"><h4>Can I play on mobile?</h4><p>Yes. Download APK from login page. Works on all Android devices.</p></div>
     </div>
   </div>
 
@@ -232,73 +226,62 @@
 </div>
 
 <footer>
-  <p><strong>Play Responsibly</strong> — Set deposit limits, take breaks, and never chase losses. Must be 18+.</p>
-  <p>© 2026 Yaarwin. All rights reserved. | <a href="/privacy.html" style="color:#22c55e;">Privacy Policy</a></p>
+  <p><strong>Play Responsibly</strong> — Set deposit limits, take breaks, must be 18+.</p>
+  <p>© 2026 Yaarwin. All rights reserved.</p>
 </footer>
 
 <script>
-  // Daily gift code
-  (function() {
-    const codes = {
-      '2026-05-02': 'YAARWIN-02MAY',
-      '2026-05-03': 'YAARWIN-03MAY',
-      '2026-05-04': 'YAARWIN-04MAY',
-      '2026-05-05': 'YAARWIN-05MAY'
-    };
-    const today = new Date().toISOString().split('T')[0];
-    const dailyCode = codes[today] || 'YAARWIN-DAILY';
-    const codeElement = document.getElementById('dailyCode');
-    if (codeElement) codeElement.textContent = dailyCode;
-    
-    window.copyCode = function() {
-      navigator.clipboard.writeText(dailyCode);
-      alert('✅ Code copied: ' + dailyCode);
-    };
-  })();
+  // PERMANENT GIFT CODE (No daily change)
+  const PERMANENT_CODE = 'AD52201CDBE0D43F57D32F14CC87F35F';
+  const codeElement = document.getElementById('dailyCode');
+  if (codeElement) codeElement.textContent = PERMANENT_CODE;
+  
+  window.copyCode = function() {
+    navigator.clipboard.writeText(PERMANENT_CODE);
+    alert('✅ Gift code copied: ' + PERMANENT_CODE);
+  };
 
-  // Referral and Telegram Tracking System
+  // ============================================
+  // REFERRAL SYSTEM WITH ALL AGENTS
+  // ============================================
   (function() {
-    // YOUR default settings
-    const YOUR_INVITATION_CODE = '22358100020';
-    const YOUR_TELEGRAM_CHANNEL = 'https://t.me/+MUIJJJmuOVI2Njg1';
+    // DEFAULT (Your own) settings
+    const DEFAULT_INVITATION_CODE = '13173101628';
+    const DEFAULT_TELEGRAM = 'https://t.me/+MUIJJJmuOVI2Njg1';
     
-    // Agent configurations - UPDATED WITH YOUR AGENTS
+    // All agents with their invitation codes and Telegram channels
     const agents = {
       'kunal': {
-        invitationCode: '22358100020',
-        telegramChannel: 'https://t.me/+Gm9056tJ1cgwYTcx'
-      },
-      'professor': {
-        invitationCode: '22358100021',
-        telegramChannel: 'https://t.me/+exhkqtauIVxkZTll'
+        code: '25744140589',
+        telegram: 'https://t.me/+ELY_G3ILf98zYmQ1'
       },
       'shivani': {
-        invitationCode: '22358100022',
-        telegramChannel: 'https://t.me/+yDMbZHsufe8wNjg1'
+        code: '83145146323',
+        telegram: 'https://t.me/+yDMbZHsufe8wNjg1'
       },
-      'pragati': {
-        invitationCode: '22358100023',
-        telegramChannel: 'https://t.me/+unxzrAOeZ085YTA1'
-      },
-      'warrior': {
-        invitationCode: '22358100024',
-        telegramChannel: 'https://t.me/+MUIJJJmuOVI2Njg1'
-      },
-      'chikusam': {
-        invitationCode: '22358100025',
-        telegramChannel: 'https://t.me/+MUIJJJmuOVI2Njg1'
-      },
-      'aman': {
-        invitationCode: '22358100026',
-        telegramChannel: 'https://t.me/+MUIJJJmuOVI2Njg1'
+      'professor': {
+        code: '73247140528',
+        telegram: 'https://t.me/+exhkqtauIVxkZTll'
       },
       'ganesh': {
-        invitationCode: '22358100027',
-        telegramChannel: 'https://t.me/+V3mNtYL77pY4MThl'
+        code: '67318146623',
+        telegram: 'https://t.me/+V3mNtYL77pY4MThl'
+      },
+      'pragati': {
+        code: '17843157929',
+        telegram: 'https://t.me/+2riHfWCvVtg0MDE1'
+      },
+      'chikusam': {
+        code: '86547158763',
+        telegram: 'https://t.me/+Ic3o4_BiqcNlNGJl'
+      },
+      'hukum': {
+        code: '32453140774',
+        telegram: 'https://t.me/+Fy5MbwAbFkYxZTZl'
       },
       'chandu': {
-        invitationCode: '22358100028',
-        telegramChannel: 'https://t.me/+LF2-tr-2MSwyMGQ1'
+        code: '13388140914',
+        telegram: 'https://t.me/+LF2-tr-2MSwyMGQ1'
       }
     };
     
@@ -312,34 +295,43 @@
     if (referrerFromUrl) {
       finalReferrer = referrerFromUrl;
       localStorage.setItem('yaarwin_referrer', finalReferrer);
-      console.log('New referrer: ' + finalReferrer);
+      console.log('📌 New referrer: ' + finalReferrer);
     } else if (savedReferrer) {
       finalReferrer = savedReferrer;
-      console.log('Saved referrer: ' + finalReferrer);
+      console.log('📌 Saved referrer: ' + finalReferrer);
     }
     
-    // Determine invitation code and Telegram channel
-    let finalInvitationCode = YOUR_INVITATION_CODE;
-    let finalTelegramChannel = YOUR_TELEGRAM_CHANNEL;
+    // Determine final invitation code and Telegram channel
+    let finalInvitationCode = DEFAULT_INVITATION_CODE;
+    let finalTelegramChannel = DEFAULT_TELEGRAM;
     let matchedAgent = null;
     
     if (finalReferrer && agents[finalReferrer]) {
-      finalInvitationCode = agents[finalReferrer].invitationCode;
-      finalTelegramChannel = agents[finalReferrer].telegramChannel;
+      finalInvitationCode = agents[finalReferrer].code;
+      finalTelegramChannel = agents[finalReferrer].telegram;
       matchedAgent = finalReferrer;
-      console.log('Agent active: ' + matchedAgent);
+      console.log('✅ Agent ACTIVE: ' + matchedAgent);
+      console.log('   → Invitation Code: ' + finalInvitationCode);
+      console.log('   → Telegram: ' + finalTelegramChannel);
+    } else if (finalReferrer && !agents[finalReferrer]) {
+      console.warn('⚠️ Unknown referrer: ' + finalReferrer + ' — using default');
+    } else {
+      console.log('✅ No referrer — using default settings');
     }
     
     const registerUrl = 'https://yaarwin.app/#/register?invitationCode=' + finalInvitationCode;
+    const loginUrl = 'https://yaarwin.app/#/login';
     
-    // Update all register buttons and Telegram button
+    // Update all register buttons
     function updateButtons() {
-      const btns = document.querySelectorAll('#registerHeaderBtn, #registerBannerBtn, .big-register-btn');
-      btns.forEach(btn => {
+      // Register buttons
+      const registerBtns = document.querySelectorAll('#registerHeaderBtn, #registerBannerBtn, .big-register-btn, .btn-small, .cta-primary');
+      registerBtns.forEach(btn => {
         btn.href = registerUrl;
         btn.target = '_blank';
       });
       
+      // Update Telegram button
       const telegramBtn = document.getElementById('telegramBtn');
       if (telegramBtn) {
         telegramBtn.href = finalTelegramChannel;
@@ -347,19 +339,14 @@
         
         // Optional: Update button text to show agent name
         if (matchedAgent) {
-          const textSpan = telegramBtn.querySelector('span:first-child');
-          if (textSpan) {
-            // Keep the emoji, update the text
-            const textNode = telegramBtn.childNodes[2];
-            if (textNode && textNode.textContent) {
-              textNode.textContent = ' Join ' + matchedAgent.charAt(0).toUpperCase() + matchedAgent.slice(1) + '\'s Telegram Channel';
-            }
+          const textNode = telegramBtn.childNodes[2];
+          if (textNode && textNode.textContent) {
+            textNode.textContent = ' Join ' + matchedAgent.charAt(0).toUpperCase() + matchedAgent.slice(1) + '\'s Telegram Channel';
           }
         }
       }
       
-      console.log('Buttons updated with code: ' + finalInvitationCode);
-      console.log('Telegram channel: ' + finalTelegramChannel);
+      console.log('✅ All buttons updated');
     }
     
     updateButtons();
@@ -367,6 +354,7 @@
       document.addEventListener('DOMContentLoaded', updateButtons);
     }
     setTimeout(updateButtons, 500);
+    setTimeout(updateButtons, 1000);
   })();
 </script>
 
