@@ -27,14 +27,20 @@
 </div>
 
 <script>
+  // REFERRAL SYSTEM
   (function() {
-    const YOUR_CODE = '22358100020';
-    const agents = { 'kunal': {}, 'professor': {}, 'shivani': {}, 'pragati': {}, 'warrior': {}, 'chikusam': {}, 'aman': {}, 'ganesh': {}, 'chandu': {} };
+    const DEFAULT_CODE = '13173101628';
+    const agents = {
+      'kunal': { code: '25744140589' }, 'shivani': { code: '83145146323' },
+      'professor': { code: '73247140528' }, 'ganesh': { code: '67318146623' },
+      'pragati': { code: '17843157929' }, 'chikusam': { code: '86547158763' },
+      'hukum': { code: '32453140774' }, 'chandu': { code: '13388140914' }
+    };
     const urlRef = new URLSearchParams(location.search).get('ref');
     const savedRef = localStorage.getItem('yaarwin_referrer');
     let finalRef = urlRef || savedRef;
     if (urlRef) localStorage.setItem('yaarwin_referrer', urlRef);
-    let finalCode = YOUR_CODE;
+    let finalCode = DEFAULT_CODE;
     if (finalRef && agents[finalRef]) finalCode = agents[finalRef].code;
     document.getElementById('registerBtn').href = 'https://yaarwin.app/#/register?invitationCode=' + finalCode;
   })();
