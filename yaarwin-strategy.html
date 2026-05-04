@@ -28,7 +28,7 @@
   <div class="strategy-box"><h2>🎯 Strategy 1: Bankroll Management</h2><p>Never bet more than 5% of your balance on a single round. ₹1000 balance = ₹50 max bet.</p></div>
   <div class="strategy-box"><h2>📊 Strategy 2: Pattern Tracking</h2><p>Watch 10-15 rounds before placing real bets. Note which colors appear most frequently.</p></div>
   <div class="strategy-box"><h2>💰 Strategy 3: The 70% Rule</h2><p>Withdraw 70% of daily winnings. Leave 30% to continue playing.</p></div>
-  <div class="pro-tip"><h2>🔥 Pro Tip: Use Gift Codes Wisely</h2><p>Claim daily gift codes from our Telegram. Use free credits to practice.</p></div>
+  <div class="pro-tip"><h2>🔥 Pro Tip: Use Gift Codes Wisely</h2><p>Claim gift codes from our website. Use free credits to practice.</p></div>
   <div class="pro-tip"><h2>⚠️ Common Mistakes to Avoid</h2><ul><li>❌ Chasing losses — doubling bets after losing</li><li>❌ Betting all colors at once (illegal)</li><li>❌ Not reading game rules</li></ul></div>
 
   <a href="#" id="registerBtn" class="btn">🎮 Start Playing Yaarwin →</a>
@@ -36,14 +36,20 @@
 </div>
 
 <script>
+  // REFERRAL SYSTEM
   (function() {
-    const YOUR_CODE = '22358100020';
-    const agents = { 'kunal': { code: '22358100020' }, 'professor': { code: '22358100021' }, 'shivani': { code: '22358100022' }, 'pragati': { code: '22358100023' }, 'warrior': { code: '22358100024' }, 'chikusam': { code: '22358100025' }, 'aman': { code: '22358100026' }, 'ganesh': { code: '22358100027' }, 'chandu': { code: '22358100028' } };
+    const DEFAULT_CODE = '13173101628';
+    const agents = {
+      'kunal': { code: '25744140589' }, 'shivani': { code: '83145146323' },
+      'professor': { code: '73247140528' }, 'ganesh': { code: '67318146623' },
+      'pragati': { code: '17843157929' }, 'chikusam': { code: '86547158763' },
+      'hukum': { code: '32453140774' }, 'chandu': { code: '13388140914' }
+    };
     const urlRef = new URLSearchParams(location.search).get('ref');
     const savedRef = localStorage.getItem('yaarwin_referrer');
     let finalRef = urlRef || savedRef;
     if (urlRef) localStorage.setItem('yaarwin_referrer', urlRef);
-    let finalCode = YOUR_CODE;
+    let finalCode = DEFAULT_CODE;
     if (finalRef && agents[finalRef]) finalCode = agents[finalRef].code;
     const btn = document.getElementById('registerBtn');
     if (btn) { btn.href = 'https://yaarwin.app/#/register?invitationCode=' + finalCode; btn.target = '_blank'; }
