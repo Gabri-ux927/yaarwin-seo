@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Yaarwin Game - Earn by Playing or Become an Agent</title>
- <meta name="description" content="Play Yaarwin game - predict colors, win real money. Learn rules, download app, login to your account. Instant withdrawals. Join now!">
+  <title>Yaarwin - Color Trading Game Platform India</title>
+  <meta name="description" content="Yaarwin is India's most trusted color trading game. Play, predict colors, win real money. Instant withdrawals. Join 50,000+ players.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
   
@@ -80,6 +80,10 @@
     .payout-multiplier { font-size: 28px; font-weight: bold; color: #22c55e; }
     .payout-name { font-size: 14px; color: #94a3b8; margin-top: 5px; }
     
+    .quick-links { background: #1e293b; border-radius: 16px; padding: 20px; margin: 30px 0; text-align: center; }
+    .quick-links a { color: #22c55e; text-decoration: none; margin: 0 15px; display: inline-block; }
+    .quick-links a:hover { text-decoration: underline; }
+    
     .testimonial { background: #1e293b; border-radius: 24px; padding: 30px; text-align: center; border-left: 4px solid #22c55e; margin: 50px 0; }
     .testimonial p { color: #cbd5f5; font-style: italic; font-size: 16px; }
     .testimonial-author { color: #fbbf24; margin-top: 15px; font-weight: bold; }
@@ -110,6 +114,7 @@
       .gift-code { font-size: 18px; letter-spacing: 1px; }
       .stat-number { font-size: 28px; }
       header { flex-direction: column; text-align: center; }
+      .quick-links a { display: block; margin: 8px 0; }
     }
   </style>
 </head>
@@ -127,7 +132,7 @@
 
 <div class="container">
   <div class="hero">
-    <h1>Yaarwin Game - India's Fastest Growing Color Trading Platform</h1>
+    <h1>Yaarwin - Play Color Trading Game & Win Real Money</h1>
     <p>India's fastest-growing color trading platform. Play, earn, withdraw instantly. Or become an agent and earn passive income.</p>
   </div>
 
@@ -141,7 +146,7 @@
     <p style="color: #64748b; font-size: 12px; margin-top: 8px;">Get daily gift codes, tips, and support</p>
   </div>
 
-  <!-- PERMANENT GIFT CODE BOX (No daily change needed) -->
+  <!-- PERMANENT GIFT CODE BOX -->
   <div class="gift-box">
     <p>🎁 YOUR GIFT CODE</p>
     <div class="gift-code" id="dailyCode">AD52201CDBE0D43F57D32F14CC87F35F</div>
@@ -162,6 +167,14 @@
       <p>Earn daily commissions by referring players. No investment. Passive income. Top agents earn ₹50K+/month.</p>
       <span class="btn-small">Learn More →</span>
     </a>
+  </div>
+
+  <div class="quick-links">
+    <h3>Popular Pages</h3>
+    <a href="/yaarwin-game.html">🎲 Yaarwin Game Rules</a> |
+    <a href="/yaarwin-app.html">📱 Yaarwin App Download</a> |
+    <a href="/yaarwin-login.html">🔐 Yaarwin Login</a> |
+    <a href="/become-agent.html">🤝 Yaarwin Agent Program</a>
   </div>
 
   <div class="trust-section">
@@ -215,6 +228,16 @@
     </div>
   </div>
 
+  <div class="cta-banner">
+    <h2>🎯 Ready to Start Earning?</h2>
+    <p>Join 50,000+ active players or become an agent with zero investment.</p>
+    <div class="cta-buttons">
+      <a href="#" class="cta-btn cta-primary" id="registerCtaBtn">📝 Start Playing</a>
+      <a href="/become-agent.html" class="cta-btn cta-secondary">🤝 Become an Agent</a>
+      <a href="/yaarwin-login.html" class="cta-btn cta-primary">🔐 Login</a>
+    </div>
+  </div>
+
   <nav>
     <a href="/">Home</a> |
     <a href="/yaarwin-game.html">Game Rules</a> |
@@ -231,7 +254,7 @@
 </footer>
 
 <script>
-  // PERMANENT GIFT CODE (No daily change)
+  // PERMANENT GIFT CODE
   const PERMANENT_CODE = 'AD52201CDBE0D43F57D32F14CC87F35F';
   const codeElement = document.getElementById('dailyCode');
   if (codeElement) codeElement.textContent = PERMANENT_CODE;
@@ -282,6 +305,10 @@
       'chandu': {
         code: '13388140914',
         telegram: 'https://t.me/+LF2-tr-2MSwyMGQ1'
+      },
+      'warrior': {
+        code: '88668157673',
+        telegram: 'https://t.me/+dB7b1mfipnhhYzUx'
       }
     };
     
@@ -325,10 +352,12 @@
     // Update all register buttons
     function updateButtons() {
       // Register buttons
-      const registerBtns = document.querySelectorAll('#registerHeaderBtn, #registerBannerBtn, .big-register-btn, .btn-small, .cta-primary');
+      const registerBtns = document.querySelectorAll('#registerHeaderBtn, #registerBannerBtn, #registerCtaBtn, .big-register-btn, .cta-primary');
       registerBtns.forEach(btn => {
-        btn.href = registerUrl;
-        btn.target = '_blank';
+        if (btn.innerText.toLowerCase().includes('register') || btn.innerText.toLowerCase().includes('start')) {
+          btn.href = registerUrl;
+          btn.target = '_blank';
+        }
       });
       
       // Update Telegram button
