@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Yaarwin App Download - Android APK for Colour Trading</title>
-  <meta name="description" content="Download Yaarwin APK for Android. Play colour prediction on mobile. Step-by-step install guide.">
+  <title>Yaarwin App - Download Official Android APK</title>
+  <meta name="description" content="Download official Yaarwin app for Android. Play color trading game on mobile. Fast, secure, and easy to use. APK download link inside.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body { font-family: 'Segoe UI', Arial, sans-serif; background: #0f172a; color: white; padding: 20px; }
@@ -14,69 +14,26 @@
     .header { text-align: center; margin-bottom: 20px; }
     .header img { height: 50px; }
     nav { margin-top: 30px; text-align: center; }
-    nav a { color: #22c55e; margin: 0 10px; }
+    nav a { color: #22c55e; margin: 0 10px; text-decoration: none; }
+    footer { margin-top: 30px; text-align: center; font-size: 12px; color: #64748b; }
   </style>
 </head>
 <body>
 <div class="container">
-  <div class="header"><img src="/logo.png" alt="Logo"></div>
-  <h1>Download Yaarwin App for Android</h1>
-  <p>Get the official Yaarwin APK and play colour prediction on your mobile phone.</p>
-  <div class="step"><strong>📱 App Details:</strong><br>Size: 6.8 MB • Version: 1.0.0 • Android 5.0+</div>
-  <div class="step"><strong>⬇️ Step 1: Download APK</strong><br>Click the download button below.</div>
-  <div class="step"><strong>⚙️ Step 2: Enable Unknown Sources</strong><br>Settings → Security → Enable "Unknown Sources"</div>
-  <div class="step"><strong>📂 Step 3: Install APK</strong><br>Open downloaded file → Tap "Install"</div>
-  <div class="step"><strong>🎮 Step 4: Login & Play</strong><br>Open Yaarwin app → Login or Register</div>
-  <a href="#" id="registerBtn" class="btn">⬇️ Download Yaarwin APK Now</a>
-  <nav><a href="/">Home</a> | <a href="/yaarwin-game.html">Rules</a> | <a href="/yaarwin-login.html">Login</a></nav>
+  <div class="header"><img src="/logo.png" alt="Yaarwin App Logo"></div>
+  <h1>Yaarwin App - Download for Android</h1>
+  <p><strong>Yaarwin app</strong> is the official mobile application for Yaarwin color trading. Available for Android devices. Size: 6.8 MB • Version 1.0.0</p>
+  
+  <div class="step"><strong>📱 Step 1: Download Yaarwin App APK</strong><br>Click the download button below to get the Yaarwin app APK file.</div>
+  <div class="step"><strong>⚙️ Step 2: Enable Unknown Sources</strong><br>Settings → Security → Enable "Unknown Sources" to install Yaarwin app.</div>
+  <div class="step"><strong>📂 Step 3: Install Yaarwin App</strong><br>Open downloaded file → Tap "Install" → Wait for completion.</div>
+  <div class="step"><strong>🎮 Step 4: Login & Play</strong><br>Open Yaarwin app → Login or Register → Start playing.</div>
+  
+  <a href="https://yaarwin.app/#/downloadCenter" class="btn">⬇️ Download Yaarwin App Now</a>
+  <p style="font-size: 11px; margin-top: 20px;">*APK file. Enable unknown sources in settings. Android only.</p>
+  
+  <nav><a href="/">Home</a> | <a href="/yaarwin-game.html">Yaarwin Game Rules</a> | <a href="/yaarwin-login.html">Yaarwin Login</a></nav>
+  <footer><p>© 2026 Yaarwin App. All rights reserved.</p></footer>
 </div>
-
-<script>
-  // REFERRAL SYSTEM (UPDATED WITH WARRIOR)
-  (function() {
-    const DEFAULT_CODE = '13173101628';
-    const DEFAULT_TELEGRAM = 'https://t.me/+MUIJJJmuOVI2Njg1';
-    
-    const agents = {
-      'kunal': { code: '25744140589', telegram: 'https://t.me/+O9vOxjl4g2YxNmY1' },
-      'shivani': { code: '83145146323', telegram: 'https://t.me/+yDMbZHsufe8wNjg1' },
-      'professor': { code: '73247140528', telegram: 'https://t.me/+exhkqtauIVxkZTll' },
-      'ganesh': { code: '67318146623', telegram: 'https://t.me/+V3mNtYL77pY4MThl' },
-      'pragati': { code: '17843157929', telegram: 'https://t.me/+2riHfWCvVtg0MDE1' },
-      'chikusam': { code: '86547158763', telegram: 'https://t.me/+Ic3o4_BiqcNlNGJl' },
-      'hukum': { code: '32453140774', telegram: 'https://t.me/+Fy5MbwAbFkYxZTZl' },
-      'chandu': { code: '13388140914', telegram: 'https://t.me/+LF2-tr-2MSwyMGQ1' },
-      'warrior': { code: '88668157673', telegram: 'https://t.me/+dB7b1mfipnhhYzUx' }
-    };
-    
-    const urlRef = new URLSearchParams(location.search).get('ref');
-    const savedRef = localStorage.getItem('yaarwin_referrer');
-    let finalRef = urlRef || savedRef;
-    if (urlRef) localStorage.setItem('yaarwin_referrer', urlRef);
-    
-    let finalCode = DEFAULT_CODE;
-    let finalTelegram = DEFAULT_TELEGRAM;
-    
-    if (finalRef && agents[finalRef]) {
-      finalCode = agents[finalRef].code;
-      finalTelegram = agents[finalRef].telegram;
-    }
-    
-    const registerUrl = 'https://yaarwin.app/#/register?invitationCode=' + finalCode;
-    
-    // Update register buttons
-    document.querySelectorAll('a, button').forEach(btn => {
-      const text = (btn.innerText || '').toLowerCase();
-      if (text.includes('register') || text.includes('sign up') || text.includes('create account')) {
-        btn.href = registerUrl;
-        btn.target = '_blank';
-      }
-    });
-    
-    // Update Telegram button if exists
-    const tgBtn = document.getElementById('telegramBtn');
-    if (tgBtn) { tgBtn.href = finalTelegram; tgBtn.target = '_blank'; }
-  })();
-</script>
 </body>
 </html>
