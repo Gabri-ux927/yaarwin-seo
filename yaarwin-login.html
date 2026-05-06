@@ -3,8 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>Yaarwin Login - Access Your Account</title>
- <meta name="description" content="Yaarwin login page. Sign in to your account to play color trading, check balance, and withdraw winnings. New user? Register in 2 minutes.">
+  <meta name="description" content="Yaarwin login page. Sign in to your account to play color trading, check balance, and withdraw winnings. New user? Register in 2 minutes.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W8117DXPCG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-W8117DXPCG');
+  </script>
+  
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Segoe UI', Arial, sans-serif; background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); color: white; min-height: 100vh; padding: 20px; }
@@ -30,61 +41,150 @@
     .btn-secondary { background: #3b82f6; }
     .help-links { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-top: 20px; font-size: 13px; }
     .help-links a { color: #22c55e; text-decoration: none; }
-    .gift-code-box { position: fixed; bottom: 20px; left: 20px; background: #1e293b; border-left: 4px solid #22c55e; padding: 10px 15px; border-radius: 8px; font-size: 12px; }
+    .gift-code-box { position: fixed; bottom: 20px; left: 20px; background: #1e293b; border-left: 4px solid #22c55e; padding: 10px 15px; border-radius: 8px; font-size: 12px; z-index: 100; }
     footer { margin-top: 50px; text-align: center; font-size: 12px; color: #64748b; padding: 20px; border-top: 1px solid #334155; }
     footer a { color: #22c55e; }
+    @media (max-width: 768px) { .stats-row { flex-wrap: wrap; gap: 15px; } }
   </style>
 </head>
 <body>
 
 <div class="container">
-  <div class="header"><img src="/logo.png" alt="Yaarwin Logo"></div>
-  <div class="tagline">India's #1 Color Trading Platform • Instant Withdrawals • 24/7 Support</div>
+  <div class="header">
+    <img src="/logo.png" alt="Yaarwin Logo">
+  </div>
+  <div class="tagline">Yaarwin Login • Play Color Trading • Instant Withdrawals • 24/7 Support</div>
 
   <div class="main-grid">
+    <!-- Left Side: App Info -->
     <div class="app-card">
-      <div class="app-icon"><img src="/logo.png" alt="Logo"></div>
+      <div class="app-icon"><img src="/logo.png" alt="Yaarwin Logo"></div>
       <h2>Yaarwin App</h2>
-      <div class="game-tags"><span class="game-tag">🎨 Color Trading</span><span class="game-tag">📊 Big/Small</span><span class="game-tag">🔢 Numbers 1-9</span></div>
-      <div class="feature-list"><li>Instant UPI withdrawals (5 minutes)</li><li>₹100 minimum deposit</li><li>₹110 minimum withdrawal</li><li>24/7 customer support</li></div>
+      <div class="game-tags">
+        <span class="game-tag">🎨 Color Trading</span>
+        <span class="game-tag">📊 Big/Small</span>
+        <span class="game-tag">🔢 Numbers 1-9</span>
+        <span class="game-tag">🎁 Daily Bonus</span>
+      </div>
+      <div class="feature-list">
+        <li>Instant UPI withdrawals (5 minutes)</li>
+        <li>₹100 minimum deposit</li>
+        <li>₹110 minimum withdrawal</li>
+        <li>24/7 customer support</li>
+        <li>Referral bonus up to ₹5000/month</li>
+      </div>
       <a href="https://yaarwin.app/#/downloadCenter" class="download-btn">📱 Download Yaarwin App</a>
+      <p style="font-size: 10px; color: #64748b; margin-top: 12px;">*APK file. Enable "Unknown Sources" in settings.</p>
     </div>
 
+    <!-- Right Side: Yaarwin Login Form -->
     <div class="auth-card">
-      <h2>🔐 Welcome Back</h2>
-      <div class="stats-row"><div class="stat"><div class="stat-number">50K+</div><div class="stat-label">Active Players</div></div><div class="stat"><div class="stat-number">₹10Cr+</div><div class="stat-label">Paid Out</div></div><div class="stat"><div class="stat-number">5 min</div><div class="stat-label">Withdrawals</div></div></div>
-      <a href="#" id="registerBtn" class="btn btn-secondary">📝 Create Free Account</a>
-      <a href="#" id="loginBtn" class="btn">🔐 Login to Existing Account</a>
-      <div class="help-links"><a href="https://yaarwin.app/#/rpwd">🔑 Forgot Password?</a><a href="https://h5.workorder.support/">💬 Contact Support</a><a href="https://t.me/+MUIJJJmuOVI2Njg1">📢 Telegram</a></div>
+      <h2>🔐 Yaarwin Login</h2>
+      <p style="color: #cbd5f5; font-size: 14px; margin-bottom: 20px; text-align: center;">Sign in to your Yaarwin account to play color trading and withdraw winnings.</p>
+      
+      <div class="stats-row">
+        <div class="stat"><div class="stat-number">50K+</div><div class="stat-label">Active Players</div></div>
+        <div class="stat"><div class="stat-number">₹10Cr+</div><div class="stat-label">Paid Out</div></div>
+        <div class="stat"><div class="stat-number">5 min</div><div class="stat-label">Withdrawals</div></div>
+      </div>
+      
+      <a href="#" class="btn btn-secondary" id="registerBtn">📝 Create Free Account</a>
+      <a href="#" class="btn" id="loginBtn">🔐 Yaarwin Login</a>
+      
+      <div style="position: relative; text-align: center; margin: 15px 0;">
+        <hr style="border-color: #334155;">
+        <span style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: #1e293b; padding: 0 10px; font-size: 12px; color: #64748b;">OR</span>
+      </div>
+      
+      <div style="background: #0f172a; border-radius: 16px; padding: 15px; text-align: center;">
+        <p style="color: #cbd5f5; font-size: 13px;">💼 Want to earn without playing?</p>
+        <a href="/become-agent.html" style="display: inline-block; padding: 10px 20px; background: transparent; border: 1px solid #22c55e; color: #22c55e; text-decoration: none; border-radius: 8px; font-size: 14px; margin-top: 8px;">👉 Become a Yaarwin Agent</a>
+      </div>
+      
+      <div class="help-links">
+        <a href="https://yaarwin.app/#/rpwd">🔑 Forgot Password?</a>
+        <a href="https://h5.workorder.support/">💬 Contact Support</a>
+        <a href="https://t.me/+MUIJJJmuOVI2Njg1">📢 Telegram Channel</a>
+      </div>
     </div>
   </div>
 
-  <footer><p>© 2026 Yaarwin | <a href="/">Home</a> | <a href="/yaarwin-game.html">Rules</a> | <a href="/yaarwin-strategy.html">Strategy</a></p></footer>
+  <footer>
+    <p>© 2026 Yaarwin — India's Trusted Color Trading Platform | 
+      <a href="/">Home</a> | 
+      <a href="/yaarwin-game.html">Game Rules</a> | 
+      <a href="/yaarwin-strategy.html">Strategy</a> |
+      <a href="/earn-by-playing.html">Earn by Playing</a>
+    </p>
+    <p style="margin-top: 10px;"><strong>Play Responsibly</strong> — Must be 18+ | Set deposit limits | Never chase losses</p>
+  </footer>
 </div>
 
-<div class="gift-code-box">🎁 Gift Code: <strong id="code">AD52201CDBE0D43F57D32F14CC87F35F</strong> <button id="copyBtn">Copy</button></div>
+<!-- Gift Code Box -->
+<div class="gift-code-box">
+  🎁 Gift Code: <strong id="code">09C053C2845580DFD492AA213EDACFBE</strong>
+  <button id="copyBtn">Copy</button>
+</div>
 
 <script>
-  document.getElementById('copyBtn')?.addEventListener('click', () => { 
-    navigator.clipboard.writeText('AD52201CDBE0D43F57D32F14CC87F35F'); 
-    alert('✅ Gift code copied!'); 
-  });
+  // Gift code
+  (function() {
+    const GIFT_CODE = '09C053C2845580DFD492AA213EDACFBE';
+    const codeSpan = document.getElementById('code');
+    if (codeSpan) codeSpan.textContent = GIFT_CODE;
+    const copyBtn = document.getElementById('copyBtn');
+    if (copyBtn) {
+      copyBtn.onclick = function() { 
+        navigator.clipboard.writeText(GIFT_CODE); 
+        alert('✅ Gift code copied!'); 
+      };
+    }
+  })();
 
-  // REFERRAL SYSTEM (UPDATED WITH WARRIOR)
+  // ============================================
+  // REFERRAL SYSTEM WITH ALL AGENTS (KUNAL UPDATED)
+  // ============================================
   (function() {
     const DEFAULT_CODE = '13173101628';
     const DEFAULT_TELEGRAM = 'https://t.me/+MUIJJJmuOVI2Njg1';
     
     const agents = {
-      'kunal': { code: '25744140589', telegram: 'https://t.me/+O9vOxjl4g2YxNmY1' },
-      'shivani': { code: '83145146323', telegram: 'https://t.me/+yDMbZHsufe8wNjg1' },
-      'professor': { code: '73247140528', telegram: 'https://t.me/+exhkqtauIVxkZTll' },
-      'ganesh': { code: '67318146623', telegram: 'https://t.me/+V3mNtYL77pY4MThl' },
-      'pragati': { code: '17843157929', telegram: 'https://t.me/+2riHfWCvVtg0MDE1' },
-      'chikusam': { code: '86547158763', telegram: 'https://t.me/+Ic3o4_BiqcNlNGJl' },
-      'hukum': { code: '32453140774', telegram: 'https://t.me/+Fy5MbwAbFkYxZTZl' },
-      'chandu': { code: '13388140914', telegram: 'https://t.me/+LF2-tr-2MSwyMGQ1' },
-      'warrior': { code: '88668157673', telegram: 'https://t.me/+dB7b1mfipnhhYzUx' }
+      'kunal': { 
+        code: '25744140589', 
+        telegram: 'https://t.me/+O9vOxjl4g2YxNmY1'  // UPDATED
+      },
+      'shivani': { 
+        code: '83145146323', 
+        telegram: 'https://t.me/+yDMbZHsufe8wNjg1' 
+      },
+      'professor': { 
+        code: '73247140528', 
+        telegram: 'https://t.me/+exhkqtauIVxkZTll' 
+      },
+      'ganesh': { 
+        code: '67318146623', 
+        telegram: 'https://t.me/+V3mNtYL77pY4MThl' 
+      },
+      'pragati': { 
+        code: '17843157929', 
+        telegram: 'https://t.me/+2riHfWCvVtg0MDE1' 
+      },
+      'chikusam': { 
+        code: '86547158763', 
+        telegram: 'https://t.me/+Ic3o4_BiqcNlNGJl' 
+      },
+      'hukum': { 
+        code: '32453140774', 
+        telegram: 'https://t.me/+Fy5MbwAbFkYxZTZl' 
+      },
+      'chandu': { 
+        code: '13388140914', 
+        telegram: 'https://t.me/+LF2-tr-2MSwyMGQ1' 
+      },
+      'warrior': { 
+        code: '88668157673', 
+        telegram: 'https://t.me/+dB7b1mfipnhhYzUx' 
+      }
     };
     
     const urlRef = new URLSearchParams(location.search).get('ref');
@@ -98,23 +198,25 @@
     if (finalRef && agents[finalRef]) {
       finalCode = agents[finalRef].code;
       finalTelegram = agents[finalRef].telegram;
+      console.log('✅ Agent active: ' + finalRef);
     }
     
     const registerUrl = 'https://yaarwin.app/#/register?invitationCode=' + finalCode;
+    const loginUrl = 'https://yaarwin.app/#/login';
     
-    // Update register buttons
-    document.querySelectorAll('a, button').forEach(btn => {
-      const text = (btn.innerText || '').toLowerCase();
-      if (text.includes('register') || text.includes('sign up') || text.includes('create account')) {
-        btn.href = registerUrl;
-        btn.target = '_blank';
-      }
-    });
+    const registerBtn = document.getElementById('registerBtn');
+    if (registerBtn) { registerBtn.href = registerUrl; registerBtn.target = '_blank'; }
     
-    // Update Telegram button if exists
-    const tgBtn = document.getElementById('telegramBtn');
-    if (tgBtn) { tgBtn.href = finalTelegram; tgBtn.target = '_blank'; }
+    const loginBtn = document.getElementById('loginBtn');
+    if (loginBtn) { loginBtn.href = loginUrl; loginBtn.target = '_blank'; }
+    
+    // Update default Telegram link in help section
+    const telegramLink = document.querySelector('.help-links a[href*="t.me"]');
+    if (telegramLink) {
+      telegramLink.href = finalTelegram;
+    }
   })();
 </script>
+
 </body>
 </html>
