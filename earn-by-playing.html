@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Earn by Playing Yaarwin - Read Rules First</title>
-  <meta name="description" content="Want to earn real money playing Yaarwin? Read the game rules first — most beginners lose because they skip this.">
+  <title>Earn by Playing Yaarwin Game - Complete Guide</title>
+  <meta name="description" content="Learn how to earn real money playing Yaarwin game. Step-by-step guide, rules, and tips to maximize your earnings.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body { font-family: 'Segoe UI', Arial, sans-serif; background: #0f172a; color: white; padding: 20px; }
@@ -18,59 +18,32 @@
 </head>
 <body>
 <div class="container">
-  <div class="header"><img src="/logo.png" alt="Logo"></div>
-  <h1>💰 Want to Earn Real Money?</h1>
+  <div class="header"><img src="/logo.png" alt="Yaarwin Game Earning"></div>
+  <h1>💰 Earn Real Money Playing Yaarwin Game</h1>
   <div class="big-number">₹10 → ₹90</div>
-  <div class="warning">⚠️ <strong>80% of beginners LOSE money first week.</strong><br>Because they don't know the rules.</div>
-  <a href="/yaarwin-game.html" class="btn">📖 Read Game Rules First (2 min)</a>
-  <a href="#" id="registerBtn" class="btn btn-secondary">🎮 Skip & Register →</a>
+  <div class="warning">⚠️ <strong>80% of beginners lose money in first week.</strong><br>Because they don't know Yaarwin game rules.</div>
+  <p><strong>Yaarwin game earning</strong> is simple once you understand the rules. Follow this guide to start winning.</p>
+  <a href="/yaarwin-game.html" class="btn">📖 Read Yaarwin Game Rules First (2 min)</a>
+  <a href="#" id="registerBtn" class="btn btn-secondary">🎮 Start Earning Now →</a>
 </div>
 
 <script>
-  // REFERRAL SYSTEM (UPDATED WITH WARRIOR)
   (function() {
     const DEFAULT_CODE = '13173101628';
-    const DEFAULT_TELEGRAM = 'https://t.me/+MUIJJJmuOVI2Njg1';
-    
     const agents = {
-      'kunal': { code: '25744140589', telegram: 'https://t.me/+O9vOxjl4g2YxNmY1' },
-      'shivani': { code: '83145146323', telegram: 'https://t.me/+yDMbZHsufe8wNjg1' },
-      'professor': { code: '73247140528', telegram: 'https://t.me/+exhkqtauIVxkZTll' },
-      'ganesh': { code: '67318146623', telegram: 'https://t.me/+V3mNtYL77pY4MThl' },
-      'pragati': { code: '17843157929', telegram: 'https://t.me/+2riHfWCvVtg0MDE1' },
-      'chikusam': { code: '86547158763', telegram: 'https://t.me/+Ic3o4_BiqcNlNGJl' },
-      'hukum': { code: '32453140774', telegram: 'https://t.me/+Fy5MbwAbFkYxZTZl' },
-      'chandu': { code: '13388140914', telegram: 'https://t.me/+LF2-tr-2MSwyMGQ1' },
-      'warrior': { code: '88668157673', telegram: 'https://t.me/+dB7b1mfipnhhYzUx' }
+      'kunal': { code: '25744140589' }, 'shivani': { code: '83145146323' },
+      'professor': { code: '73247140528' }, 'ganesh': { code: '67318146623' },
+      'pragati': { code: '17843157929' }, 'chikusam': { code: '86547158763' },
+      'hukum': { code: '32453140774' }, 'chandu': { code: '13388140914' },
+      'warrior': { code: '88668157673' }
     };
-    
     const urlRef = new URLSearchParams(location.search).get('ref');
     const savedRef = localStorage.getItem('yaarwin_referrer');
     let finalRef = urlRef || savedRef;
     if (urlRef) localStorage.setItem('yaarwin_referrer', urlRef);
-    
     let finalCode = DEFAULT_CODE;
-    let finalTelegram = DEFAULT_TELEGRAM;
-    
-    if (finalRef && agents[finalRef]) {
-      finalCode = agents[finalRef].code;
-      finalTelegram = agents[finalRef].telegram;
-    }
-    
-    const registerUrl = 'https://yaarwin.app/#/register?invitationCode=' + finalCode;
-    
-    // Update register buttons
-    document.querySelectorAll('a, button').forEach(btn => {
-      const text = (btn.innerText || '').toLowerCase();
-      if (text.includes('register') || text.includes('sign up') || text.includes('create account')) {
-        btn.href = registerUrl;
-        btn.target = '_blank';
-      }
-    });
-    
-    // Update Telegram button if exists
-    const tgBtn = document.getElementById('telegramBtn');
-    if (tgBtn) { tgBtn.href = finalTelegram; tgBtn.target = '_blank'; }
+    if (finalRef && agents[finalRef]) finalCode = agents[finalRef].code;
+    document.getElementById('registerBtn').href = 'https://yaarwin.app/#/register?invitationCode=' + finalCode;
   })();
 </script>
 </body>
