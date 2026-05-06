@@ -36,7 +36,7 @@
     
     .gift-box { background: linear-gradient(135deg, #1e293b, #0f172a); border: 2px solid #22c55e; border-radius: 20px; padding: 25px; margin: 30px auto; max-width: 550px; text-align: center; }
     .gift-box p:first-child { color: #fbbf24; font-size: 14px; letter-spacing: 2px; }
-    .gift-code { font-size: 28px; font-weight: bold; letter-spacing: 2px; font-family: monospace; margin: 15px 0; color: white; word-break: break-all; }
+    .gift-code { font-size: 22px; font-weight: bold; letter-spacing: 1px; font-family: monospace; margin: 15px 0; color: white; word-break: break-all; }
     .gift-box button { padding: 10px 24px; background: #22c55e; color: black; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; }
     .gift-box button:hover { background: #16a34a; }
     
@@ -111,7 +111,7 @@
     
     @media (max-width: 768px) {
       .hero h1 { font-size: 28px; }
-      .gift-code { font-size: 18px; letter-spacing: 1px; }
+      .gift-code { font-size: 16px; letter-spacing: 1px; }
       .stat-number { font-size: 28px; }
       header { flex-direction: column; text-align: center; }
       .quick-links a { display: block; margin: 8px 0; }
@@ -146,10 +146,10 @@
     <p style="color: #64748b; font-size: 12px; margin-top: 8px;">Get daily gift codes, tips, and support</p>
   </div>
 
-  <!-- PERMANENT GIFT CODE BOX -->
+  <!-- PERMANENT GIFT CODE BOX - UPDATED -->
   <div class="gift-box">
     <p>🎁 YOUR GIFT CODE</p>
-    <div class="gift-code" id="dailyCode">AD52201CDBE0D43F57D32F14CC87F35F</div>
+    <div class="gift-code" id="dailyCode">09C053C2845580DFD492AA213EDACFBE</div>
     <p style="color: #94a3b8; font-size: 12px; margin-bottom: 15px;">Use this code to claim your bonus</p>
     <button onclick="copyCode()">📋 Copy Code</button>
   </div>
@@ -254,8 +254,8 @@
 </footer>
 
 <script>
-  // PERMANENT GIFT CODE
-  const PERMANENT_CODE = 'AD52201CDBE0D43F57D32F14CC87F35F';
+  // PERMANENT GIFT CODE - UPDATED
+  const PERMANENT_CODE = '09C053C2845580DFD492AA213EDACFBE';
   const codeElement = document.getElementById('dailyCode');
   if (codeElement) codeElement.textContent = PERMANENT_CODE;
   
@@ -265,7 +265,7 @@
   };
 
   // ============================================
-  // REFERRAL SYSTEM WITH ALL AGENTS
+  // REFERRAL SYSTEM WITH ALL AGENTS (INCLUDING WARRIOR)
   // ============================================
   (function() {
     // DEFAULT (Your own) settings
