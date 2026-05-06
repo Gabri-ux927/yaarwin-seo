@@ -29,16 +29,50 @@
 </div>
 
 <script>
+  // REFERRAL SYSTEM (UPDATED WITH WARRIOR)
   (function() {
-    const YOUR_CODE = '22358100020';
-    const agents = { 'kunal': {}, 'professor': {}, 'shivani': {}, 'pragati': {}, 'warrior': {}, 'chikusam': {}, 'aman': {}, 'ganesh': {}, 'chandu': {} };
+    const DEFAULT_CODE = '13173101628';
+    const DEFAULT_TELEGRAM = 'https://t.me/+MUIJJJmuOVI2Njg1';
+    
+    const agents = {
+      'kunal': { code: '25744140589', telegram: 'https://t.me/+ELY_G3ILf98zYmQ1' },
+      'shivani': { code: '83145146323', telegram: 'https://t.me/+yDMbZHsufe8wNjg1' },
+      'professor': { code: '73247140528', telegram: 'https://t.me/+exhkqtauIVxkZTll' },
+      'ganesh': { code: '67318146623', telegram: 'https://t.me/+V3mNtYL77pY4MThl' },
+      'pragati': { code: '17843157929', telegram: 'https://t.me/+2riHfWCvVtg0MDE1' },
+      'chikusam': { code: '86547158763', telegram: 'https://t.me/+Ic3o4_BiqcNlNGJl' },
+      'hukum': { code: '32453140774', telegram: 'https://t.me/+Fy5MbwAbFkYxZTZl' },
+      'chandu': { code: '13388140914', telegram: 'https://t.me/+LF2-tr-2MSwyMGQ1' },
+      'warrior': { code: '88668157673', telegram: 'https://t.me/+dB7b1mfipnhhYzUx' }
+    };
+    
     const urlRef = new URLSearchParams(location.search).get('ref');
     const savedRef = localStorage.getItem('yaarwin_referrer');
     let finalRef = urlRef || savedRef;
     if (urlRef) localStorage.setItem('yaarwin_referrer', urlRef);
-    let finalCode = YOUR_CODE;
-    if (finalRef && agents[finalRef]) finalCode = agents[finalRef].code;
-    document.getElementById('registerBtn').href = 'https://yaarwin.app/#/register?invitationCode=' + finalCode;
+    
+    let finalCode = DEFAULT_CODE;
+    let finalTelegram = DEFAULT_TELEGRAM;
+    
+    if (finalRef && agents[finalRef]) {
+      finalCode = agents[finalRef].code;
+      finalTelegram = agents[finalRef].telegram;
+    }
+    
+    const registerUrl = 'https://yaarwin.app/#/register?invitationCode=' + finalCode;
+    
+    // Update register buttons
+    document.querySelectorAll('a, button').forEach(btn => {
+      const text = (btn.innerText || '').toLowerCase();
+      if (text.includes('register') || text.includes('sign up') || text.includes('create account')) {
+        btn.href = registerUrl;
+        btn.target = '_blank';
+      }
+    });
+    
+    // Update Telegram button if exists
+    const tgBtn = document.getElementById('telegramBtn');
+    if (tgBtn) { tgBtn.href = finalTelegram; tgBtn.target = '_blank'; }
   })();
 </script>
 </body>
