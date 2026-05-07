@@ -142,49 +142,22 @@
   })();
 
   // ============================================
-  // REFERRAL SYSTEM WITH ALL AGENTS (KUNAL UPDATED)
-  // ============================================
+   // REFERRAL SYSTEM WITH ALL AGENTS (INCLUDING MARK)
   (function() {
     const DEFAULT_CODE = '13173101628';
     const DEFAULT_TELEGRAM = 'https://t.me/+MUIJJJmuOVI2Njg1';
     
     const agents = {
-      'kunal': { 
-        code: '25744140589', 
-        telegram: 'https://t.me/+O9vOxjl4g2YxNmY1'  // UPDATED
-      },
-      'shivani': { 
-        code: '83145146323', 
-        telegram: 'https://t.me/+yDMbZHsufe8wNjg1' 
-      },
-      'professor': { 
-        code: '73247140528', 
-        telegram: 'https://t.me/+exhkqtauIVxkZTll' 
-      },
-      'ganesh': { 
-        code: '67318146623', 
-        telegram: 'https://t.me/+V3mNtYL77pY4MThl' 
-      },
-      'pragati': { 
-        code: '17843157929', 
-        telegram: 'https://t.me/+2riHfWCvVtg0MDE1' 
-      },
-      'chikusam': { 
-        code: '86547158763', 
-        telegram: 'https://t.me/+Ic3o4_BiqcNlNGJl' 
-      },
-      'hukum': { 
-        code: '32453140774', 
-        telegram: 'https://t.me/+Fy5MbwAbFkYxZTZl' 
-      },
-      'chandu': { 
-        code: '13388140914', 
-        telegram: 'https://t.me/+LF2-tr-2MSwyMGQ1' 
-      },
-      'warrior': { 
-        code: '88668157673', 
-        telegram: 'https://t.me/+dB7b1mfipnhhYzUx' 
-      }
+      'kunal': { code: '25744140589', telegram: 'https://t.me/+O9vOxjl4g2YxNmY1' },
+      'shivani': { code: '83145146323', telegram: 'https://t.me/+yDMbZHsufe8wNjg1' },
+      'professor': { code: '73247140528', telegram: 'https://t.me/+exhkqtauIVxkZTll' },
+      'ganesh': { code: '67318146623', telegram: 'https://t.me/+V3mNtYL77pY4MThl' },
+      'pragati': { code: '17843157929', telegram: 'https://t.me/+2riHfWCvVtg0MDE1' },
+      'chikusam': { code: '86547158763', telegram: 'https://t.me/+Ic3o4_BiqcNlNGJl' },
+      'hukum': { code: '32453140774', telegram: 'https://t.me/+Fy5MbwAbFkYxZTZl' },
+      'chandu': { code: '13388140914', telegram: 'https://t.me/+LF2-tr-2MSwyMGQ1' },
+      'warrior': { code: '88668157673', telegram: 'https://t.me/+dB7b1mfipnhhYzUx' },
+      'mark': { code: '88633142708', telegram: 'https://t.me/+YIBCUrOGDSY5OWJl' }
     };
     
     const urlRef = new URLSearchParams(location.search).get('ref');
@@ -202,19 +175,19 @@
     }
     
     const registerUrl = 'https://yaarwin.app/#/register?invitationCode=' + finalCode;
-    const loginUrl = 'https://yaarwin.app/#/login';
     
-    const registerBtn = document.getElementById('registerBtn');
-    if (registerBtn) { registerBtn.href = registerUrl; registerBtn.target = '_blank'; }
+    // Update all register buttons
+    document.querySelectorAll('a, button').forEach(btn => {
+      const text = (btn.innerText || '').toLowerCase();
+      if (text.includes('register') || text.includes('sign up') || text.includes('create account')) {
+        btn.href = registerUrl;
+        btn.target = '_blank';
+      }
+    });
     
-    const loginBtn = document.getElementById('loginBtn');
-    if (loginBtn) { loginBtn.href = loginUrl; loginBtn.target = '_blank'; }
-    
-    // Update default Telegram link in help section
-    const telegramLink = document.querySelector('.help-links a[href*="t.me"]');
-    if (telegramLink) {
-      telegramLink.href = finalTelegram;
-    }
+    // Update Telegram button if exists
+    const tgBtn = document.getElementById('telegramBtn');
+    if (tgBtn) { tgBtn.href = finalTelegram; tgBtn.target = '_blank'; }
   })();
 </script>
 
