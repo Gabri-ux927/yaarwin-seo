@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Yaarwin Game - Play Color Trading & Win Real Money</title>
-  <meta name="description" content="Play Yaarwin game - India's most trusted color trading platform. Predict colors, win real money, withdraw instantly. Join 50,000+ players today.">
+  <title>Yaarwin Colour Trading - Play & Win Real Money</title>
+  <meta name="description" content="Yaarwin colour trading platform for Indian players. Predict colors, win real money, withdraw instantly via UPI. Join 50,000+ players.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://yaarwinpro.com"/>
   
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-W8117DXPCG"></script>
@@ -25,33 +24,30 @@
     .logo-area { display: flex; align-items: center; gap: 12px; }
     .logo-area img { height: 40px; width: auto; }
     .header-buttons { display: flex; gap: 12px; }
-    .header-btn { padding: 10px 20px; background: #22c55e; color: black; text-decoration: none; border-radius: 8px; font-weight: bold; }
+    .header-btn { padding: 10px 20px; background: #22c55e; color: black; text-decoration: none; border-radius: 8px; font-weight: bold; transition: background 0.2s; }
     .header-btn:hover { background: #16a34a; }
     .header-btn-outline { background: transparent; border: 1px solid #22c55e; color: #22c55e; }
     .header-btn-outline:hover { background: #22c55e20; }
     
     .container { padding: 40px 20px; max-width: 1200px; margin: auto; }
-    .hero { text-align: center; margin-bottom: 50px; }
+    .hero { text-align: center; margin-bottom: 30px; }
     .hero h1 { font-size: 42px; color: #22c55e; margin-bottom: 15px; }
     .hero p { font-size: 18px; color: #cbd5f5; max-width: 700px; margin: 0 auto; }
     
-    .gift-box { background: linear-gradient(135deg, #1e293b, #0f172a); border: 2px solid #22c55e; border-radius: 20px; padding: 25px; margin: 30px auto; max-width: 550px; text-align: center; }
-    .gift-box p:first-child { color: #fbbf24; font-size: 14px; letter-spacing: 2px; }
-    .gift-code { font-size: 22px; font-weight: bold; letter-spacing: 1px; font-family: monospace; margin: 15px 0; color: white; word-break: break-all; }
-    .gift-box button { padding: 10px 24px; background: #22c55e; color: black; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; }
-    .gift-box button:hover { background: #16a34a; }
+    .gift-box { background: linear-gradient(135deg, #22c55e, #16a34a); border-radius: 24px; padding: 30px 20px; margin: 30px auto; text-align: center; max-width: 600px; box-shadow: 0 10px 30px rgba(34,197,94,0.3); cursor: pointer; }
     
-    .register-banner { background: linear-gradient(135deg, #22c55e15, #16a34a05); border: 1px solid #22c55e; border-radius: 16px; padding: 20px; text-align: center; margin: 20px 0 30px; }
-    .register-banner p { margin-bottom: 12px; font-size: 16px; }
-    .big-register-btn { display: inline-block; padding: 14px 32px; background: #22c55e; color: black; text-decoration: none; border-radius: 12px; font-weight: bold; font-size: 20px; }
-    .big-register-btn:hover { background: #16a34a; transform: scale(1.02); }
+    .quick-links { background: #1e293b; padding: 20px; border-radius: 16px; margin: 30px 0; }
+    .quick-links h3 { color: #fbbf24; margin-bottom: 15px; }
+    .quick-links a { color: #22c55e; text-decoration: none; margin-right: 20px; display: inline-block; margin-bottom: 8px; }
+    .quick-links a:hover { text-decoration: underline; }
     
-    .telegram-section { text-align: center; margin: 25px 0; }
-    .telegram-btn { display: inline-flex; align-items: center; gap: 12px; background: #0088cc; padding: 14px 28px; border-radius: 50px; text-decoration: none; color: white; font-weight: bold; font-size: 18px; }
-    .telegram-btn:hover { background: #006699; transform: scale(1.02); }
+    .stats-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; background: #1e293b; border-radius: 24px; padding: 40px 20px; margin: 40px 0; }
+    .stat-item { text-align: center; min-width: 150px; }
+    .stat-number { font-size: 36px; font-weight: bold; color: #fbbf24; }
+    .stat-label { color: #94a3b8; font-size: 14px; margin-top: 8px; }
     
-    .selection-section { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin: 50px 0; }
-    .earn-card { flex: 1; min-width: 280px; max-width: 350px; background: linear-gradient(135deg, #1e293b, #0f172a); border-radius: 24px; padding: 35px 25px; text-align: center; border: 1px solid #334155; text-decoration: none; display: block; }
+    .selection-section { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin: 40px 0; }
+    .earn-card { flex: 1; min-width: 280px; max-width: 350px; background: linear-gradient(135deg, #1e293b, #0f172a); border-radius: 24px; padding: 35px 25px; text-align: center; border: 1px solid #334155; text-decoration: none; display: block; transition: transform 0.3s; }
     .earn-card:hover { transform: translateY(-8px); border-color: #22c55e; }
     .earn-card img { width: 100px; height: 100px; margin-bottom: 20px; }
     .earn-card h3 { font-size: 28px; color: #fbbf24; margin-bottom: 15px; }
@@ -61,61 +57,31 @@
     .trust-section { text-align: center; margin: 40px 0; }
     .trust-badge { display: inline-block; background: #22c55e20; border: 1px solid #22c55e; border-radius: 40px; padding: 8px 20px; margin: 6px; font-size: 14px; }
     
-    .stats-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; background: #1e293b; border-radius: 24px; padding: 40px 20px; margin: 50px 0; }
-    .stat-item { text-align: center; min-width: 150px; }
-    .stat-number { font-size: 36px; font-weight: bold; color: #fbbf24; }
-    .stat-label { color: #94a3b8; font-size: 14px; margin-top: 8px; }
-    
-    .how-it-works { text-align: center; margin: 50px 0; }
-    .how-it-works h2 { color: #fbbf24; font-size: 32px; margin-bottom: 30px; }
-    .steps-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
-    .step-card { flex: 1; min-width: 200px; background: #1e293b; border-radius: 20px; padding: 25px 20px; border: 1px solid #334155; }
-    .step-number { width: 45px; height: 45px; background: #22c55e; color: black; font-size: 22px; font-weight: bold; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; }
-    .step-card h3 { color: #22c55e; margin-bottom: 10px; font-size: 18px; }
-    .step-card p { color: #cbd5f5; font-size: 13px; }
-    
-    .payout-section { background: linear-gradient(135deg, #1e293b, #0f172a); border-radius: 24px; padding: 40px; text-align: center; border: 1px solid #334155; }
-    .payout-section h2 { color: #fbbf24; margin-bottom: 25px; }
-    .payout-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-    .payout-item { background: #0f172a; border-radius: 16px; padding: 15px 25px; min-width: 120px; }
-    .payout-multiplier { font-size: 28px; font-weight: bold; color: #22c55e; }
-    .payout-name { font-size: 14px; color: #94a3b8; margin-top: 5px; }
-    
-    .quick-links { background: #1e293b; border-radius: 16px; padding: 20px; margin: 30px 0; text-align: center; }
-    .quick-links a { color: #22c55e; text-decoration: none; margin: 0 15px; display: inline-block; }
-    .quick-links a:hover { text-decoration: underline; }
-    
-    .testimonial { background: #1e293b; border-radius: 24px; padding: 30px; text-align: center; border-left: 4px solid #22c55e; margin: 50px 0; }
-    .testimonial p { color: #cbd5f5; font-style: italic; font-size: 16px; }
-    .testimonial-author { color: #fbbf24; margin-top: 15px; font-weight: bold; }
-    
-    .faq-preview { margin: 50px 0; }
+    .faq-preview { margin: 40px 0; }
     .faq-preview h2 { text-align: center; color: #fbbf24; font-size: 32px; margin-bottom: 30px; }
     .faq-grid { display: flex; flex-wrap: wrap; gap: 20px; }
     .faq-item { flex: 1; min-width: 250px; background: #1e293b; border-radius: 16px; padding: 20px; border-left: 3px solid #22c55e; }
     .faq-item h4 { color: #22c55e; margin-bottom: 8px; }
     .faq-item p { color: #cbd5f5; font-size: 13px; }
     
-    .cta-banner { background: linear-gradient(135deg, #22c55e20, #16a34a10); border: 2px solid #22c55e; border-radius: 24px; padding: 40px; text-align: center; margin: 50px 0; }
-    .cta-banner h2 { color: #22c55e; margin-bottom: 15px; }
-    .cta-banner p { color: #cbd5f5; margin-bottom: 25px; }
+    .cta-banner { background: linear-gradient(135deg, #22c55e20, #16a34a10); border: 2px solid #22c55e; border-radius: 24px; padding: 40px; text-align: center; margin: 40px 0; }
     .cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
     .cta-btn { padding: 14px 28px; border-radius: 12px; font-weight: bold; text-decoration: none; display: inline-block; }
     .cta-primary { background: #22c55e; color: black; }
-    .cta-primary:hover { background: #16a34a; }
     .cta-secondary { background: #3b82f6; color: white; }
-    .cta-secondary:hover { background: #2563eb; }
     
     nav { margin: 40px 0 20px; padding: 20px; background: #111827; border-radius: 12px; text-align: center; }
-    nav a { color: #22c55e; text-decoration: none; margin: 0 12px; display: inline-block; padding: 5px 0; }
+    nav a { color: #22c55e; text-decoration: none; margin: 0 12px; display: inline-block; }
+    
     footer { margin-top: 40px; padding: 30px 20px; font-size: 12px; color: #64748b; border-top: 1px solid #1e293b; text-align: center; }
+    .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 15px; }
+    .footer-links a { color: #22c55e; text-decoration: none; }
     
     @media (max-width: 768px) {
       .hero h1 { font-size: 28px; }
-      .gift-code { font-size: 16px; letter-spacing: 1px; }
       .stat-number { font-size: 28px; }
       header { flex-direction: column; text-align: center; }
-      .quick-links a { display: block; margin: 8px 0; }
+      .quick-links a { display: block; margin-right: 0; }
     }
   </style>
 </head>
@@ -123,7 +89,7 @@
 
 <header>
   <div class="logo-area">
-    <img src="/logo.png" alt="Yaarwin Game Logo">
+    <img src="/logo.png" alt="Yaarwin Colour Trading Logo">
   </div>
   <div class="header-buttons">
     <a href="#" class="header-btn" id="registerHeaderBtn">📝 Register Now</a>
@@ -133,105 +99,79 @@
 
 <div class="container">
   <div class="hero">
-    <h1>Yaarwin Game - Play Color Trading & Win Real Money</h1>
-    <p><strong>Yaarwin game</strong> is India's fastest-growing color trading platform. Play, earn, withdraw instantly. Or become an agent and earn passive income.</p>
+    <h1>Yaarwin Colour Trading - Play Colour Prediction & Win Real Money</h1>
+    <p><strong>Yaarwin colour trading</strong> is India's most trusted platform. Predict colours, win real money, withdraw instantly via UPI. Trusted by 50,000+ Indian players.</p>
   </div>
 
-  <div class="register-banner">
-    <p>🚀 <strong>Start your Yaarwin game journey today!</strong> Create a free account in 2 minutes.</p>
-    <a href="#" class="big-register-btn" id="registerBannerBtn">📝 Register Now & Get ₹100 Bonus →</a>
+  <!-- GIFT CODE BOX -->
+  <div class="gift-box" onclick="copyCode()">
+    <p style="color: white; font-size: 14px; letter-spacing: 2px;">🎁 LIMITED TIME OFFER 🎁</p>
+    <div style="background: white; border-radius: 16px; padding: 20px; margin: 15px 20px;">
+      <p style="color: #0f172a; font-size: 12px;">👇 CLICK ANYWHERE TO COPY 👇</p>
+      <p style="color: #22c55e; font-size: 22px; font-weight: bold; font-family: monospace;" id="dailyCode">29DA88971422742DCFBE5BD476E24807</p>
+    </div>
+    <p style="color: white; font-size: 16px; font-weight: bold;">💰 GET ₹50 FREE BONUS 💰</p>
   </div>
 
-  <div class="telegram-section">
-    <a href="#" id="telegramBtn" class="telegram-btn" target="_blank">📢 Join Our Telegram Channel</a>
-    <p style="color: #64748b; font-size: 12px; margin-top: 8px;">Get daily gift codes, tips, and support for Yaarwin game</p>
+  <!-- QUICK LINKS SECTION -->
+  <div class="quick-links">
+    <h3>🎯 Yaarwin Quick Links</h3>
+    <a href="/yaarwin-game.html">▶ How to Play Yaarwin Colour Trading</a>
+    <a href="/yaarwin-login.html">▶ Yaarwin Login</a>
+    <a href="/yaarwin-withdrawal.html">▶ Withdraw Money from Yaarwin</a>
+    <a href="/become-agent.html">▶ Become a Yaarwin Agent</a>
+    <a href="/yaarwin-app.html">▶ Download Yaarwin App for Android</a>
   </div>
 
-  <!-- PERMANENT GIFT CODE BOX -->
-  <div class="gift-box">
-    <p>🎁 YOUR YAARWIN GAME GIFT CODE</p>
-    <div class="gift-code" id="dailyCode">29DA88971422742DCFBE5BD476E24807</div>
-    <p style="color: #94a3b8; font-size: 12px; margin-bottom: 15px;">Use this code to claim your bonus</p>
-    <button onclick="copyCode()">📋 Copy Code</button>
+  <!-- STATS SECTION -->
+  <div class="stats-row">
+    <div class="stat-item"><div class="stat-number">50K+</div><div class="stat-label">Yaarwin Players</div></div>
+    <div class="stat-item"><div class="stat-number">₹10Cr+</div><div class="stat-label">Total Payouts</div></div>
+    <div class="stat-item"><div class="stat-number">5 min</div><div class="stat-label">Withdrawals</div></div>
+    <div class="stat-item"><div class="stat-number">24/7</div><div class="stat-label">Support</div></div>
   </div>
 
+  <!-- SELECTION CARDS -->
   <div class="selection-section">
     <a href="/earn-by-playing.html" class="earn-card">
-      <img src="https://img.icons8.com/fluency/120/gaming.png" alt="Earn by Playing Yaarwin Game">
+      <img src="https://img.icons8.com/fluency/120/gaming.png" alt="Yaarwin Colour Trading Game">
       <h3>🎮 Earn by Playing</h3>
-      <p>Play Yaarwin game — predict colors, sizes, and numbers. Win real money. Withdraw instantly.</p>
+      <p>Play Yaarwin colour trading — predict colours, sizes, and numbers. Win real money. Withdraw instantly.</p>
       <span class="btn-small">Learn More →</span>
     </a>
     <a href="/become-agent.html" class="earn-card">
-      <img src="https://img.icons8.com/fluency/120/teamwork.png" alt="Become Yaarwin Game Agent">
+      <img src="https://img.icons8.com/fluency/120/teamwork.png" alt="Yaarwin Agent Program">
       <h3>🤝 Become a Yaarwin Agent</h3>
-      <p>Earn daily commissions by referring players to Yaarwin game. No investment. Passive income.</p>
+      <p>Earn daily commissions by referring players to Yaarwin colour trading. No investment. Passive income.</p>
       <span class="btn-small">Learn More →</span>
     </a>
   </div>
 
-  <div class="quick-links">
-    <h3>Popular Yaarwin Game Pages</h3>
-    <a href="/yaarwin-game.html">🎲 Yaarwin Game Rules</a> |
-    <a href="/yaarwin-app.html">📱 Yaarwin App Download</a> |
-    <a href="/yaarwin-login.html">🔐 Yaarwin Login</a> |
-    <a href="/become-agent.html">🤝 Yaarwin Agent Program</a>
-  </div>
-
+  <!-- TRUST BADGES -->
   <div class="trust-section">
-    <span class="trust-badge">✅ 50,000+ Yaarwin Game Players</span>
+    <span class="trust-badge">✅ 50,000+ Indian Players</span>
     <span class="trust-badge">✅ ₹10Cr+ Paid Out</span>
-    <span class="trust-badge">✅ 5-Min Withdrawals</span>
+    <span class="trust-badge">✅ 5-Minute UPI Withdrawals</span>
     <span class="trust-badge">✅ 24/7 Support</span>
     <span class="trust-badge">✅ UPI & Bank Transfer</span>
     <span class="trust-badge">✅ 100% Legal in India</span>
   </div>
 
-  <div class="stats-row">
-    <div class="stat-item"><div class="stat-number">50K+</div><div class="stat-label">Yaarwin Game Players</div></div>
-    <div class="stat-item"><div class="stat-number">₹10Cr+</div><div class="stat-label">Total Payouts</div></div>
-    <div class="stat-item"><div class="stat-number">500+</div><div class="stat-label">Active Agents</div></div>
-    <div class="stat-item"><div class="stat-number">24/7</div><div class="stat-label">Support</div></div>
-  </div>
-
-  <div class="how-it-works">
-    <h2>🚀 How Yaarwin Game Works</h2>
-    <div class="steps-grid">
-      <div class="step-card"><div class="step-number">1</div><h3>Choose</h3><p>Select color, size, or number in Yaarwin game</p></div>
-      <div class="step-card"><div class="step-number">2</div><h3>Bet</h3><p>Place your prediction (₹10 minimum)</p></div>
-      <div class="step-card"><div class="step-number">3</div><h3>Win</h3><p>Get paid instantly to UPI/bank</p></div>
-      <div class="step-card"><div class="step-number">4</div><h3>Refer</h3><p>Earn extra as a Yaarwin game agent</p></div>
-    </div>
-  </div>
-
-  <div class="payout-section">
-    <h2>💰 Yaarwin Game Payout Structure</h2>
-    <div class="payout-grid">
-      <div class="payout-item"><div class="payout-multiplier">2x</div><div class="payout-name">Big / Small</div></div>
-      <div class="payout-item"><div class="payout-multiplier">3x</div><div class="payout-name">Red / Green</div></div>
-      <div class="payout-item"><div class="payout-multiplier">5x</div><div class="payout-name">Violet</div></div>
-      <div class="payout-item"><div class="payout-multiplier">9x</div><div class="payout-name">Numbers 1-9</div></div>
-    </div>
-  </div>
-
-  <div class="testimonial">
-    <p>"Started playing Yaarwin game, earned ₹15,000 in first week. Then became an agent — now making ₹40,000/month passive income. Best decision ever."</p>
-    <div class="testimonial-author">— Rajesh K., Yaarwin Agent since 2025</div>
-  </div>
-
+  <!-- FAQ PREVIEW -->
   <div class="faq-preview">
-    <h2>❓ Yaarwin Game Quick Answers</h2>
+    <h2>❓ Yaarwin Colour Trading Quick Answers</h2>
     <div class="faq-grid">
-      <div class="faq-item"><h4>Is Yaarwin game legal?</h4><p>Yes. Yaarwin game is a skill-based gaming platform compliant with Indian laws.</p></div>
-      <div class="faq-item"><h4>Minimum withdrawal in Yaarwin game?</h4><p>₹110. Withdrawals processed within 5 minutes to UPI or bank.</p></div>
-      <div class="faq-item"><h4>How to get Yaarwin game gift codes?</h4><p>Daily codes here. Join Telegram for early access.</p></div>
-      <div class="faq-item"><h4>Can I play Yaarwin game on mobile?</h4><p>Yes. Download Yaarwin app from the login page.</p></div>
+      <div class="faq-item"><h4>What is Yaarwin colour trading?</h4><p>Yaarwin is a colour prediction game where you predict colours and win real money.</p></div>
+      <div class="faq-item"><h4>How to withdraw money from Yaarwin?</h4><p>Go to Wallet → Withdraw → UPI/Bank. Processed in 5 minutes. Minimum ₹110.</p></div>
+      <div class="faq-item"><h4>Is Yaarwin legal in India?</h4><p>Yes. Yaarwin is a skill-based gaming platform compliant with Indian laws.</p></div>
+      <div class="faq-item"><h4>How to get Yaarwin gift code?</h4><p>Use the code above. Join Telegram for daily codes.</p></div>
     </div>
   </div>
 
+  <!-- CTA BANNER -->
   <div class="cta-banner">
-    <h2>🎯 Ready to Start Playing Yaarwin Game?</h2>
-    <p>Join 50,000+ active players or become a Yaarwin game agent with zero investment.</p>
+    <h2>🎯 Ready to Start Yaarwin Colour Trading?</h2>
+    <p>Join 50,000+ Indian players already earning daily.</p>
     <div class="cta-buttons">
       <a href="#" class="cta-btn cta-primary" id="registerCtaBtn">📝 Start Playing Yaarwin</a>
       <a href="/become-agent.html" class="cta-btn cta-secondary">🤝 Become Yaarwin Agent</a>
@@ -239,33 +179,49 @@
     </div>
   </div>
 
+  <!-- NAVIGATION -->
   <nav>
-    <a href="/">Home</a> |
-    <a href="/yaarwin-game.html">Yaarwin Game Rules</a> |
-    <a href="/yaarwin-strategy.html">Yaarwin Game Strategy</a> |
-    <a href="/yaarwin-app.html">Yaarwin App</a> |
+    <a href="/">Yaarwin Home</a> |
+    <a href="/yaarwin-game.html">Yaarwin Colour Trading Rules</a> |
+    <a href="/yaarwin-strategy.html">Yaarwin Game Strategy Guide</a> |
+    <a href="/yaarwin-app.html">Download Yaarwin App</a> |
     <a href="/yaarwin-login.html">Yaarwin Login</a> |
-    <a href="/become-agent.html">Yaarwin Agent</a>
+    <a href="/become-agent.html">Become Yaarwin Agent</a>
   </nav>
 </div>
 
+<!-- FOOTER -->
 <footer>
-  <p><strong>Play Yaarwin Game Responsibly</strong> — Set deposit limits, take breaks, must be 18+.</p>
-  <p>© 2026 Yaarwin Game. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a> |
+    <a href="/yaarwin-game.html">Colour Trading Rules</a> |
+    <a href="/yaarwin-login.html">Login to Yaarwin</a> |
+    <a href="/yaarwin-app.html">Yaarwin APK Download</a> |
+    <a href="/become-agent.html">Yaarwin Agent Referral</a>
+  </div>
+  <p><strong>Play Yaarwin Colour Trading Responsibly</strong> — Set deposit limits, must be 18+.</p>
+  <p>© 2026 Yaarwin. All rights reserved.</p>
 </footer>
 
+<!-- Sticky Claim Button -->
+<div style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+  <button onclick="copyCode()" style="background: #22c55e; border: none; border-radius: 50px; padding: 12px 20px; color: black; font-weight: bold; cursor: pointer;">
+    🎁 CLAIM ₹50 BONUS
+  </button>
+</div>
+
 <script>
-  // PERMANENT GIFT CODE
-  const PERMANENT_CODE = '09C053C2845580DFD492AA213EDACFBE';
+  // GIFT CODE
+  const GIFT_CODE = '29DA88971422742DCFBE5BD476E24807';
   const codeElement = document.getElementById('dailyCode');
-  if (codeElement) codeElement.textContent = PERMANENT_CODE;
+  if (codeElement) codeElement.textContent = GIFT_CODE;
   
   window.copyCode = function() {
-    navigator.clipboard.writeText(PERMANENT_CODE);
-    alert('✅ Yaarwin game gift code copied: ' + PERMANENT_CODE);
+    navigator.clipboard.writeText(GIFT_CODE);
+    alert('✅ YAARWIN GIFT CODE COPIED!\n\nUse this code during registration to get ₹50 free bonus.\n\nCode: ' + GIFT_CODE);
   };
 
-    // REFERRAL SYSTEM WITH ALL AGENTS (INCLUDING MARK)
+  // REFERRAL SYSTEM
   (function() {
     const DEFAULT_CODE = '13173101628';
     const DEFAULT_TELEGRAM = 'https://t.me/+MUIJJJmuOVI2Njg1';
@@ -294,25 +250,17 @@
     if (finalRef && agents[finalRef]) {
       finalCode = agents[finalRef].code;
       finalTelegram = agents[finalRef].telegram;
-      console.log('✅ Agent active: ' + finalRef);
     }
     
     const registerUrl = 'https://yaarwin.app/#/register?invitationCode=' + finalCode;
     
-    // Update all register buttons
-    document.querySelectorAll('a, button').forEach(btn => {
-      const text = (btn.innerText || '').toLowerCase();
-      if (text.includes('register') || text.includes('sign up') || text.includes('create account')) {
+    document.querySelectorAll('#registerHeaderBtn, #registerCtaBtn, .big-register-btn, .cta-primary').forEach(btn => {
+      if (btn.innerText.toLowerCase().includes('register')) {
         btn.href = registerUrl;
         btn.target = '_blank';
       }
     });
-    
-    // Update Telegram button if exists
-    const tgBtn = document.getElementById('telegramBtn');
-    if (tgBtn) { tgBtn.href = finalTelegram; tgBtn.target = '_blank'; }
   })();
 </script>
-
 </body>
 </html>
