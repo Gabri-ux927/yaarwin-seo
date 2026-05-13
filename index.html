@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Yaarwin Colour Trading - Play & Win Real Money</title>
-  <meta name="description" content="Yaarwin colour trading platform for Indian players. Predict colors, win real money, withdraw instantly via UPI. Join 50,000+ players.">
+  <title>Yaarwin Colour Trading - Register & Get ₹50 Free Bonus</title>
+  <meta name="description" content="Yaarwin colour trading platform for Indian players. Register now and claim ₹50 free gift code. Predict colors, win real money, withdraw instantly via UPI. Join 50,000+ players.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
   
@@ -30,16 +30,75 @@
     .header-btn-outline:hover { background: #22c55e20; }
     
     .container { padding: 40px 20px; max-width: 1200px; margin: auto; }
-    .hero { text-align: center; margin-bottom: 30px; }
-    .hero h1 { font-size: 42px; color: #22c55e; margin-bottom: 15px; }
-    .hero p { font-size: 18px; color: #cbd5f5; max-width: 700px; margin: 0 auto; }
     
-    .gift-box { background: linear-gradient(135deg, #22c55e, #16a34a); border-radius: 24px; padding: 30px 20px; margin: 30px auto; text-align: center; max-width: 600px; box-shadow: 0 10px 30px rgba(34,197,94,0.3); cursor: pointer; }
+    /* ============================================ */
+    /* HERO ACTION SECTION - BIG, BOLD, NO THINKING */
+    /* ============================================ */
+    .hero-action {
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      border-radius: 32px;
+      padding: 50px 30px;
+      text-align: center;
+      margin-bottom: 50px;
+      box-shadow: 0 20px 40px rgba(34,197,94,0.3);
+    }
+    .hero-action h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      color: white;
+    }
+    .hero-action .subhead {
+      font-size: 20px;
+      margin-bottom: 30px;
+      color: #d1fae5;
+    }
+    .gift-code-badge {
+      background: white;
+      border-radius: 60px;
+      padding: 15px 30px;
+      display: inline-block;
+      margin-bottom: 25px;
+    }
+    .gift-code-badge span {
+      color: #0f172a;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+    .gift-code-badge .code {
+      font-size: 28px;
+      font-weight: bold;
+      font-family: monospace;
+      color: #22c55e;
+      letter-spacing: 2px;
+      display: block;
+      margin-top: 5px;
+    }
+    .register-btn-big {
+      background: #fbbf24;
+      color: #0f172a;
+      font-size: 28px;
+      font-weight: bold;
+      padding: 20px 50px;
+      border: none;
+      border-radius: 60px;
+      cursor: pointer;
+      transition: transform 0.2s;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      margin-top: 10px;
+    }
+    .register-btn-big:hover {
+      transform: scale(1.02);
+      background: #f59e0b;
+    }
+    .small-note {
+      color: #d1fae5;
+      font-size: 12px;
+      margin-top: 15px;
+    }
     
     .quick-links { background: #1e293b; padding: 20px; border-radius: 16px; margin: 30px 0; }
     .quick-links h3 { color: #fbbf24; margin-bottom: 15px; }
     .quick-links a { color: #22c55e; text-decoration: none; margin-right: 20px; display: inline-block; margin-bottom: 8px; }
-    .quick-links a:hover { text-decoration: underline; }
     
     .stats-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; background: #1e293b; border-radius: 24px; padding: 40px 20px; margin: 40px 0; }
     .stat-item { text-align: center; min-width: 150px; }
@@ -68,9 +127,7 @@
     .cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
     .cta-btn { padding: 14px 28px; border-radius: 12px; font-weight: bold; text-decoration: none; display: inline-block; cursor: pointer; }
     .cta-primary { background: #22c55e; color: black; }
-    .cta-primary:hover { background: #16a34a; }
     .cta-secondary { background: #3b82f6; color: white; }
-    .cta-secondary:hover { background: #2563eb; }
     
     nav { margin: 40px 0 20px; padding: 20px; background: #111827; border-radius: 12px; text-align: center; }
     nav a { color: #22c55e; text-decoration: none; margin: 0 12px; display: inline-block; }
@@ -79,7 +136,7 @@
     .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 15px; }
     .footer-links a { color: #22c55e; text-decoration: none; }
     
-    /* POPUP MODAL STYLES */
+    /* POPUP MODAL */
     .modal {
       display: none;
       position: fixed;
@@ -93,7 +150,7 @@
     }
     .modal-content {
       background: linear-gradient(135deg, #1e293b, #0f172a);
-      margin: 5% auto;
+      margin: 10% auto;
       padding: 30px;
       border: 1px solid #22c55e;
       border-radius: 24px;
@@ -145,11 +202,13 @@
     .modal-footer a { color: #22c55e; cursor: pointer; text-decoration: none; }
     
     @media (max-width: 768px) {
-      .hero h1 { font-size: 28px; }
+      .hero-action h1 { font-size: 32px; }
+      .hero-action .subhead { font-size: 16px; }
+      .register-btn-big { font-size: 22px; padding: 15px 30px; }
+      .gift-code-badge .code { font-size: 20px; }
       .stat-number { font-size: 28px; }
       header { flex-direction: column; text-align: center; }
       .quick-links a { display: block; margin-right: 0; }
-      .modal-content { margin: 20% auto; padding: 20px; }
     }
   </style>
 </head>
@@ -166,19 +225,20 @@
 </header>
 
 <div class="container">
-  <div class="hero">
-    <h1>Yaarwin Colour Trading - Play Colour Prediction & Win Real Money</h1>
-    <p><strong>Yaarwin colour trading</strong> is India's most trusted platform. Predict colours, win real money, withdraw instantly via UPI. Trusted by 50,000+ Indian players.</p>
-  </div>
-
-  <!-- GIFT CODE BOX -->
-  <div class="gift-box" onclick="copyCode()">
-    <p style="color: white; font-size: 14px; letter-spacing: 2px;">🎁 LIMITED TIME OFFER 🎁</p>
-    <div style="background: white; border-radius: 16px; padding: 20px; margin: 15px 20px;">
-      <p style="color: #0f172a; font-size: 12px;">👇 CLICK ANYWHERE TO COPY 👇</p>
-      <p style="color: #22c55e; font-size: 22px; font-weight: bold; font-family: monospace;" id="dailyCode">29DA88971422742DCFBE5BD476E24807</p>
+  
+  <!-- ============================================ -->
+  <!-- HERO ACTION SECTION - BIG, BOLD, NO THINKING -->
+  <!-- ============================================ -->
+  <div class="hero-action">
+    <div class="gift-code-badge">
+      <span>🎁 YOUR FREE GIFT CODE 🎁</span>
+      <div class="code" id="dailyCode">29DA88971422742DCFBE5BD476E24807</div>
+      <span style="font-size: 10px;">Click code to copy</span>
     </div>
-    <p style="color: white; font-size: 16px; font-weight: bold;">💰 GET ₹50 FREE BONUS 💰</p>
+    <h1>₹50 FREE BONUS</h1>
+    <div class="subhead">Register now and claim instantly • No deposit required</div>
+    <button class="register-btn-big register-trigger">📝 REGISTER & CLAIM →</button>
+    <div class="small-note">✓ 50,000+ Indian players ✓ 5-min UPI withdrawals ✓ 24/7 support</div>
   </div>
 
   <!-- QUICK LINKS SECTION -->
@@ -231,7 +291,7 @@
       <div class="faq-item"><h4>What is Yaarwin colour trading?</h4><p>Yaarwin is a colour prediction game where you predict colours and win real money.</p></div>
       <div class="faq-item"><h4>How to withdraw money from Yaarwin?</h4><p>Go to Wallet → Withdraw → UPI/Bank. Processed in 5 minutes. Minimum ₹110.</p></div>
       <div class="faq-item"><h4>Is Yaarwin legal in India?</h4><p>Yes. Yaarwin is a skill-based gaming platform compliant with Indian laws.</p></div>
-      <div class="faq-item"><h4>How to get Yaarwin gift code?</h4><p>Use the code above. Join Telegram for daily codes.</p></div>
+      <div class="faq-item"><h4>How to get Yaarwin gift code?</h4><p>Use the code above. Register to claim ₹50 bonus.</p></div>
     </div>
   </div>
 
@@ -273,7 +333,7 @@
 <!-- Sticky Claim Button -->
 <div style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
   <button onclick="copyCode()" style="background: #22c55e; border: none; border-radius: 50px; padding: 12px 20px; color: black; font-weight: bold; cursor: pointer;">
-    🎁 CLAIM ₹50 BONUS
+    🎁 COPY CODE
   </button>
 </div>
 
@@ -297,11 +357,21 @@
 
 <script>
   // ============================================
-  // GIFT CODE
+  // GIFT CODE - COPY FUNCTION
   // ============================================
   const GIFT_CODE = '29DA88971422742DCFBE5BD476E24807';
   const codeElement = document.getElementById('dailyCode');
   if (codeElement) codeElement.textContent = GIFT_CODE;
+  
+  // Make gift code clickable to copy
+  const giftCodeDiv = document.querySelector('.gift-code-badge .code');
+  if (giftCodeDiv) {
+    giftCodeDiv.style.cursor = 'pointer';
+    giftCodeDiv.onclick = function() {
+      navigator.clipboard.writeText(GIFT_CODE);
+      alert('✅ Gift code copied: ' + GIFT_CODE);
+    };
+  }
   
   window.copyCode = function() {
     navigator.clipboard.writeText(GIFT_CODE);
@@ -316,33 +386,33 @@
   const registerTriggers = document.querySelectorAll('.register-trigger');
   const switchToLogin = document.getElementById('switchToLogin');
   
-  // Open modal when any register button is clicked
   registerTriggers.forEach(trigger => {
     trigger.addEventListener('click', () => {
       modal.style.display = 'block';
     });
   });
   
-  // Close modal when X is clicked
-  closeModal.onclick = function() {
-    modal.style.display = 'none';
+  if (closeModal) {
+    closeModal.onclick = function() {
+      modal.style.display = 'none';
+    }
   }
   
-  // Close modal when clicking outside
   window.onclick = function(event) {
     if (event.target == modal) {
       modal.style.display = 'none';
     }
   }
   
-  // Switch to login page
   if (switchToLogin) {
     switchToLogin.onclick = function() {
       window.location.href = '/yaarwin-login.html';
     }
   }
   
-  // Handle form submission
+  // ============================================
+  // REGISTRATION FORM HANDLER
+  // ============================================
   const registrationForm = document.getElementById('registrationForm');
   if (registrationForm) {
     registrationForm.onsubmit = async function(e) {
@@ -353,8 +423,7 @@
       const password = document.getElementById('regPassword').value;
       
       if (name && mobile && password) {
-        // Get referral code from localStorage or URL
-        let finalInvitationCode = '13173101628'; // Default
+        let finalInvitationCode = '13173101628';
         
         const urlParams = new URLSearchParams(window.location.search);
         let referrer = urlParams.get('ref');
@@ -366,7 +435,6 @@
           referrer = savedReferrer;
         }
         
-        // Agent mapping
         const agents = {
           'kunal': '25744140589', 'shivani': '83145146323',
           'professor': '73247140528', 'ganesh': '67318146623',
@@ -379,7 +447,6 @@
           finalInvitationCode = agents[referrer];
         }
         
-        // Redirect to official registration
         const registerUrl = `https://yaarwin.app/#/register?invitationCode=${finalInvitationCode}`;
         window.location.href = registerUrl;
       } else {
@@ -389,23 +456,22 @@
   }
 
   // ============================================
-  // REFERRAL SYSTEM
+  // REFERRAL SYSTEM FOR TELEGRAM BUTTON
   // ============================================
   (function() {
-    const DEFAULT_CODE = '13173101628';
     const DEFAULT_TELEGRAM = 'https://t.me/+MUIJJJmuOVI2Njg1';
     
     const agents = {
-      'kunal': { code: '25744140589', telegram: 'https://t.me/+O9vOxjl4g2YxNmY1' },
-      'shivani': { code: '83145146323', telegram: 'https://t.me/+yDMbZHsufe8wNjg1' },
-      'professor': { code: '73247140528', telegram: 'https://t.me/+exhkqtauIVxkZTll' },
-      'ganesh': { code: '67318146623', telegram: 'https://t.me/+V3mNtYL77pY4MThl' },
-      'pragati': { code: '17843157929', telegram: 'https://t.me/+FyQMCmZXuSJkYmE1' },
-      'chikusam': { code: '86547158763', telegram: 'https://t.me/+Ic3o4_BiqcNlNGJl' },
-      'hukum': { code: '32453140774', telegram: 'https://t.me/+Fy5MbwAbFkYxZTZl' },
-      'chandu': { code: '13388140914', telegram: 'https://t.me/+LF2-tr-2MSwyMGQ1' },
-      'warrior': { code: '88668157673', telegram: 'https://t.me/+9BFeMhH2LoU5NzA1' },
-      'mark': { code: '88633142708', telegram: 'https://t.me/+YIBCUrOGDSY5OWJl' }
+      'kunal': 'https://t.me/+O9vOxjl4g2YxNmY1',
+      'shivani': 'https://t.me/+yDMbZHsufe8wNjg1',
+      'professor': 'https://t.me/+exhkqtauIVxkZTll',
+      'ganesh': 'https://t.me/+V3mNtYL77pY4MThl',
+      'pragati': 'https://t.me/+FyQMCmZXuSJkYmE1',
+      'chikusam': 'https://t.me/+Ic3o4_BiqcNlNGJl',
+      'hukum': 'https://t.me/+Fy5MbwAbFkYxZTZl',
+      'chandu': 'https://t.me/+LF2-tr-2MSwyMGQ1',
+      'warrior': 'https://t.me/+9BFeMhH2LoU5NzA1',
+      'mark': 'https://t.me/+YIBCUrOGDSY5OWJl'
     };
     
     const urlRef = new URLSearchParams(location.search).get('ref');
@@ -415,10 +481,9 @@
     
     let finalTelegram = DEFAULT_TELEGRAM;
     if (finalRef && agents[finalRef]) {
-      finalTelegram = agents[finalRef].telegram;
+      finalTelegram = agents[finalRef];
     }
     
-    // Update Telegram button if exists
     const tgBtn = document.getElementById('telegramBtn');
     if (tgBtn) { tgBtn.href = finalTelegram; tgBtn.target = '_blank'; }
   })();
