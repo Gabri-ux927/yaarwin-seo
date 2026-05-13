@@ -20,6 +20,7 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Segoe UI', Arial, sans-serif; background: #0f172a; color: white; }
     
+    /* Header */
     header { padding: 20px; background: #111827; border-bottom: 1px solid #22c55e; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px; }
     .logo-area { display: flex; align-items: center; gap: 12px; }
     .logo-area img { height: 40px; width: auto; }
@@ -31,87 +32,135 @@
     
     .container { padding: 40px 20px; max-width: 1200px; margin: auto; }
     
-    /* ============================================ */
-    /* HERO ACTION SECTION - BIG, BOLD, NO THINKING */
-    /* ============================================ */
-    .hero-action {
-      background: linear-gradient(135deg, #22c55e, #16a34a);
-      border-radius: 32px;
-      padding: 50px 30px;
+    /* Action Card */
+    .action-card {
+      background: #1e293b;
+      border-radius: 24px;
+      padding: 40px;
       text-align: center;
-      margin-bottom: 50px;
-      box-shadow: 0 20px 40px rgba(34,197,94,0.3);
-    }
-    .hero-action h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-      color: white;
-    }
-    .hero-action .subhead {
-      font-size: 20px;
       margin-bottom: 30px;
-      color: #d1fae5;
+      border: 1px solid #334155;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3);
     }
-    .gift-code-badge {
-      background: white;
-      border-radius: 60px;
-      padding: 15px 30px;
-      display: inline-block;
+    .action-card h1 {
+      font-size: 36px;
+      color: #fbbf24;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    .action-card .subhead {
+      font-size: 16px;
+      color: #94a3b8;
+      margin-bottom: 30px;
+    }
+    .gift-row {
+      background: #0f172a;
+      border-radius: 16px;
+      padding: 20px;
       margin-bottom: 25px;
+      border: 1px solid #334155;
     }
-    .gift-code-badge span {
-      color: #0f172a;
-      font-size: 14px;
+    .gift-label {
+      color: #94a3b8;
+      font-size: 12px;
       letter-spacing: 1px;
+      margin-bottom: 8px;
     }
-    .gift-code-badge .code {
-      font-size: 28px;
+    .gift-code-value {
+      font-size: 24px;
       font-weight: bold;
       font-family: monospace;
       color: #22c55e;
-      letter-spacing: 2px;
-      display: block;
-      margin-top: 5px;
-    }
-    .register-btn-big {
-      background: #fbbf24;
-      color: #0f172a;
-      font-size: 28px;
-      font-weight: bold;
-      padding: 20px 50px;
-      border: none;
-      border-radius: 60px;
+      letter-spacing: 1px;
+      background: #0f172a;
+      display: inline-block;
+      padding: 8px 20px;
+      border-radius: 40px;
       cursor: pointer;
-      transition: transform 0.2s;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      transition: all 0.2s;
+    }
+    .gift-code-value:hover {
+      background: #1e293b;
+    }
+    .bonus-amount {
+      font-size: 42px;
+      font-weight: bold;
+      color: #22c55e;
+      margin: 15px 0 10px;
+    }
+    .register-btn-main {
+      background: #22c55e;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 16px 40px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: inline-block;
       margin-top: 10px;
     }
-    .register-btn-big:hover {
+    .register-btn-main:hover {
+      background: #16a34a;
+      transform: translateY(-2px);
+    }
+    .action-footer {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 25px;
+      font-size: 13px;
+      color: #64748b;
+    }
+    .action-footer span { display: inline-flex; align-items: center; gap: 6px; }
+    
+    /* Telegram Section */
+    .telegram-section {
+      background: #1e293b;
+      border-radius: 20px;
+      padding: 25px;
+      text-align: center;
+      margin-bottom: 40px;
+      border: 1px solid #334155;
+    }
+    .telegram-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #0088cc;
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: transform 0.2s;
+    }
+    .telegram-btn:hover {
+      background: #006699;
       transform: scale(1.02);
-      background: #f59e0b;
     }
-    .small-note {
-      color: #d1fae5;
+    .telegram-note {
+      color: #94a3b8;
       font-size: 12px;
-      margin-top: 15px;
+      margin-top: 12px;
     }
     
-    .quick-links { background: #1e293b; padding: 20px; border-radius: 16px; margin: 30px 0; }
-    .quick-links h3 { color: #fbbf24; margin-bottom: 15px; }
-    .quick-links a { color: #22c55e; text-decoration: none; margin-right: 20px; display: inline-block; margin-bottom: 8px; }
-    
+    /* SEO Content Sections */
     .stats-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; background: #1e293b; border-radius: 24px; padding: 40px 20px; margin: 40px 0; }
     .stat-item { text-align: center; min-width: 150px; }
     .stat-number { font-size: 36px; font-weight: bold; color: #fbbf24; }
     .stat-label { color: #94a3b8; font-size: 14px; margin-top: 8px; }
     
     .selection-section { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin: 40px 0; }
-    .earn-card { flex: 1; min-width: 280px; max-width: 350px; background: linear-gradient(135deg, #1e293b, #0f172a); border-radius: 24px; padding: 35px 25px; text-align: center; border: 1px solid #334155; text-decoration: none; display: block; transition: transform 0.3s; }
-    .earn-card:hover { transform: translateY(-8px); border-color: #22c55e; }
+    .earn-card { flex: 1; min-width: 280px; max-width: 350px; background: #1e293b; border-radius: 24px; padding: 35px 25px; text-align: center; border: 1px solid #334155; text-decoration: none; display: block; transition: transform 0.3s; }
+    .earn-card:hover { transform: translateY(-5px); border-color: #22c55e; }
     .earn-card img { width: 100px; height: 100px; margin-bottom: 20px; }
     .earn-card h3 { font-size: 28px; color: #fbbf24; margin-bottom: 15px; }
     .earn-card p { color: #cbd5f5; font-size: 14px; margin-bottom: 20px; }
     .earn-card .btn-small { display: inline-block; padding: 10px 24px; background: #22c55e; color: black; text-decoration: none; border-radius: 8px; font-weight: bold; cursor: pointer; }
+    .earn-card .btn-small:hover { background: #16a34a; }
     
     .trust-section { text-align: center; margin: 40px 0; }
     .trust-badge { display: inline-block; background: #22c55e20; border: 1px solid #22c55e; border-radius: 40px; padding: 8px 20px; margin: 6px; font-size: 14px; }
@@ -123,11 +172,18 @@
     .faq-item h4 { color: #22c55e; margin-bottom: 8px; }
     .faq-item p { color: #cbd5f5; font-size: 13px; }
     
-    .cta-banner { background: linear-gradient(135deg, #22c55e20, #16a34a10); border: 2px solid #22c55e; border-radius: 24px; padding: 40px; text-align: center; margin: 40px 0; }
+    .cta-banner { background: #1e293b; border: 1px solid #334155; border-radius: 24px; padding: 40px; text-align: center; margin: 40px 0; }
     .cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
-    .cta-btn { padding: 14px 28px; border-radius: 12px; font-weight: bold; text-decoration: none; display: inline-block; cursor: pointer; }
+    .cta-btn { padding: 14px 28px; border-radius: 12px; font-weight: bold; text-decoration: none; display: inline-block; cursor: pointer; transition: all 0.2s; }
     .cta-primary { background: #22c55e; color: black; }
+    .cta-primary:hover { background: #16a34a; }
     .cta-secondary { background: #3b82f6; color: white; }
+    .cta-secondary:hover { background: #2563eb; }
+    
+    .quick-links { background: #1e293b; padding: 20px; border-radius: 16px; margin: 30px 0; border: 1px solid #334155; }
+    .quick-links h3 { color: #fbbf24; margin-bottom: 15px; }
+    .quick-links a { color: #22c55e; text-decoration: none; margin-right: 20px; display: inline-block; margin-bottom: 8px; }
+    .quick-links a:hover { text-decoration: underline; }
     
     nav { margin: 40px 0 20px; padding: 20px; background: #111827; border-radius: 12px; text-align: center; }
     nav a { color: #22c55e; text-decoration: none; margin: 0 12px; display: inline-block; }
@@ -136,7 +192,7 @@
     .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 15px; }
     .footer-links a { color: #22c55e; text-decoration: none; }
     
-    /* POPUP MODAL */
+    /* Modal */
     .modal {
       display: none;
       position: fixed;
@@ -149,10 +205,10 @@
       backdrop-filter: blur(5px);
     }
     .modal-content {
-      background: linear-gradient(135deg, #1e293b, #0f172a);
+      background: #1e293b;
       margin: 10% auto;
       padding: 30px;
-      border: 1px solid #22c55e;
+      border: 1px solid #334155;
       border-radius: 24px;
       width: 90%;
       max-width: 450px;
@@ -160,7 +216,7 @@
       animation: modalFadeIn 0.3s;
     }
     @keyframes modalFadeIn {
-      from { opacity: 0; transform: translateY(-50px); }
+      from { opacity: 0; transform: translateY(-30px); }
       to { opacity: 1; transform: translateY(0); }
     }
     .close-modal {
@@ -202,13 +258,16 @@
     .modal-footer a { color: #22c55e; cursor: pointer; text-decoration: none; }
     
     @media (max-width: 768px) {
-      .hero-action h1 { font-size: 32px; }
-      .hero-action .subhead { font-size: 16px; }
-      .register-btn-big { font-size: 22px; padding: 15px 30px; }
-      .gift-code-badge .code { font-size: 20px; }
+      .action-card { padding: 25px; }
+      .action-card h1 { font-size: 28px; }
+      .bonus-amount { font-size: 32px; }
+      .register-btn-main { font-size: 18px; padding: 14px 30px; }
+      .action-footer { flex-direction: column; gap: 10px; }
       .stat-number { font-size: 28px; }
-      header { flex-direction: column; text-align: center; }
+      .selection-section { gap: 20px; }
+      .earn-card { min-width: 100%; }
       .quick-links a { display: block; margin-right: 0; }
+      .telegram-btn { font-size: 14px; padding: 10px 20px; }
     }
   </style>
 </head>
@@ -227,27 +286,38 @@
 <div class="container">
   
   <!-- ============================================ -->
-  <!-- HERO ACTION SECTION - BIG, BOLD, NO THINKING -->
+  <!-- PROFESSIONAL ACTION CARD -->
   <!-- ============================================ -->
-  <div class="hero-action">
-    <div class="gift-code-badge">
-      <span>🎁 YOUR FREE GIFT CODE 🎁</span>
-      <div class="code" id="dailyCode">29DA88971422742DCFBE5BD476E24807</div>
-      <span style="font-size: 10px;">Click code to copy</span>
+  <div class="action-card">
+    <h1>Yaarwin Colour Trading</h1>
+    <div class="subhead">India's Most Trusted Colour Prediction Platform</div>
+    
+    <div class="gift-row">
+      <div class="gift-label">🎁 YOUR EXCLUSIVE GIFT CODE</div>
+      <div class="gift-code-value" id="dailyCode" onclick="copyCode()">29DA88971422742DCFBE5BD476E24807</div>
+      <div class="bonus-amount">₹50 FREE BONUS</div>
+      <div style="color: #94a3b8; font-size: 13px;">No deposit required • Limited time</div>
     </div>
-    <h1>₹50 FREE BONUS</h1>
-    <div class="subhead">Register now and claim instantly • No deposit required</div>
-    <button class="register-btn-big register-trigger">📝 REGISTER & CLAIM →</button>
-    <div class="small-note">✓ 50,000+ Indian players ✓ 5-min UPI withdrawals ✓ 24/7 support</div>
+    
+    <button class="register-btn-main register-trigger">📝 Register & Claim Bonus</button>
+    
+    <div class="action-footer">
+      <span>✅ 50,000+ Players</span>
+      <span>⚡ 5-Min Withdrawals</span>
+      <span>💳 UPI & Bank Transfer</span>
+    </div>
   </div>
 
-  <!-- QUICK LINKS SECTION -->
-  <div class="quick-links">
-    <h3>🎯 Yaarwin Quick Links</h3>
-    <a href="/yaarwin-game.html">▶ How to Play Yaarwin Colour Trading</a>
-    <a href="/yaarwin-login.html">▶ Yaarwin Login</a>
-    <a href="/become-agent.html">▶ Become a Yaarwin Agent</a>
-    <a href="/yaarwin-app.html">▶ Download Yaarwin App for Android</a>
+  <!-- ============================================ -->
+  <!-- TELEGRAM CHANNEL SECTION -->
+  <!-- ============================================ -->
+  <div class="telegram-section">
+    <a href="#" id="telegramBtn" class="telegram-btn" target="_blank">
+      📢 Join Yaarwin Official Telegram
+    </a>
+    <div class="telegram-note">
+      Get daily gift codes, game tips, and instant support
+    </div>
   </div>
 
   <!-- STATS SECTION -->
@@ -269,7 +339,7 @@
     <a href="/become-agent.html" class="earn-card">
       <img src="https://img.icons8.com/fluency/120/teamwork.png" alt="Yaarwin Agent Program">
       <h3>🤝 Become a Yaarwin Agent</h3>
-      <p>Earn daily commissions by referring players to Yaarwin colour trading. No investment. Passive income.</p>
+      <p>Earn daily commissions by referring players. No investment. Passive income. Top agents earn ₹50K+/month.</p>
       <span class="btn-small">Learn More →</span>
     </a>
   </div>
@@ -284,36 +354,46 @@
     <span class="trust-badge">✅ 100% Legal in India</span>
   </div>
 
+  <!-- QUICK LINKS -->
+  <div class="quick-links">
+    <h3>📚 Yaarwin Resources</h3>
+    <a href="/yaarwin-game.html">▶ Yaarwin Colour Trading Rules</a>
+    <a href="/yaarwin-strategy.html">▶ Yaarwin Strategy Guide</a>
+    <a href="/yaarwin-app.html">▶ Download Yaarwin App</a>
+    <a href="/yaarwin-login.html">▶ Yaarwin Login</a>
+    <a href="/become-agent.html">▶ Become Yaarwin Agent</a>
+  </div>
+
   <!-- FAQ PREVIEW -->
   <div class="faq-preview">
-    <h2>❓ Yaarwin Colour Trading Quick Answers</h2>
+    <h2>❓ Frequently Asked Questions</h2>
     <div class="faq-grid">
-      <div class="faq-item"><h4>What is Yaarwin colour trading?</h4><p>Yaarwin is a colour prediction game where you predict colours and win real money.</p></div>
-      <div class="faq-item"><h4>How to withdraw money from Yaarwin?</h4><p>Go to Wallet → Withdraw → UPI/Bank. Processed in 5 minutes. Minimum ₹110.</p></div>
-      <div class="faq-item"><h4>Is Yaarwin legal in India?</h4><p>Yes. Yaarwin is a skill-based gaming platform compliant with Indian laws.</p></div>
-      <div class="faq-item"><h4>How to get Yaarwin gift code?</h4><p>Use the code above. Register to claim ₹50 bonus.</p></div>
+      <div class="faq-item"><h4>What is Yaarwin colour trading?</h4><p>Yaarwin is a colour prediction game where you predict colours (Red, Green, Violet) and win real money instantly.</p></div>
+      <div class="faq-item"><h4>How to withdraw money from Yaarwin?</h4><p>Go to Wallet → Withdraw → Select UPI/Bank. Withdrawals processed within 5 minutes. Minimum withdrawal ₹110.</p></div>
+      <div class="faq-item"><h4>Is Yaarwin legal in India?</h4><p>Yes. Yaarwin operates as a skill-based gaming platform compliant with Indian laws. Must be 18+.</p></div>
+      <div class="faq-item"><h4>How to get the ₹50 gift code?</h4><p>Use the code above during registration. Limited time offer for new users.</p></div>
     </div>
   </div>
 
   <!-- CTA BANNER -->
   <div class="cta-banner">
-    <h2>🎯 Ready to Start Yaarwin Colour Trading?</h2>
-    <p>Join 50,000+ Indian players already earning daily.</p>
+    <h2>🎯 Ready to Start Earning?</h2>
+    <p>Join 50,000+ Indian players already earning daily on Yaarwin.</p>
     <div class="cta-buttons">
-      <a class="cta-btn cta-primary register-trigger">📝 Start Playing Yaarwin</a>
-      <a href="/become-agent.html" class="cta-btn cta-secondary">🤝 Become Yaarwin Agent</a>
-      <a href="/yaarwin-login.html" class="cta-btn cta-primary">🔐 Yaarwin Login</a>
+      <a class="cta-btn cta-primary register-trigger">📝 Start Playing Now</a>
+      <a href="/become-agent.html" class="cta-btn cta-secondary">🤝 Become an Agent</a>
+      <a href="/yaarwin-login.html" class="cta-btn cta-primary">🔐 Login</a>
     </div>
   </div>
 
   <!-- NAVIGATION -->
   <nav>
-    <a href="/">Yaarwin Home</a> |
-    <a href="/yaarwin-game.html">Yaarwin Colour Trading Rules</a> |
-    <a href="/yaarwin-strategy.html">Yaarwin Game Strategy Guide</a> |
-    <a href="/yaarwin-app.html">Download Yaarwin App</a> |
-    <a href="/yaarwin-login.html">Yaarwin Login</a> |
-    <a href="/become-agent.html">Become Yaarwin Agent</a>
+    <a href="/">Home</a> |
+    <a href="/yaarwin-game.html">Game Rules</a> |
+    <a href="/yaarwin-strategy.html">Strategy</a> |
+    <a href="/yaarwin-app.html">App</a> |
+    <a href="/yaarwin-login.html">Login</a> |
+    <a href="/become-agent.html">Agent</a>
   </nav>
 </div>
 
@@ -322,34 +402,33 @@
   <div class="footer-links">
     <a href="/">Home</a> |
     <a href="/yaarwin-game.html">Colour Trading Rules</a> |
-    <a href="/yaarwin-login.html">Login to Yaarwin</a> |
-    <a href="/yaarwin-app.html">Yaarwin APK Download</a> |
-    <a href="/become-agent.html">Yaarwin Agent Referral</a>
+    <a href="/yaarwin-login.html">Yaarwin Login</a> |
+    <a href="/yaarwin-app.html">Download App</a> |
+    <a href="/become-agent.html">Agent Program</a>
   </div>
-  <p><strong>Play Yaarwin Colour Trading Responsibly</strong> — Set deposit limits, must be 18+.</p>
+  <p><strong>Play Responsibly</strong> — Set deposit limits, take breaks, must be 18+.</p>
   <p>© 2026 Yaarwin. All rights reserved.</p>
 </footer>
 
-<!-- Sticky Claim Button -->
+<!-- Sticky Copy Button -->
 <div style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
-  <button onclick="copyCode()" style="background: #22c55e; border: none; border-radius: 50px; padding: 12px 20px; color: black; font-weight: bold; cursor: pointer;">
-    🎁 COPY CODE
+  <button onclick="copyCode()" style="background: #1e293b; border: 1px solid #22c55e; border-radius: 50px; padding: 10px 18px; color: #22c55e; font-weight: bold; cursor: pointer;">
+    🎁 Copy Code
   </button>
 </div>
 
-<!-- REGISTRATION POPUP MODAL -->
+<!-- REGISTRATION MODAL -->
 <div id="registerModal" class="modal">
   <div class="modal-content">
     <span class="close-modal">&times;</span>
-    <h2>📝 Create Your Yaarwin Account</h2>
+    <h2>📝 Create Your Account</h2>
     <form id="registrationForm">
       <input type="text" id="regName" placeholder="Full Name" required>
       <input type="tel" id="regMobile" placeholder="Mobile Number (10 digits)" required>
-      <input type="password" id="regPassword" placeholder="Create Password (min 8 characters)" required>
+      <input type="password" id="regPassword" placeholder="Password (min 8 characters)" required>
       <button type="submit">✅ Register & Get ₹50 Bonus</button>
     </form>
     <div class="modal-footer">
-      <p>By registering, you agree to our <a href="#">Terms & Conditions</a></p>
       <p>Already have an account? <a id="switchToLogin">Login here</a></p>
     </div>
   </div>
@@ -357,29 +436,19 @@
 
 <script>
   // ============================================
-  // GIFT CODE - COPY FUNCTION
+  // GIFT CODE
   // ============================================
   const GIFT_CODE = '29DA88971422742DCFBE5BD476E24807';
   const codeElement = document.getElementById('dailyCode');
   if (codeElement) codeElement.textContent = GIFT_CODE;
   
-  // Make gift code clickable to copy
-  const giftCodeDiv = document.querySelector('.gift-code-badge .code');
-  if (giftCodeDiv) {
-    giftCodeDiv.style.cursor = 'pointer';
-    giftCodeDiv.onclick = function() {
-      navigator.clipboard.writeText(GIFT_CODE);
-      alert('✅ Gift code copied: ' + GIFT_CODE);
-    };
-  }
-  
   window.copyCode = function() {
     navigator.clipboard.writeText(GIFT_CODE);
-    alert('✅ YAARWIN GIFT CODE COPIED!\n\nUse this code during registration to get ₹50 free bonus.\n\nCode: ' + GIFT_CODE);
+    alert('✅ Gift code copied: ' + GIFT_CODE);
   };
 
   // ============================================
-  // POPUP MODAL SYSTEM
+  // POPUP MODAL
   // ============================================
   const modal = document.getElementById('registerModal');
   const closeModal = document.querySelector('.close-modal');
@@ -393,29 +462,23 @@
   });
   
   if (closeModal) {
-    closeModal.onclick = function() {
-      modal.style.display = 'none';
-    }
+    closeModal.onclick = () => { modal.style.display = 'none'; };
   }
   
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = 'none';
-    }
-  }
+  window.onclick = (event) => {
+    if (event.target == modal) modal.style.display = 'none';
+  };
   
   if (switchToLogin) {
-    switchToLogin.onclick = function() {
-      window.location.href = '/yaarwin-login.html';
-    }
+    switchToLogin.onclick = () => { window.location.href = '/yaarwin-login.html'; };
   }
   
   // ============================================
-  // REGISTRATION FORM HANDLER
+  // REGISTRATION FORM
   // ============================================
   const registrationForm = document.getElementById('registrationForm');
   if (registrationForm) {
-    registrationForm.onsubmit = async function(e) {
+    registrationForm.onsubmit = (e) => {
       e.preventDefault();
       
       const name = document.getElementById('regName').value;
@@ -447,8 +510,7 @@
           finalInvitationCode = agents[referrer];
         }
         
-        const registerUrl = `https://yaarwin.app/#/register?invitationCode=${finalInvitationCode}`;
-        window.location.href = registerUrl;
+        window.location.href = `https://yaarwin.app/#/register?invitationCode=${finalInvitationCode}`;
       } else {
         alert('Please fill in all fields');
       }
@@ -456,11 +518,10 @@
   }
 
   // ============================================
-  // REFERRAL SYSTEM FOR TELEGRAM BUTTON
+  // REFERRAL SYSTEM FOR TELEGRAM
   // ============================================
   (function() {
     const DEFAULT_TELEGRAM = 'https://t.me/+MUIJJJmuOVI2Njg1';
-    
     const agents = {
       'kunal': 'https://t.me/+O9vOxjl4g2YxNmY1',
       'shivani': 'https://t.me/+yDMbZHsufe8wNjg1',
@@ -480,9 +541,7 @@
     if (urlRef) localStorage.setItem('yaarwin_referrer', urlRef);
     
     let finalTelegram = DEFAULT_TELEGRAM;
-    if (finalRef && agents[finalRef]) {
-      finalTelegram = agents[finalRef];
-    }
+    if (finalRef && agents[finalRef]) finalTelegram = agents[finalRef];
     
     const tgBtn = document.getElementById('telegramBtn');
     if (tgBtn) { tgBtn.href = finalTelegram; tgBtn.target = '_blank'; }
