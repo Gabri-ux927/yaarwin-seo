@@ -24,7 +24,7 @@
     .logo-area { display: flex; align-items: center; gap: 12px; }
     .logo-area img { height: 40px; width: auto; }
     .header-buttons { display: flex; gap: 12px; }
-    .header-btn { padding: 10px 20px; background: #22c55e; color: black; text-decoration: none; border-radius: 8px; font-weight: bold; transition: background 0.2s; }
+    .header-btn { padding: 10px 20px; background: #22c55e; color: black; text-decoration: none; border-radius: 8px; font-weight: bold; cursor: pointer; transition: background 0.2s; }
     .header-btn:hover { background: #16a34a; }
     .header-btn-outline { background: transparent; border: 1px solid #22c55e; color: #22c55e; }
     .header-btn-outline:hover { background: #22c55e20; }
@@ -52,7 +52,7 @@
     .earn-card img { width: 100px; height: 100px; margin-bottom: 20px; }
     .earn-card h3 { font-size: 28px; color: #fbbf24; margin-bottom: 15px; }
     .earn-card p { color: #cbd5f5; font-size: 14px; margin-bottom: 20px; }
-    .earn-card .btn-small { display: inline-block; padding: 10px 24px; background: #22c55e; color: black; text-decoration: none; border-radius: 8px; font-weight: bold; }
+    .earn-card .btn-small { display: inline-block; padding: 10px 24px; background: #22c55e; color: black; text-decoration: none; border-radius: 8px; font-weight: bold; cursor: pointer; }
     
     .trust-section { text-align: center; margin: 40px 0; }
     .trust-badge { display: inline-block; background: #22c55e20; border: 1px solid #22c55e; border-radius: 40px; padding: 8px 20px; margin: 6px; font-size: 14px; }
@@ -66,9 +66,11 @@
     
     .cta-banner { background: linear-gradient(135deg, #22c55e20, #16a34a10); border: 2px solid #22c55e; border-radius: 24px; padding: 40px; text-align: center; margin: 40px 0; }
     .cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
-    .cta-btn { padding: 14px 28px; border-radius: 12px; font-weight: bold; text-decoration: none; display: inline-block; }
+    .cta-btn { padding: 14px 28px; border-radius: 12px; font-weight: bold; text-decoration: none; display: inline-block; cursor: pointer; }
     .cta-primary { background: #22c55e; color: black; }
+    .cta-primary:hover { background: #16a34a; }
     .cta-secondary { background: #3b82f6; color: white; }
+    .cta-secondary:hover { background: #2563eb; }
     
     nav { margin: 40px 0 20px; padding: 20px; background: #111827; border-radius: 12px; text-align: center; }
     nav a { color: #22c55e; text-decoration: none; margin: 0 12px; display: inline-block; }
@@ -77,11 +79,77 @@
     .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 15px; }
     .footer-links a { color: #22c55e; text-decoration: none; }
     
+    /* POPUP MODAL STYLES */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+      backdrop-filter: blur(5px);
+    }
+    .modal-content {
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+      margin: 5% auto;
+      padding: 30px;
+      border: 1px solid #22c55e;
+      border-radius: 24px;
+      width: 90%;
+      max-width: 450px;
+      position: relative;
+      animation: modalFadeIn 0.3s;
+    }
+    @keyframes modalFadeIn {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .close-modal {
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #94a3b8;
+    }
+    .close-modal:hover { color: #22c55e; }
+    .modal h2 { color: #fbbf24; text-align: center; margin-bottom: 20px; }
+    .modal input {
+      width: 100%;
+      padding: 14px;
+      margin: 10px 0;
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      color: white;
+      font-size: 16px;
+    }
+    .modal input:focus { outline: none; border-color: #22c55e; }
+    .modal button {
+      width: 100%;
+      padding: 14px;
+      background: #22c55e;
+      color: black;
+      border: none;
+      border-radius: 12px;
+      font-weight: bold;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+    .modal button:hover { background: #16a34a; }
+    .modal-footer { text-align: center; margin-top: 20px; font-size: 12px; color: #64748b; }
+    .modal-footer a { color: #22c55e; cursor: pointer; text-decoration: none; }
+    
     @media (max-width: 768px) {
       .hero h1 { font-size: 28px; }
       .stat-number { font-size: 28px; }
       header { flex-direction: column; text-align: center; }
       .quick-links a { display: block; margin-right: 0; }
+      .modal-content { margin: 20% auto; padding: 20px; }
     }
   </style>
 </head>
@@ -92,8 +160,8 @@
     <img src="/logo.png" alt="Yaarwin Colour Trading Logo">
   </div>
   <div class="header-buttons">
-    <a href="#" class="header-btn" id="registerHeaderBtn">📝 Register Now</a>
-    <a href="/yaarwin-login.html" class="header-btn-outline header-btn" id="loginHeaderBtn">🔐 Yaarwin Login</a>
+    <a class="header-btn register-trigger">📝 Register Now</a>
+    <a href="/yaarwin-login.html" class="header-btn-outline header-btn">🔐 Yaarwin Login</a>
   </div>
 </header>
 
@@ -118,7 +186,6 @@
     <h3>🎯 Yaarwin Quick Links</h3>
     <a href="/yaarwin-game.html">▶ How to Play Yaarwin Colour Trading</a>
     <a href="/yaarwin-login.html">▶ Yaarwin Login</a>
-    <a href="/yaarwin-withdrawal.html">▶ Withdraw Money from Yaarwin</a>
     <a href="/become-agent.html">▶ Become a Yaarwin Agent</a>
     <a href="/yaarwin-app.html">▶ Download Yaarwin App for Android</a>
   </div>
@@ -133,12 +200,12 @@
 
   <!-- SELECTION CARDS -->
   <div class="selection-section">
-    <a href="/earn-by-playing.html" class="earn-card">
+    <div class="earn-card register-trigger">
       <img src="https://img.icons8.com/fluency/120/gaming.png" alt="Yaarwin Colour Trading Game">
       <h3>🎮 Earn by Playing</h3>
       <p>Play Yaarwin colour trading — predict colours, sizes, and numbers. Win real money. Withdraw instantly.</p>
       <span class="btn-small">Learn More →</span>
-    </a>
+    </div>
     <a href="/become-agent.html" class="earn-card">
       <img src="https://img.icons8.com/fluency/120/teamwork.png" alt="Yaarwin Agent Program">
       <h3>🤝 Become a Yaarwin Agent</h3>
@@ -173,7 +240,7 @@
     <h2>🎯 Ready to Start Yaarwin Colour Trading?</h2>
     <p>Join 50,000+ Indian players already earning daily.</p>
     <div class="cta-buttons">
-      <a href="#" class="cta-btn cta-primary" id="registerCtaBtn">📝 Start Playing Yaarwin</a>
+      <a class="cta-btn cta-primary register-trigger">📝 Start Playing Yaarwin</a>
       <a href="/become-agent.html" class="cta-btn cta-secondary">🤝 Become Yaarwin Agent</a>
       <a href="/yaarwin-login.html" class="cta-btn cta-primary">🔐 Yaarwin Login</a>
     </div>
@@ -210,8 +277,28 @@
   </button>
 </div>
 
+<!-- REGISTRATION POPUP MODAL -->
+<div id="registerModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h2>📝 Create Your Yaarwin Account</h2>
+    <form id="registrationForm">
+      <input type="text" id="regName" placeholder="Full Name" required>
+      <input type="tel" id="regMobile" placeholder="Mobile Number (10 digits)" required>
+      <input type="password" id="regPassword" placeholder="Create Password (min 8 characters)" required>
+      <button type="submit">✅ Register & Get ₹50 Bonus</button>
+    </form>
+    <div class="modal-footer">
+      <p>By registering, you agree to our <a href="#">Terms & Conditions</a></p>
+      <p>Already have an account? <a id="switchToLogin">Login here</a></p>
+    </div>
+  </div>
+</div>
+
 <script>
+  // ============================================
   // GIFT CODE
+  // ============================================
   const GIFT_CODE = '29DA88971422742DCFBE5BD476E24807';
   const codeElement = document.getElementById('dailyCode');
   if (codeElement) codeElement.textContent = GIFT_CODE;
@@ -221,7 +308,89 @@
     alert('✅ YAARWIN GIFT CODE COPIED!\n\nUse this code during registration to get ₹50 free bonus.\n\nCode: ' + GIFT_CODE);
   };
 
+  // ============================================
+  // POPUP MODAL SYSTEM
+  // ============================================
+  const modal = document.getElementById('registerModal');
+  const closeModal = document.querySelector('.close-modal');
+  const registerTriggers = document.querySelectorAll('.register-trigger');
+  const switchToLogin = document.getElementById('switchToLogin');
+  
+  // Open modal when any register button is clicked
+  registerTriggers.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      modal.style.display = 'block';
+    });
+  });
+  
+  // Close modal when X is clicked
+  closeModal.onclick = function() {
+    modal.style.display = 'none';
+  }
+  
+  // Close modal when clicking outside
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  }
+  
+  // Switch to login page
+  if (switchToLogin) {
+    switchToLogin.onclick = function() {
+      window.location.href = '/yaarwin-login.html';
+    }
+  }
+  
+  // Handle form submission
+  const registrationForm = document.getElementById('registrationForm');
+  if (registrationForm) {
+    registrationForm.onsubmit = async function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('regName').value;
+      const mobile = document.getElementById('regMobile').value;
+      const password = document.getElementById('regPassword').value;
+      
+      if (name && mobile && password) {
+        // Get referral code from localStorage or URL
+        let finalInvitationCode = '13173101628'; // Default
+        
+        const urlParams = new URLSearchParams(window.location.search);
+        let referrer = urlParams.get('ref');
+        const savedReferrer = localStorage.getItem('yaarwin_referrer');
+        
+        if (referrer) {
+          localStorage.setItem('yaarwin_referrer', referrer);
+        } else if (savedReferrer) {
+          referrer = savedReferrer;
+        }
+        
+        // Agent mapping
+        const agents = {
+          'kunal': '25744140589', 'shivani': '83145146323',
+          'professor': '73247140528', 'ganesh': '67318146623',
+          'pragati': '17843157929', 'chikusam': '86547158763',
+          'hukum': '32453140774', 'chandu': '13388140914',
+          'warrior': '88668157673', 'mark': '88633142708'
+        };
+        
+        if (referrer && agents[referrer]) {
+          finalInvitationCode = agents[referrer];
+        }
+        
+        // Redirect to official registration
+        const registerUrl = `https://yaarwin.app/#/register?invitationCode=${finalInvitationCode}`;
+        window.location.href = registerUrl;
+      } else {
+        alert('Please fill in all fields');
+      }
+    };
+  }
+
+  // ============================================
   // REFERRAL SYSTEM
+  // ============================================
   (function() {
     const DEFAULT_CODE = '13173101628';
     const DEFAULT_TELEGRAM = 'https://t.me/+MUIJJJmuOVI2Njg1';
@@ -244,23 +413,16 @@
     let finalRef = urlRef || savedRef;
     if (urlRef) localStorage.setItem('yaarwin_referrer', urlRef);
     
-    let finalCode = DEFAULT_CODE;
     let finalTelegram = DEFAULT_TELEGRAM;
-    
     if (finalRef && agents[finalRef]) {
-      finalCode = agents[finalRef].code;
       finalTelegram = agents[finalRef].telegram;
     }
     
-    const registerUrl = 'https://yaarwin.app/#/register?invitationCode=' + finalCode;
-    
-    document.querySelectorAll('#registerHeaderBtn, #registerCtaBtn, .big-register-btn, .cta-primary').forEach(btn => {
-      if (btn.innerText.toLowerCase().includes('register')) {
-        btn.href = registerUrl;
-        btn.target = '_blank';
-      }
-    });
+    // Update Telegram button if exists
+    const tgBtn = document.getElementById('telegramBtn');
+    if (tgBtn) { tgBtn.href = finalTelegram; tgBtn.target = '_blank'; }
   })();
 </script>
+
 </body>
 </html>
