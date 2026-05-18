@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yaarwin Responsible Gaming - Play Safe</title>
+  <meta name="description" content="Yaarwin promotes responsible gaming. Set deposit limits, take breaks, and never chase losses. Must be 18+.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #0f172a; color: white; padding: 20px; }
+    .container { max-width: 800px; margin: auto; background: #1e293b; padding: 30px; border-radius: 16px; }
+    h1 { color: #22c55e; margin-bottom: 20px; }
+    h2 { color: #fbbf24; margin: 25px 0 15px; }
+    .tip { background: #0f172a; padding: 15px; margin: 15px 0; border-radius: 12px; border-left: 3px solid #22c55e; }
+    .helpline { background: #1e3a5f; padding: 20px; border-radius: 12px; text-align: center; margin: 25px 0; }
+    nav { margin-top: 30px; text-align: center; }
+    nav a { color: #22c55e; margin: 0 10px; text-decoration: none; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>🎗️ Responsible Gaming at Yaarwin</h1>
+  <p>Yaarwin is committed to promoting responsible gaming practices for all players.</p>
+
+  <h2>📋 Our Responsible Gaming Principles</h2>
+  <div class="tip"><strong>Play for Entertainment:</strong> Treat colour trading as entertainment, not a source of income.</div>
+  <div class="tip"><strong>Set a Budget:</strong> Decide how much you can afford to lose before you start playing.</div>
+  <div class="tip"><strong>Take Breaks:</strong> Step away regularly. Don't play for hours continuously.</div>
+  <div class="tip"><strong>Never Chase Losses:</strong> Trying to recover losses leads to bigger losses.</div>
+  <div class="tip"><strong>18+ Only:</strong> You must be 18 years or older to play on Yaarwin.</div>
+
+  <h2>⚠️ Warning Signs of Problem Gaming</h2>
+  <div class="tip">• Spending more than you can afford<br>• Borrowing money to play<br>• Neglecting work or family<br>• Lying about time or money spent<br>• Chasing losses repeatedly</div>
+
+  <div class="helpline">
+    <strong>📞 Need Help?</strong><br>
+    Contact our support team 24/7 via Telegram<br>
+    <a href="#" id="telegramHelpBtn" style="color: #22c55e;">Join Yaarwin Support Telegram →</a>
+  </div>
+
+  <h2>🛠️ Tools to Control Your Gaming</h2>
+  <div class="tip"><strong>Set Deposit Limits:</strong> Contact support to set daily/weekly deposit limits.</div>
+  <div class="tip"><strong>Take a Break:</strong> Request temporary account suspension.</div>
+  <div class="tip"><strong>Self-Exclusion:</strong> Permanently close your account if needed.</div>
+
+  <a href="/" class="btn" style="display: inline-block; margin-top: 20px; padding: 12px 24px; background: #22c55e; color: black; text-decoration: none; border-radius: 8px; font-weight: bold;">Back to Home →</a>
+
+  <nav><a href="/">Home</a> | <a href="/yaarwin-game.html">Game Rules</a> | <a href="/yaarwin-beginners-guide.html">Beginner's Guide</a></nav>
+</div>
+<script>
+  (function() {
+    const DEFAULT_TELEGRAM = 'https://t.me/+MUIJJJmuOVI2Njg1';
+    const agents = {
+      'kunal': 'https://t.me/+O9vOxjl4g2YxNmY1', 'shivani': 'https://t.me/+yDMbZHsufe8wNjg1',
+      'professor': 'https://t.me/+exhkqtauIVxkZTll', 'ganesh': 'https://t.me/+V3mNtYL77pY4MThl',
+      'pragati': 'https://t.me/+FyQMCmZXuSJkYmE1', 'chikusam': 'https://t.me/+Ic3o4_BiqcNlNGJl',
+      'hukum': 'https://t.me/+Fy5MbwAbFkYxZTZl', 'chandu': 'https://t.me/+LF2-tr-2MSwyMGQ1',
+      'warrior': 'https://t.me/+9BFeMhH2LoU5NzA1', 'mark': 'https://t.me/+YIBCUrOGDSY5OWJl'
+    };
+    const urlRef = new URLSearchParams(location.search).get('ref');
+    const savedRef = localStorage.getItem('yaarwin_referrer');
+    let finalRef = urlRef || savedRef;
+    if (urlRef) localStorage.setItem('yaarwin_referrer', urlRef);
+    let finalTelegram = DEFAULT_TELEGRAM;
+    if (finalRef && agents[finalRef]) finalTelegram = agents[finalRef];
+    const tgBtn = document.getElementById('telegramHelpBtn');
+    if (tgBtn) { tgBtn.href = finalTelegram; tgBtn.target = '_blank'; }
+  })();
+</script>
+</body>
+</html>
