@@ -5,7 +5,26 @@
   <title>Yaarwin Colour Trading Rules - How to Play & Win</title>
   <meta name="description" content="Yaarwin colour trading rules made simple. Learn payouts (2x, 3x, 5x, 9x), illegal bets, and allowed combinations. Complete guide for Indian players.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://yaarwinpro.com/yaarwin-game.html" />
+  
+  <!-- URL FIX SCRIPT - Prevents redirects -->
+  <script>
+    (function() {
+      var currentPath = window.location.pathname;
+      var currentUrl = window.location.href;
+      if (currentPath === '/') return;
+      if (currentPath.endsWith('/') && currentPath !== '/') {
+        window.location.href = currentUrl.slice(0, -1);
+        return;
+      }
+      if (!currentPath.endsWith('.html') && !currentPath.includes('.') && currentPath !== '/') {
+        window.location.href = currentUrl + '.html';
+        return;
+      }
+    })();
+  </script>
+  
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Segoe UI', Arial, sans-serif; background: #0f172a; color: white; padding: 20px; }
@@ -13,6 +32,7 @@
     .header { text-align: center; margin-bottom: 30px; }
     .header img { height: 50px; }
     .header h1 { color: #22c55e; font-size: 32px; margin-top: 10px; }
+    .header p { color: #94a3b8; }
     .grid-2 { display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 30px; }
     .card { flex: 1; min-width: 250px; background: #1e293b; border-radius: 20px; padding: 20px; text-align: center; }
     .card-icon { font-size: 48px; margin-bottom: 15px; }
@@ -98,28 +118,23 @@
     <a href="/become-agent.html">Yaarwin Agent</a>
   </nav>
 
-  <footer>
-    <p><strong>Play Yaarwin Colour Trading Responsibly</strong> — Set deposit limits, must be 18+.</p>
-    <p>© 2026 Yaarwin. All rights reserved.</p>
-  </footer>
+  <footer><p><strong>Play Yaarwin Colour Trading Responsibly</strong> — Must be 18+.</p><p>© 2026 Yaarwin. All rights reserved.</p></footer>
 </div>
 
 <script>
   (function() {
     const DEFAULT_CODE = '13173101628';
     const agents = {
-      'kunal': { code: '25744140589' }, 'shivani': { code: '83145146323' },
-      'professor': { code: '73247140528' }, 'ganesh': { code: '67318146623' },
-      'pragati': { code: '17843157929' }, 'chikusam': { code: '86547158763' },
-      'hukum': { code: '32453140774' }, 'chandu': { code: '13388140914' },
-      'warrior': { code: '88668157673' }, 'mark': { code: '88633142708' }
+      'kunal': '25744140589', 'shivani': '83145146323', 'professor': '73247140528',
+      'ganesh': '67318146623', 'pragati': '17843157929', 'chikusam': '86547158763',
+      'hukum': '32453140774', 'chandu': '13388140914', 'warrior': '88668157673', 'mark': '88633142708'
     };
     const urlRef = new URLSearchParams(location.search).get('ref');
     const savedRef = localStorage.getItem('yaarwin_referrer');
     let finalRef = urlRef || savedRef;
     if (urlRef) localStorage.setItem('yaarwin_referrer', urlRef);
     let finalCode = DEFAULT_CODE;
-    if (finalRef && agents[finalRef]) finalCode = agents[finalRef].code;
+    if (finalRef && agents[finalRef]) finalCode = agents[finalRef];
     const btn = document.getElementById('registerBtn');
     if (btn) { btn.href = 'https://yaarwin.app/#/register?invitationCode=' + finalCode; btn.target = '_blank'; }
   })();
