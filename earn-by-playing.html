@@ -2,10 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Earn by Playing Yaarwin Game - Complete Guide</title>
-  <meta name="description" content="Learn how to earn real money playing Yaarwin game. Step-by-step guide, rules, and tips to maximize your earnings.">
+  <title>Earn by Playing Yaarwin - Complete Guide to Colour Trading Earnings</title>
+  <meta name="description" content="Learn how to earn real money playing Yaarwin colour trading. Step-by-step guide, rules, and tips to maximize your earnings.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://yaarwinpro.com/earn-by-playing.html" />
+  
+  <!-- URL FIX SCRIPT - Prevents redirects -->
+  <script>
+    (function() {
+      var path = window.location.pathname;
+      var url = window.location.href;
+      if (path === '/') return;
+      if (path.endsWith('/') && path !== '/') {
+        window.location.href = url.slice(0, -1);
+        return;
+      }
+      if (!path.includes('.') && path !== '/') {
+        window.location.href = url + '.html';
+        return;
+      }
+    })();
+  </script>
+  
   <style>
     body { font-family: 'Segoe UI', Arial, sans-serif; background: #0f172a; color: white; padding: 20px; }
     .container { max-width: 700px; margin: auto; background: #1e293b; padding: 30px; border-radius: 12px; text-align: center; }
@@ -15,66 +34,36 @@
     .btn { display: inline-block; margin: 10px; padding: 14px 28px; background: #22c55e; color: black; text-decoration: none; border-radius: 8px; font-weight: bold; }
     .btn-secondary { background: #3b82f6; }
     .header img { height: 50px; margin-bottom: 20px; }
+    .footer-links { margin-top: 30px; padding-top: 20px; border-top: 1px solid #334155; }
+    .footer-links a { color: #22c55e; margin: 0 10px; text-decoration: none; }
   </style>
 </head>
 <body>
 <div class="container">
-  <div class="header"><img src="/logo.png" alt="Yaarwin Game Earning"></div>
-  <h1>💰 Earn Real Money Playing Yaarwin Game</h1>
+  <div class="header"><img src="/logo.png" alt="Earn by Playing Yaarwin"></div>
+  <h1>💰 Earn Real Money Playing Yaarwin Colour Trading</h1>
   <div class="big-number">₹10 → ₹90</div>
-  <div class="warning">⚠️ <strong>80% of beginners lose money in first week.</strong><br>Because they don't know Yaarwin game rules.</div>
-  <p><strong>Yaarwin game earning</strong> is simple once you understand the rules. Follow this guide to start winning.</p>
-  <a href="/yaarwin-game.html" class="btn">📖 Read Yaarwin Game Rules First (2 min)</a>
+  <div class="warning">⚠️ <strong>80% of beginners lose money in first week.</strong><br>Because they don't know Yaarwin colour trading rules.</div>
+  <p><strong>Yaarwin colour trading</strong> earnings are simple once you understand the rules. Follow this guide to start winning.</p>
+  <a href="/yaarwin-game.html" class="btn">📖 Read Yaarwin Colour Trading Rules First (2 min)</a>
   <a href="#" id="registerBtn" class="btn btn-secondary">🎮 Start Earning Now →</a>
+  <div class="footer-links"><a href="/">Yaarwin Home</a> | <a href="/yaarwin-login.html">Yaarwin Login</a> | <a href="/become-agent.html">Yaarwin Agent</a></div>
 </div>
-
 <script>
-    // REFERRAL SYSTEM WITH ALL AGENTS (INCLUDING MARK)
   (function() {
     const DEFAULT_CODE = '13173101628';
-    const DEFAULT_TELEGRAM = 'https://t.me/+MUIJJJmuOVI2Njg1';
-    
     const agents = {
-      'kunal': { code: '25744140589', telegram: 'https://t.me/+O9vOxjl4g2YxNmY1' },
-      'shivani': { code: '83145146323', telegram: 'https://t.me/+yDMbZHsufe8wNjg1' },
-      'professor': { code: '73247140528', telegram: 'https://t.me/+exhkqtauIVxkZTll' },
-      'ganesh': { code: '67318146623', telegram: 'https://t.me/+V3mNtYL77pY4MThl' },
-      'pragati': { code: '17843157929', telegram: 'https://t.me/+FyQMCmZXuSJkYmE1' },
-      'chikusam': { code: '86547158763', telegram: 'https://t.me/+Ic3o4_BiqcNlNGJl' },
-      'hukum': { code: '32453140774', telegram: 'https://t.me/+Fy5MbwAbFkYxZTZl' },
-      'chandu': { code: '13388140914', telegram: 'https://t.me/+LF2-tr-2MSwyMGQ1' },
-      'warrior': { code: '88668157673', telegram: 'https://t.me/+9BFeMhH2LoU5NzA1' },
-      'mark': { code: '88633142708', telegram: 'https://t.me/+YIBCUrOGDSY5OWJl' }
+      'kunal': '25744140589', 'shivani': '83145146323', 'professor': '73247140528',
+      'ganesh': '67318146623', 'pragati': '17843157929', 'chikusam': '86547158763',
+      'hukum': '32453140774', 'chandu': '13388140914', 'warrior': '88668157673', 'mark': '88633142708'
     };
-    
     const urlRef = new URLSearchParams(location.search).get('ref');
     const savedRef = localStorage.getItem('yaarwin_referrer');
     let finalRef = urlRef || savedRef;
     if (urlRef) localStorage.setItem('yaarwin_referrer', urlRef);
-    
     let finalCode = DEFAULT_CODE;
-    let finalTelegram = DEFAULT_TELEGRAM;
-    
-    if (finalRef && agents[finalRef]) {
-      finalCode = agents[finalRef].code;
-      finalTelegram = agents[finalRef].telegram;
-      console.log('✅ Agent active: ' + finalRef);
-    }
-    
-    const registerUrl = 'https://yaarwin.app/#/register?invitationCode=' + finalCode;
-    
-    // Update all register buttons
-    document.querySelectorAll('a, button').forEach(btn => {
-      const text = (btn.innerText || '').toLowerCase();
-      if (text.includes('register') || text.includes('sign up') || text.includes('create account')) {
-        btn.href = registerUrl;
-        btn.target = '_blank';
-      }
-    });
-    
-    // Update Telegram button if exists
-    const tgBtn = document.getElementById('telegramBtn');
-    if (tgBtn) { tgBtn.href = finalTelegram; tgBtn.target = '_blank'; }
+    if (finalRef && agents[finalRef]) finalCode = agents[finalRef];
+    document.getElementById('registerBtn').href = 'https://yaarwin.app/#/register?invitationCode=' + finalCode;
   })();
 </script>
 </body>
