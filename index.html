@@ -6,6 +6,24 @@
   <meta name="description" content="Yaarwin colour trading platform for Indian players. Register now and claim ₹50 free gift code. Predict colors, win real money, withdraw instantly via UPI. Join 50,000+ players.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://yaarwinpro.com/" />
+  
+  <!-- URL FIX SCRIPT - Prevents redirects -->
+  <script>
+    (function() {
+      var currentPath = window.location.pathname;
+      var currentUrl = window.location.href;
+      if (currentPath === '/') return;
+      if (currentPath.endsWith('/') && currentPath !== '/') {
+        window.location.href = currentUrl.slice(0, -1);
+        return;
+      }
+      if (!currentPath.endsWith('.html') && !currentPath.includes('.') && currentPath !== '/') {
+        window.location.href = currentUrl + '.html';
+        return;
+      }
+    })();
+  </script>
   
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-W8117DXPCG"></script>
@@ -39,121 +57,27 @@
       margin-bottom: 40px;
       border: 1px solid #334155;
     }
-    .dual-hero h1 {
-      font-size: 38px;
-      color: #fbbf24;
-      margin-bottom: 10px;
-    }
-    .dual-hero .subhead {
-      color: #94a3b8;
-      margin-bottom: 30px;
-    }
+    .dual-hero h1 { font-size: 38px; color: #fbbf24; margin-bottom: 10px; }
+    .dual-hero .subhead { color: #94a3b8; margin-bottom: 30px; }
     
-    .dual-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-      margin-bottom: 30px;
-    }
-    .action-card {
-      flex: 1;
-      min-width: 280px;
-      background: #1e293b;
-      border-radius: 24px;
-      padding: 30px;
-      text-align: center;
-      border: 1px solid #334155;
-      transition: transform 0.2s;
-    }
-    .action-card:hover {
-      transform: translateY(-5px);
-      border-color: #22c55e;
-    }
-    .action-icon {
-      font-size: 48px;
-      margin-bottom: 15px;
-    }
-    .action-card h3 {
-      font-size: 28px;
-      color: #fbbf24;
-      margin-bottom: 10px;
-    }
-    .action-card p {
-      color: #94a3b8;
-      margin-bottom: 20px;
-    }
-    .action-btn {
-      display: inline-block;
-      padding: 14px 28px;
-      border-radius: 12px;
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 18px;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    .register-btn-card {
-      background: #22c55e;
-      color: black;
-      border: none;
-    }
-    .register-btn-card:hover {
-      background: #16a34a;
-      transform: scale(1.02);
-    }
-    .telegram-btn-card {
-      background: #0088cc;
-      color: white;
-    }
-    .telegram-btn-card:hover {
-      background: #006699;
-      transform: scale(1.02);
-    }
+    .dual-actions { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; margin-bottom: 30px; }
+    .action-card { flex: 1; min-width: 280px; background: #1e293b; border-radius: 24px; padding: 30px; text-align: center; border: 1px solid #334155; transition: transform 0.2s; }
+    .action-card:hover { transform: translateY(-5px); border-color: #22c55e; }
+    .action-icon { font-size: 48px; margin-bottom: 15px; }
+    .action-card h3 { font-size: 28px; color: #fbbf24; margin-bottom: 10px; }
+    .action-card p { color: #94a3b8; margin-bottom: 20px; }
+    .action-btn { display: inline-block; padding: 14px 28px; border-radius: 12px; font-weight: bold; text-decoration: none; font-size: 18px; cursor: pointer; transition: all 0.2s; }
+    .register-btn-card { background: #22c55e; color: black; border: none; }
+    .register-btn-card:hover { background: #16a34a; transform: scale(1.02); }
+    .telegram-btn-card { background: #0088cc; color: white; }
+    .telegram-btn-card:hover { background: #006699; transform: scale(1.02); }
     
-    /* GIFT CODE SECTION - RESTORED */
-    .gift-section {
-      background: #1e293b;
-      border-radius: 24px;
-      padding: 25px;
-      text-align: center;
-      margin: 30px 0;
-      border: 1px solid #334155;
-    }
-    .gift-label {
-      color: #fbbf24;
-      font-size: 14px;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
-    }
-    .gift-code-value {
-      font-size: 28px;
-      font-weight: bold;
-      font-family: monospace;
-      color: #22c55e;
-      letter-spacing: 1px;
-      background: #0f172a;
-      display: inline-block;
-      padding: 12px 24px;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: all 0.2s;
-      margin: 10px 0;
-    }
-    .gift-code-value:hover {
-      background: #1e293b;
-    }
-    .bonus-text {
-      color: #fbbf24;
-      font-size: 20px;
-      font-weight: bold;
-      margin-top: 10px;
-    }
-    .gift-note {
-      color: #64748b;
-      font-size: 12px;
-      margin-top: 10px;
-    }
+    .gift-section { background: #1e293b; border-radius: 24px; padding: 25px; text-align: center; margin: 30px 0; border: 1px solid #334155; }
+    .gift-label { color: #fbbf24; font-size: 14px; letter-spacing: 2px; margin-bottom: 10px; }
+    .gift-code-value { font-size: 28px; font-weight: bold; font-family: monospace; color: #22c55e; background: #0f172a; display: inline-block; padding: 12px 24px; border-radius: 12px; cursor: pointer; margin: 10px 0; }
+    .gift-code-value:hover { background: #1e293b; }
+    .bonus-text { color: #fbbf24; font-size: 20px; font-weight: bold; margin-top: 10px; }
+    .gift-note { color: #64748b; font-size: 12px; margin-top: 10px; }
     
     .stats-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; background: #1e293b; border-radius: 24px; padding: 40px 20px; margin: 40px 0; }
     .stat-item { text-align: center; min-width: 150px; }
@@ -167,15 +91,13 @@
     .earn-card h3 { font-size: 28px; color: #fbbf24; margin-bottom: 15px; }
     .earn-card p { color: #cbd5f5; font-size: 14px; margin-bottom: 20px; }
     .earn-card .btn-small { display: inline-block; padding: 10px 24px; background: #22c55e; color: black; text-decoration: none; border-radius: 8px; font-weight: bold; cursor: pointer; }
-    .earn-card .btn-small:hover { background: #16a34a; }
     
     .trust-section { text-align: center; margin: 40px 0; }
     .trust-badge { display: inline-block; background: #22c55e20; border: 1px solid #22c55e; border-radius: 40px; padding: 8px 20px; margin: 6px; font-size: 14px; }
     
     .quick-links { background: #1e293b; padding: 25px; border-radius: 16px; margin: 30px 0; border: 1px solid #334155; text-align: center; }
     .quick-links h3 { color: #fbbf24; margin-bottom: 15px; font-size: 20px; }
-    .quick-links a { color: #22c55e; text-decoration: none; margin: 0 12px; display: inline-block; padding: 5px 0; transition: color 0.2s; }
-    .quick-links a:hover { color: #16a34a; text-decoration: underline; }
+    .quick-links a { color: #22c55e; text-decoration: none; margin: 0 12px; display: inline-block; padding: 5px 0; }
     .quick-links hr { margin: 15px 0; border-color: #334155; }
     
     .faq-preview { margin: 40px 0; }
@@ -187,12 +109,10 @@
     
     nav { margin: 40px 0 20px; padding: 20px; background: #111827; border-radius: 12px; text-align: center; }
     nav a { color: #22c55e; text-decoration: none; margin: 0 12px; display: inline-block; }
-    nav a:hover { text-decoration: underline; }
     
     footer { margin-top: 40px; padding: 30px 20px; font-size: 12px; color: #64748b; border-top: 1px solid #1e293b; text-align: center; }
     .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 15px; }
     .footer-links a { color: #22c55e; text-decoration: none; }
-    .footer-links a:hover { text-decoration: underline; }
     
     @media (max-width: 768px) {
       .dual-hero h1 { font-size: 28px; }
@@ -200,7 +120,6 @@
       .stat-number { font-size: 28px; }
       .gift-code-value { font-size: 20px; padding: 8px 16px; }
       .quick-links a { display: block; margin: 8px 0; }
-      nav a { display: inline-block; margin: 5px 8px; }
     }
   </style>
 </head>
@@ -218,7 +137,6 @@
 
 <div class="container">
   
-  <!-- DUAL ACTION HERO SECTION -->
   <div class="dual-hero">
     <h1>Yaarwin Colour Trading</h1>
     <div class="subhead">Choose how to start — Register or Join Telegram</div>
@@ -246,9 +164,6 @@
     </div>
   </div>
 
-  <!-- ============================================ -->
-  <!-- GIFT CODE SECTION - RESTORED -->
-  <!-- ============================================ -->
   <div class="gift-section">
     <div class="gift-label">🎁 YOUR EXCLUSIVE GIFT CODE</div>
     <div class="gift-code-value" id="dailyCode" onclick="copyCode()">29DA88971422742DCFBE5BD476E24807</div>
@@ -256,7 +171,6 @@
     <div class="gift-note">Click the code to copy • Limited time offer • New users only</div>
   </div>
 
-  <!-- STATS SECTION -->
   <div class="stats-row">
     <div class="stat-item"><div class="stat-number">50K+</div><div class="stat-label">Players</div></div>
     <div class="stat-item"><div class="stat-number">₹10Cr+</div><div class="stat-label">Paid Out</div></div>
@@ -264,7 +178,6 @@
     <div class="stat-item"><div class="stat-number">24/7</div><div class="stat-label">Support</div></div>
   </div>
 
-  <!-- SELECTION CARDS -->
   <div class="selection-section">
     <a href="/earn-by-playing.html" class="earn-card">
       <img src="https://img.icons8.com/fluency/120/gaming.png" alt="Yaarwin Colour Trading Game">
@@ -280,7 +193,6 @@
     </a>
   </div>
 
-  <!-- TRUST BADGES -->
   <div class="trust-section">
     <span class="trust-badge">✅ 50,000+ Indian Players</span>
     <span class="trust-badge">✅ ₹10Cr+ Paid Out</span>
@@ -289,7 +201,6 @@
     <span class="trust-badge">✅ 100% Legal in India</span>
   </div>
 
-  <!-- QUICK LINKS SECTION -->
   <div class="quick-links">
     <h3>📚 Yaarwin Resources</h3>
     <div>
@@ -313,7 +224,6 @@
     </div>
   </div>
 
-  <!-- FAQ PREVIEW -->
   <div class="faq-preview">
     <h2>❓ Quick Answers</h2>
     <div class="faq-grid">
@@ -324,7 +234,6 @@
     </div>
   </div>
 
-  <!-- NAVIGATION -->
   <nav>
     <a href="/">Home</a> |
     <a href="/yaarwin-game.html">Game Rules</a> |
@@ -336,7 +245,6 @@
   </nav>
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-links">
     <a href="/">Home</a> |
@@ -351,9 +259,6 @@
 </footer>
 
 <script>
-  // ============================================
-  // GIFT CODE
-  // ============================================
   const GIFT_CODE = '29DA88971422742DCFBE5BD476E24807';
   const codeElement = document.getElementById('dailyCode');
   if (codeElement) codeElement.textContent = GIFT_CODE;
@@ -363,9 +268,6 @@
     alert('✅ Gift code copied: ' + GIFT_CODE);
   };
 
-  // ============================================
-  // REFERRAL & TELEGRAM LINKS
-  // ============================================
   (function() {
     const DEFAULT_CODE = '13173101628';
     const DEFAULT_TELEGRAM = 'https://t.me/+MUIJJJmuOVI2Njg1';
@@ -399,25 +301,18 @@
     if (referrer && agents[referrer]) {
       finalCode = agents[referrer].code;
       finalTelegram = agents[referrer].telegram;
-      console.log('✅ Agent active: ' + referrer);
     }
     
     const registerUrl = 'https://yaarwin.app/#/register?invitationCode=' + finalCode;
     
     const registerBtns = document.querySelectorAll('#registerHeaderBtn, #registerMainBtn');
     registerBtns.forEach(btn => {
-      if (btn) {
-        btn.href = registerUrl;
-        btn.setAttribute('target', '_blank');
-      }
+      if (btn) { btn.href = registerUrl; btn.setAttribute('target', '_blank'); }
     });
     
     const telegramBtns = document.querySelectorAll('#telegramHeaderBtn, #telegramMainBtn');
     telegramBtns.forEach(btn => {
-      if (btn) {
-        btn.href = finalTelegram;
-        btn.setAttribute('target', '_blank');
-      }
+      if (btn) { btn.href = finalTelegram; btn.setAttribute('target', '_blank'); }
     });
   })();
 </script>
