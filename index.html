@@ -11,15 +11,15 @@
   <!-- URL FIX SCRIPT - Prevents redirects -->
   <script>
     (function() {
-      var currentPath = window.location.pathname;
-      var currentUrl = window.location.href;
-      if (currentPath === '/') return;
-      if (currentPath.endsWith('/') && currentPath !== '/') {
-        window.location.href = currentUrl.slice(0, -1);
+      var path = window.location.pathname;
+      var url = window.location.href;
+      if (path === '/') return;
+      if (path.endsWith('/') && path !== '/') {
+        window.location.href = url.slice(0, -1);
         return;
       }
-      if (!currentPath.endsWith('.html') && !currentPath.includes('.') && currentPath !== '/') {
-        window.location.href = currentUrl + '.html';
+      if (!path.includes('.') && path !== '/') {
+        window.location.href = url + '.html';
         return;
       }
     })();
