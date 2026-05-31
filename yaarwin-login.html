@@ -5,7 +5,26 @@
   <title>Yaarwin Login - Access Your Account</title>
   <meta name="description" content="Yaarwin login page. Sign in to your Yaarwin colour trading account to play, check balance, and withdraw winnings. New user? Register in 2 minutes.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://yaarwinpro.com/yaarwin-login.html" />
+  
+  <!-- URL FIX SCRIPT - Prevents redirects -->
+  <script>
+    (function() {
+      var currentPath = window.location.pathname;
+      var currentUrl = window.location.href;
+      if (currentPath === '/') return;
+      if (currentPath.endsWith('/') && currentPath !== '/') {
+        window.location.href = currentUrl.slice(0, -1);
+        return;
+      }
+      if (!currentPath.endsWith('.html') && !currentPath.includes('.') && currentPath !== '/') {
+        window.location.href = currentUrl + '.html';
+        return;
+      }
+    })();
+  </script>
+  
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Segoe UI', Arial, sans-serif; background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); color: white; min-height: 100vh; padding: 20px; }
@@ -30,7 +49,6 @@
     .btn-secondary { background: #3b82f6; }
     .help-links { display: flex; justify-content: center; gap: 20px; margin-top: 20px; flex-wrap: wrap; }
     .help-links a { color: #22c55e; text-decoration: none; }
-    .gift-code-box { position: fixed; bottom: 20px; left: 20px; background: #1e293b; border-left: 4px solid #22c55e; padding: 10px 15px; border-radius: 8px; font-size: 12px; }
     footer { margin-top: 50px; text-align: center; font-size: 12px; color: #64748b; padding: 20px; border-top: 1px solid #334155; }
     footer a { color: #22c55e; text-decoration: none; margin: 0 10px; }
     @media (max-width: 768px) { .stats-row { flex-wrap: wrap; gap: 15px; } }
@@ -46,18 +64,8 @@
     <div class="app-card">
       <div class="app-icon"><img src="/logo.png" alt="Yaarwin App"></div>
       <h2>Yaarwin App</h2>
-      <div class="game-tags">
-        <span class="game-tag">🎨 Colour Trading</span>
-        <span class="game-tag">📊 Big/Small</span>
-        <span class="game-tag">🔢 Numbers 1-9</span>
-      </div>
-      <div class="feature-list">
-        <li>Instant UPI withdrawals (5 minutes)</li>
-        <li>₹100 minimum deposit</li>
-        <li>₹110 minimum withdrawal</li>
-        <li>24/7 customer support</li>
-        <li>Referral bonus up to ₹5000/month</li>
-      </div>
+      <div class="game-tags"><span class="game-tag">🎨 Colour Trading</span><span class="game-tag">📊 Big/Small</span><span class="game-tag">🔢 Numbers 1-9</span></div>
+      <div class="feature-list"><li>Instant UPI withdrawals (5 minutes)</li><li>₹100 minimum deposit</li><li>₹110 minimum withdrawal</li><li>24/7 customer support</li><li>Referral bonus up to ₹5000/month</li></div>
       <a href="https://yaarwin.app/#/downloadCenter" class="download-btn">📱 Download Yaarwin App</a>
     </div>
 
@@ -82,40 +90,24 @@
     </div>
   </div>
 
-  <footer>
-    <a href="/">Yaarwin Home</a> | 
-    <a href="/yaarwin-game.html">Yaarwin Colour Trading Rules</a> | 
-    <a href="/yaarwin-strategy.html">Yaarwin Strategy Guide</a> |
-    <a href="/become-agent.html">Become Yaarwin Agent</a>
-    <p style="margin-top: 10px;">© 2026 Yaarwin — India's Trusted Colour Trading Platform</p>
-  </footer>
-</div>
-
-<div class="gift-code-box">
-  🎁 Yaarwin Gift Code: <strong id="code">29DA88971422742DCFBE5BD476E24807</strong>
-  <button id="copyBtn">Copy</button>
+  <footer><a href="/">Yaarwin Home</a> | <a href="/yaarwin-game.html">Yaarwin Colour Trading Rules</a> | <a href="/yaarwin-strategy.html">Yaarwin Strategy Guide</a> | <a href="/become-agent.html">Become Yaarwin Agent</a>
+  <p style="margin-top: 10px;">© 2026 Yaarwin — India's Trusted Colour Trading Platform</p></footer>
 </div>
 
 <script>
-  const GIFT_CODE = '29DA88971422742DCFBE5BD476E24807';
-  document.getElementById('code').textContent = GIFT_CODE;
-  document.getElementById('copyBtn').onclick = () => { navigator.clipboard.writeText(GIFT_CODE); alert('✅ Yaarwin gift code copied!'); };
-
   (function() {
     const DEFAULT_CODE = '13173101628';
     const agents = {
-      'kunal': { code: '25744140589' }, 'shivani': { code: '83145146323' },
-      'professor': { code: '73247140528' }, 'ganesh': { code: '67318146623' },
-      'pragati': { code: '17843157929' }, 'chikusam': { code: '86547158763' },
-      'hukum': { code: '32453140774' }, 'chandu': { code: '13388140914' },
-      'warrior': { code: '88668157673' }, 'mark': { code: '88633142708' }
+      'kunal': '25744140589', 'shivani': '83145146323', 'professor': '73247140528',
+      'ganesh': '67318146623', 'pragati': '17843157929', 'chikusam': '86547158763',
+      'hukum': '32453140774', 'chandu': '13388140914', 'warrior': '88668157673', 'mark': '88633142708'
     };
     const urlRef = new URLSearchParams(location.search).get('ref');
     const savedRef = localStorage.getItem('yaarwin_referrer');
     let finalRef = urlRef || savedRef;
     if (urlRef) localStorage.setItem('yaarwin_referrer', urlRef);
     let finalCode = DEFAULT_CODE;
-    if (finalRef && agents[finalRef]) finalCode = agents[finalRef].code;
+    if (finalRef && agents[finalRef]) finalCode = agents[finalRef];
     document.getElementById('registerBtn').href = 'https://yaarwin.app/#/register?invitationCode=' + finalCode;
     document.getElementById('loginBtn').href = 'https://yaarwin.app/#/login';
   })();
